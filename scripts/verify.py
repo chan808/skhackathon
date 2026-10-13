@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 
 from practice.core import analyze, load_quiz
 from examples.agent_loop import OfflineReplay, run
+from practice.__main__ import load_bank
 
 
 def main():
@@ -19,7 +20,7 @@ def main():
                                cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="replace")
     output = completed.stdout + completed.stderr
     markdown_files = [ROOT / "README.md", ROOT / "REPORT.md", ROOT / "START-HERE.md", ROOT / "LEARNING-PATH.md", ROOT / "SUMMARY.md"]
-    for directory in ["research", "practice", "templates", "data", "examples"]:
+    for directory in ["research", "practice", "templates", "data/synthetic", "examples", "reports"]:
         markdown_files.extend((ROOT / directory).rglob("*.md"))
     missing = []
     local_links = 0
@@ -37,6 +38,7 @@ def main():
                 missing.append({"file": str(path.relative_to(ROOT)), "target": target})
     quiz = load_quiz(ROOT / "practice" / "quiz.json")
     advanced = load_quiz(ROOT / "practice" / "advanced-quiz.json")
+    backend = load_bank("backend")
     sources = json.loads((ROOT / "research" / "sources.json").read_text(encoding="utf-8"))
     recorded_lab = json.loads((ROOT / "reports" / "lab-result.json").read_text(encoding="utf-8"))
     lab = analyze(ROOT / "data" / "synthetic" / "lots.csv")
@@ -59,6 +61,7 @@ def main():
         "missing_local_links": missing,
         "quiz_questions": len(quiz["questions"]),
         "advanced_quiz_questions": len(advanced["questions"]),
+        "backend_selected_questions": len(backend["questions"]),
         "advanced_priorities": dict(Counter(question["priority"] for question in advanced["questions"])),
         "unregistered_quiz_source_urls": unregistered_quiz_sources,
         "readiness_cases": len(cases["cases"]),
@@ -81,6 +84,7 @@ def main():
     }
     result["passed"] = (completed.returncode == 0 and not missing and not unregistered_quiz_sources
                         and result["quiz_questions"] == 40 and result["advanced_quiz_questions"] == 36
+                        and result["backend_selected_questions"] == 20
                         and result["advanced_priorities"] == {"first_round_core": 28, "extension": 8}
                         and result["readiness_cases"] == 3 and example_check.returncode == 0 and offline_ok and lab_matches_record)
     (ROOT / "reports" / "verification.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

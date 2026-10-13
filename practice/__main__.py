@@ -1,5 +1,6 @@
 import argparse
 import json
+import math
 import platform
 import random
 import shutil
@@ -13,6 +14,23 @@ from .core import ROOT, analyze, load_quiz, validate_answer, write_dataset
 
 KST = timezone(timedelta(hours=9))
 BANK_PATHS = {"basic": ROOT / "practice" / "quiz.json", "advanced": ROOT / "practice" / "advanced-quiz.json"}
+SELECTION_PATH = ROOT / "practice" / "backend-core-selection.json"
+
+
+def load_bank(bank):
+    if bank in BANK_PATHS:
+        return load_quiz(BANK_PATHS[bank])
+    if bank != "backend":
+        raise ValueError("Unknown quiz bank")
+    selection = json.loads(SELECTION_PATH.read_text(encoding="utf-8-sig"))
+    available = {name: {item["id"]: item for item in load_quiz(path)["questions"]} for name, path in BANK_PATHS.items()}
+    questions, seen = [], set()
+    for item in selection["selection"]:
+        if item["bank"] not in available or item["id"] not in available[item["bank"]] or item["id"] in seen:
+            raise ValueError("Invalid backend quiz selection")
+        questions.append(available[item["bank"]][item["id"]])
+        seen.add(item["id"])
+    return {"disclaimer": selection["disclaimer"], "questions": questions}
 
 
 def save_json(path, document):
@@ -27,9 +45,7 @@ def quiz(args):
     if args.review:
         old = json.loads(Path(args.review).read_text(encoding="utf-8-sig"))
         bank = old.get("bank", bank)
-    if bank not in BANK_PATHS:
-        raise ValueError("Unknown quiz bank")
-    document = load_quiz(BANK_PATHS[bank])
+    document = load_bank(bank)
     print(document["disclaimer"])
     questions = document["questions"]
     priority = getattr(args, "priority", None)
@@ -48,9 +64,17 @@ def quiz(args):
         print("선택한 조건에 해당하는 문제가 없습니다.")
         return 0
     responses = []
+    minutes = getattr(args, "minutes", None)
+    if minutes is not None and (not math.isfinite(minutes) or minutes <= 0):
+        raise ValueError("--minutes must be a positive finite number")
+    if minutes is not None:
+        print("자체 연습 예산 %.1f분. 타이머는 입력을 강제 종료하지 않으며 실제 시험 설정이 아닙니다." % minutes)
     started = time.monotonic()
     try:
         for index, question in enumerate(questions, 1):
+            question_started = time.monotonic()
+            if minutes is not None:
+                print("남은 자체 연습 예산 %.1f분" % max(0, minutes - (question_started - started) / 60))
             print("\n[%d/%d] %s %s\n%s" % (index, len(questions), question["id"], question["category"], question["question"]))
             for option_index, option in enumerate(question["options"], 1):
                 print("  %d. %s" % (option_index, option))
@@ -62,7 +86,8 @@ def quiz(args):
                     break
                 print("1~4 중에서 입력하세요.")
             correct = int(selection) - 1 == question["answer"]
-            responses.append({"id": question["id"], "category": question["category"], "selected": int(selection) - 1, "correct": correct})
+            responses.append({"id": question["id"], "category": question["category"], "selected": int(selection) - 1, "correct": correct,
+                              "question_seconds": round(time.monotonic() - question_started, 1)})
             if not args.exam:
                 print("정답" if correct else "오답 (정답 %d)" % (question["answer"] + 1))
                 print(question["explanation"])
@@ -70,14 +95,20 @@ def quiz(args):
         print("\n연습을 종료합니다.")
     moment = datetime.now(KST)
     score = sum(item["correct"] for item in responses)
+    elapsed = round(time.monotonic() - started, 1)
     wrong_by_category = Counter(item["category"] for item in responses if not item["correct"])
     result = {"kind": "original_practice_not_official", "bank": bank, "priority_filter": priority, "time_kst": moment.isoformat(),
-              "elapsed_seconds": round(time.monotonic() - started, 1), "planned_questions": len(questions),
+              "elapsed_seconds": elapsed, "planned_questions": len(questions),
               "answered": len(responses), "correct": score, "seed": args.seed,
               "wrong_by_category": dict(wrong_by_category), "responses": responses}
+    if minutes is not None:
+        result.update({"practice_budget_minutes": minutes, "within_practice_budget": elapsed <= minutes * 60,
+                       "timer_mode": "advisory_no_forced_input_cutoff"})
     output = ROOT / "reports" / ("quiz-" + moment.strftime("%Y%m%d-%H%M%S-%f") + ".json")
     save_json(output, result)
     print("\n결과 %d/%d, 기록: %s" % (score, len(responses), output))
+    if minutes is not None:
+        print("소요 %.1f분 / 자체 예산 %.1f분. %s" % (elapsed / 60, minutes, "예산 내 종료" if result["within_practice_budget"] else "예산 초과"))
     if args.exam:
         by_id = {item["id"]: item for item in questions}
         for response in responses:
@@ -109,6 +140,8 @@ def doctor(args):
     advanced_path = ROOT / "practice" / "advanced-quiz.json"
     if advanced_path.is_file():
         result["advanced_quiz_questions"] = len(load_quiz(advanced_path)["questions"])
+    if SELECTION_PATH.is_file():
+        result["backend_selected_questions"] = len(load_bank("backend")["questions"])
     save_json(ROOT / "reports" / "environment.json", result)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
@@ -123,7 +156,8 @@ def main():
     quiz_parser.add_argument("--count", type=int, default=10)
     quiz_parser.add_argument("--seed", type=int, default=17)
     quiz_parser.add_argument("--category")
-    quiz_parser.add_argument("--bank", choices=["basic", "advanced"], default="basic")
+    quiz_parser.add_argument("--bank", choices=["basic", "advanced", "backend"], default="basic")
+    quiz_parser.add_argument("--minutes", type=float, help="자체 연습 예산과 문항별 시간 기록; 입력 강제 종료 없음")
     quiz_parser.add_argument("--priority", choices=["first_round_core", "extension"])
     quiz_parser.add_argument("--review", help="이전 quiz 기록 JSON의 오답만 연습")
     quiz_parser.add_argument("--exam", action="store_true", help="연습 종료 후 정답 공개")

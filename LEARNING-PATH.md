@@ -2,6 +2,8 @@
 
 2026년 10월 14일 KST 기준. 서류 합격 후 학습·체험·문제 풀이를 처음 시작하는 참가자를 위한 순서다. 지금 필요한 것은 자료를 읽는 순서와 첫 실습을 연결하는 일이다. 상세 응시 메일을 찾는 동안에도 아래 학습은 진행할 수 있다.
 
+**두 초대가 20문항·30분과 16문항·90분이라면 [시간 전략](research/09-first-round-time-strategy.md)을 우선 적용한다.** AI 지식이 적은 백엔드 개발자는 [백엔드 연결 노트](research/10-backend-ai-bridge.md)부터 읽는다. 아래 넓은 지도는 배경 자료로 남기고, 모델 구조·미분·GPU 최적화의 심화는 핵심 개념과 자료 검증이 확인된 뒤 공부한다.
+
 ## 먼저 처리할 응시 안내
 
 운영사 공지에는 상세 안내를 10월 13일 notice@skhynix-hackathon.com에서 발송할 예정이라고 적혀 있다. 공식 공지 화면에서도 같은 내용을 확인했다. 계획된 발송일이 지났으므로 등록 계정·스팸·전체메일에서 안내를 찾고, 없으면 재발송을 문의한다. 검색어와 발송 전 초안은 [공지 확인 보고서](research/07-notice-and-open-questions.md)에 있다. 실제 발송 완료를 확인한 것은 아니다.
@@ -22,6 +24,13 @@
 
 ```powershell
 .\.venv-study\Scripts\python.exe -m practice quiz --count 10
+```
+
+이미 초대를 받았다면 첫 10분은 두 세션·접속 경로를 구별하고 남은 규칙을 확인하는 데 쓴다. 기초 설명 후에는 선정 문제를 시간 제한 없이 풀고, 다음 시도에서 30분 예산을 적용한다.
+
+```powershell
+.\.venv-study\Scripts\python.exe -m practice quiz --bank backend --count 20
+.\.venv-study\Scripts\python.exe -m practice quiz --bank backend --count 20 --exam --minutes 30 --seed 18
 ```
 
 공식 체험 풀이에는 로그인이 필요하다. 시간·감독·모델·질문 제한을 실제 대회 설정으로 옮기지 않는다. 첫 공식 체험을 할 때는 답을 찾는 시간뿐 아니라 자료를 읽고 첨부하고 답안을 입력하는 시간도 확인한다.

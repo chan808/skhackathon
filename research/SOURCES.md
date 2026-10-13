@@ -41,6 +41,7 @@
 | [Overfitting](https://developers.google.com/machine-learning/crash-course/overfitting/overfitting) | Google for Developers | web open 본문 |
 | [Overfitting: L2 regularization](https://developers.google.com/machine-learning/crash-course/overfitting/regularization) | Google for Developers | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [What is Machine Learning?](https://developers.google.com/machine-learning/intro-to-ml/what-is-ml) | Google for Developers | web open 본문 |
+| [Safety in building agents](https://developers.openai.com/api/docs/guides/agent-builder-safety) | OpenAI | 현재 공개 원문을 web open/find로 확인 |
 | [Evaluate agent workflows](https://developers.openai.com/api/docs/guides/agent-evals) | OpenAI | web open 또는 find로 본문 확인 |
 | [Agents](https://developers.openai.com/api/docs/guides/agents) | OpenAI | web open 또는 find로 본문 확인 |
 | [Guardrails and human review](https://developers.openai.com/api/docs/guides/agents/guardrails-approvals) | OpenAI | web open 또는 find로 본문 확인 |
@@ -48,9 +49,13 @@
 | [Orchestration and handoffs](https://developers.openai.com/api/docs/guides/agents/orchestration) | OpenAI | web open 또는 find로 본문 확인 |
 | [Running agents](https://developers.openai.com/api/docs/guides/agents/running-agents) | OpenAI | web open 또는 find로 본문 확인 |
 | [OpenAI Agents SDK](https://developers.openai.com/api/docs/guides/agents/sdk) | OpenAI 공식 문서 | web 공식 본문 |
+| [Conversation state](https://developers.openai.com/api/docs/guides/conversation-state?lang=python) | OpenAI | 현재 공개 원문을 web open/find로 확인 |
+| [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization) | OpenAI | 현재 공개 원문을 web open/find로 확인 |
 | [Vector embeddings](https://developers.openai.com/api/docs/guides/embeddings) | OpenAI | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices) | OpenAI | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Function calling](https://developers.openai.com/api/docs/guides/function-calling) | OpenAI | web open 또는 find로 공식 본문·원 논문 확인 |
+| [Latency optimization](https://developers.openai.com/api/docs/guides/latency-optimization) | OpenAI | 현재 공개 원문을 web open/find로 확인 |
+| [Model selection](https://developers.openai.com/api/docs/guides/model-selection) | OpenAI | 현재 공개 원문을 web open/find로 확인 |
 | [Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering) | OpenAI | web open 또는 find로 공식 본문·원 논문 확인 |
 | [OpenAI Reasoning models](https://developers.openai.com/api/docs/guides/reasoning) | OpenAI 공식 문서 | web 공식 본문 |
 | [Retrieval](https://developers.openai.com/api/docs/guides/retrieval) | OpenAI | web open 또는 find로 공식 본문·원 논문 확인 |
@@ -73,6 +78,7 @@
 | [Optimizing Model Parameters](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html) | PyTorch | Official training and test loops read, including eval and no_grad comments |
 | [Transfer Learning for Computer Vision Tutorial](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html) | PyTorch | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Zeroing out gradients in PyTorch](https://docs.pytorch.org/tutorials/recipes/recipes/zeroing_out_gradients.html) | PyTorch | Official introduction explicitly describing accumulation into .grad read |
+| [Korea Agentic AI Hackathon 후보 모집 주소](https://fastcampus.co.kr/NVIDIA_hackathon) | FastCampus | 검색 캐시 단서와 실제 브라우저 확인 |
 | [LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
 | [LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Towards Total Recall in Industrial Anomaly Detection PatchCore implementation](https://github.com/amazon-science/patchcore-inspection) | PatchCore authors / Amazon Science | Opened official README and repository license |
@@ -107,6 +113,7 @@
 | [Semiconductor 101 SK hynix’s Guide to Who’s Who in the Semiconductor Industry](https://news.skhynix.com/en/semiconductor-101-sk-hynix-guide-to-key-industry-players/) | SK hynix Newsroom | Parsed article body in web results |
 | [SK hynix Ships Samples of 12-Layer Next-Gen HBM4E](https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/) | SK hynix Newsroom | Parsed full press release in web search |
 | [Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html) | pandas developers | web open 또는 find로 공식 본문·원 논문 확인 |
+| [Glossary](https://platform.claude.com/docs/en/about-claude/glossary) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
 | [프로그래머스 AI 역량평가 인사이트 목록](https://programmers.co.kr/ai-assessment/insight) | 그렙 프로그래머스 | web full page |
 | [AI 리터러시 교육 실제 역량 변화로 연결하려면](https://programmers.co.kr/ai-assessment/insight/ai-literacy-training) | 그렙 프로그래머스 | web full page |
 | [프로그래머스는 왜 AI 역량평가를 만들었을까](https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment) | 평가 플랫폼 공식 | web full page |
@@ -140,6 +147,7 @@
 | [Accessing the Test Page](https://user-guide.grepp.co/en/articles/Accessing-the-Test-Page-5dff571a) | 그렙 공식 응시자 가이드 | 공식 서비스 가이드에서 연결된 문서 web full page |
 | [Minimum Requirements](https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a) | 그렙 공식 응시자 가이드 | web full page |
 | [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) | Anthropic | web open 또는 find로 본문 확인 |
+| [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
 | [Hybrid search](https://www.elastic.co/docs/solutions/search/hybrid-search) | Elastic | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Panoptes Virtual Metrology](https://www.gausslabs.ai/vm) | Gauss Labs | Opened official product page |
 | [Probe   AI-Native Talent Assessment Platform · Cofa](https://www.getcofa.com/en/probe) | Cofa / KRAFTON | web open 본문 |

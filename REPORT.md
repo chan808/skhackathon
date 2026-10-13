@@ -38,6 +38,8 @@ FAQ 주요 조건, 채용 혜택의 조건, 플랫폼별 공개 평가 방식, �
 | [에이전트와 도구 비교](research/06-agents-and-ai-tools.md) | 기존 에이전트 사용과 업무 전용 앱 개발의 차이 | 에이전트 이해 |
 | [공지와 상세 안내 확인](research/07-notice-and-open-questions.md) | 합격 공지 메일 검색 문의 초안 사전 테스트 구분 | 오늘 바로 |
 | [AI 기초 커리큘럼](research/08-ai-foundations-curriculum.md) | ML 수학 통계 평가 최적화 DL LLM 메모리 계산 | 개념 학습 시작 |
+| [두 세션 학습 전략](research/09-first-round-time-strategy.md) | 20문항·30분과 16문항·90분 구성에 대응하는 훈련 | 해당 초대를 받은 경우 |
+| [백엔드와 AI 연결](research/10-backend-ai-bridge.md) | 하네스 workflow agent 모델 판단과 평가 | AI 지식이 적은 개발자 |
 | [출처 목록](research/SOURCES.md)과 [통합 등록부](research/sources.json) | URL 발행자 접근일 확인 내용 및 한계 | 원문 확인과 재조사 |
 
 반도체 조사에는 메모리 구조와 제조 데이터의 특징, 문서·장비·SSD 로그를 연결하는 산업 적용 사례, 데이터셋의 출처와 라이선스, 후보 프로젝트의 지표와 누수 위험을 포함한다. SK그룹 사내 대회와 이번 외부 참가 해커톤은 구분했다.

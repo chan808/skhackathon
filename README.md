@@ -2,6 +2,8 @@
 
 2026년 10월 14일 KST 재점검 반영. 서류 합격 후 AI 학습과 체험을 시작하는 웹 개발자를 위한 조사와 로컬 연습 환경이다. 먼저 **[처음 시작하는 학습 순서](LEARNING-PATH.md)**를 읽고 첫 90분을 실행한다. [준비 상태와 에이전트 설명](START-HERE.md)은 판단 근거를 설명한다. 학습 도구의 테스트 통과를 본인의 응시 준비 완료로 해석하지 않는다.
 
+초대가 **20문항·30분과 16문항·90분** 구성이라면 [두 세션의 학습 전략](research/09-first-round-time-strategy.md)과 [백엔드 경험을 AI에 연결하는 노트](research/10-backend-ai-bridge.md)를 먼저 읽는다. 세션 명칭과 외부 도구 허용은 문항 수만으로 확정하지 않는다.
+
 전체 조사 결과는 [REPORT.md](REPORT.md)에서 시작한다. 상세 응시 메일은 공지상 10월 13일 발송 예정이었다. [메일 검색·미확정 조건·재발송 문의 초안](research/07-notice-and-open-questions.md)을 확인한다. 풀이 인터페이스는 [프로그래머스 공식 공개 체험](https://programmers.co.kr/ai-assessment/preview)에서 경험한다. 체험 풀이에는 개인회원 로그인이 필요하며 실전의 감독·시간·허용 도구는 개인 안내를 따른다.
 
 틈틈이 복습할 때는 [3쪽 요약 PDF](output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf) 또는 [요약 원문](SUMMARY.md)을 읽는다.
@@ -13,6 +15,12 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 ```powershell
 .\.venv-study\Scripts\python.exe -m practice doctor
 .\.venv-study\Scripts\python.exe -m practice quiz --count 10
+```
+
+백엔드 개발자에게 먼저 필요한 20문항을 조합한 연습은 다음과 같다. `--minutes`는 예산과 문항별 시간을 기록하며 입력을 강제 종료하지 않는다.
+
+```powershell
+.\.venv-study\Scripts\python.exe -m practice quiz --bank backend --count 20 --exam --minutes 30 --seed 18
 ```
 
 전체 40문항을 끝난 뒤 채점하려면 다음을 사용한다. 자가 점검용 창작 문제이며 실제 출제 범위나 기출문제가 아니다.
@@ -75,9 +83,12 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 | research/06-agents-and-ai-tools.md | 기존 에이전트 사용과 앱 개발 비교 |
 | research/07-notice-and-open-questions.md | 합격 공지 재확인 메일 검색과 미확정 시험 조건 |
 | research/08-ai-foundations-curriculum.md | ML 통계 최적화 DL LLM 기초와 수치 예제 |
+| research/09-first-round-time-strategy.md | 30분 개념 판단과 90분 자료 검증 준비 |
+| research/10-backend-ai-bridge.md | 하네스·workflow·agent·모델과 백엔드 경험 연결 |
 | research/sources.json | 통합 출처 등록부 |
 | practice/quiz.json | 해설과 출처가 있는 40문항 |
 | practice/advanced-quiz.json | 심화 36문항과 핵심·확장 표시 |
+| practice/backend-core-selection.json | 기존 76개에서 최우선20개를 조합하는 선택 목록 |
 | practice/missions.md | 데이터 문서 코드 검증 미션 |
 | practice/readiness-cases.json | 낯선 서술형 과제 3개와 기준 풀이 |
 | templates/agent-task.md | 기존 에이전트로 수행하는 목표와 출력 계약 |

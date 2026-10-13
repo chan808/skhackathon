@@ -21,9 +21,10 @@ TITLE = "SK하이닉스 AI 해커톤 복습 요약"
 DATE = "2026년 10월 14일 기준"
 PAGES = [
     ("1. AI 활용과 에이전트", [
-        ("응시 안내부터 확보", [
+        ("응시 구성과 시간 전략", [
             "1차 10월 17~18일 중 하루 / 프로그래머스 / AI 기초 이해와 활용 역량. 2차 10월 31일~11월 1일, 본선 11월 11일.",
-            "상세 메일은 10월 13일 notice@skhynix-hackathon.com 발송 예정으로 공지됐다. 등록 계정·전체메일·스팸을 검색하고 없으면 운영사에 재발송 문의한다.",
+            "초대가20문항30분·16문항90분이면 평균90초·5분37.5초다. 첫 세션은 빠른 판단, 둘째는 자료 판독과 검증을 함께 연습한다.",
+            "30분 연습은 첫 풀이22분·검토5분·저장3분으로 배분한다. 재방문·답 변경 가능 여부는 실제 화면 안내에서 확인한다.",
             "개인 시각·시험 길이·외부 AI/검색/코드/메모·감독·최종 제출은 상세 안내로 확인한다. 이 요약은 사전 학습용이다."
         ]),
         ("문제를 푸는 다섯 단계", [
@@ -109,14 +110,14 @@ PAGES = [
             "프로젝트는 수율/이상 탐지·장비 로그·현행 문서 검색·영상 검사·SSD 로그 등이 후보다. 실제 대회 주제는 별도 안내를 따른다.",
             "먼저 사용자 결정과 KPI를 정의하고 단순 기준선을 만든다. 합성 결과를 실제 생산 개선 수치로 발표하지 않는다."
         ]),
-        ("오늘 시작할 90분", [
-            "10분: 상세 메일 검색과 응시 점검표. 20분: ML 문제·데이터·평가 개념. 20분: 기초 퀴즈10문항.",
-            "30분: 프로그래머스 공식 체험. 10분: 오답 이유와 다음에 확인할 두 가지를 기록한다.",
-            "다음 단계: LLM/RAG/도구 구분 → 심화 핵심12문항 → 서술형 첫 풀이와 자가 평가.",
+        ("남은 4일의 학습", [
+            "첫날: 모델·하네스·agent 구분과 핵심 개념, 선정20문항, 공식 체험. 처음에는 시간 없이 이유를 설명한다.",
+            "둘째 날: 30분 풀이와 RC01·RC02. 셋째 날: RC03·심화 핵심·오답 설명. 전날: 30분과90분 훈련·환경 확인.",
+            "90분 통합 연습: 전체 읽기5분·RC01 25분·RC02 20분·RC03 30분·자기 검토10분. 기존13개 작업이며 실제16문항 재현이 아니다.",
             "총점보다 보기 없는 설명·독립 계산·그럴듯한 오답 배제·변형 문제 적용을 확인한다. 첫 답과 수정한 답을 구별한다."
         ]),
         ("폴더에서 실행할 명령", [
-            "./.venv-study/Scripts/python.exe -m practice quiz --count 10",
+            "./.venv-study/Scripts/python.exe -m practice quiz --bank backend --count 20 --exam --minutes 30",
             "./.venv-study/Scripts/python.exe -m practice quiz --bank advanced --count 12 --exam",
             "./.venv-study/Scripts/python.exe -m practice.readiness start --case RC01",
             "기초40·심화36·서술형3은 자체 연습이다. /prompt는 질문을 기록하며 AI를 호출하지 않는다. 공식 체험 풀이에는 로그인이 필요하다.",
@@ -156,6 +157,7 @@ def main():
         "subtitle": ParagraphStyle("subtitle", fontName="KR", fontSize=9, leading=13, textColor=colors.HexColor("#536574"), wordWrap="CJK"),
         "section": ParagraphStyle("section", fontName="KR-Bold", fontSize=11, leading=15, textColor=colors.HexColor("#173b54"), spaceBefore=9, spaceAfter=4, wordWrap="CJK"),
         "body": ParagraphStyle("body", fontName="KR", fontSize=10.2, leading=14.8, spaceAfter=3, alignment=TA_LEFT, wordWrap="CJK"),
+        "command": ParagraphStyle("command", fontName="Courier", fontSize=8, leading=12, spaceAfter=5),
         "link": ParagraphStyle("link", fontName="KR", fontSize=8, leading=11, textColor=colors.HexColor("#365d77"), wordWrap="CJK")
     }
     story, md = [], [f"# {TITLE}", "", DATE, "", "사전 학습용이다. 실제 시험 규칙은 개인 안내를 따른다.", ""]
@@ -168,7 +170,7 @@ def main():
             story.append(Paragraph(escape(heading), styles["section"]))
             md.extend([f"### {heading}", ""])
             for item in items:
-                story.append(Paragraph(escape(item), styles["body"]))
+                story.append(Paragraph(escape(item), styles["command"] if item.startswith("./.venv-study/") else styles["body"]))
                 md.append(f"- {item}")
             md.append("")
         if index == len(PAGES) - 1:

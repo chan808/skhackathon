@@ -1,6 +1,7 @@
 .venv/
 .venv-study/
 .cache/
+.codex-remote-attachments/
 __pycache__/
 *.py[cod]
 .env

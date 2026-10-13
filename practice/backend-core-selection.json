@@ -1,0 +1,26 @@
+{
+  "disclaimer": "백엔드 개발자의 AI 기초 점검을 위한 자체 선정 20문항입니다. 공식 시험 문항·유형·배점·난이도를 재현한 것이 아닙니다.",
+  "purpose": "Requirement, evidence, LLM/RAG, tools and evaluation fundamentals before broader study",
+  "selection": [
+    {"bank": "basic", "id": "Q09"},
+    {"bank": "basic", "id": "Q11"},
+    {"bank": "basic", "id": "Q12"},
+    {"bank": "basic", "id": "Q17"},
+    {"bank": "basic", "id": "Q19"},
+    {"bank": "basic", "id": "Q40"},
+    {"bank": "basic", "id": "Q01"},
+    {"bank": "basic", "id": "Q02"},
+    {"bank": "basic", "id": "Q06"},
+    {"bank": "basic", "id": "Q07"},
+    {"bank": "basic", "id": "Q13"},
+    {"bank": "basic", "id": "Q16"},
+    {"bank": "basic", "id": "Q21"},
+    {"bank": "basic", "id": "Q25"},
+    {"bank": "basic", "id": "Q26"},
+    {"bank": "basic", "id": "Q35"},
+    {"bank": "basic", "id": "Q27"},
+    {"bank": "advanced", "id": "AQ01"},
+    {"bank": "advanced", "id": "AQ22"},
+    {"bank": "advanced", "id": "AQ26"}
+  ]
+}
