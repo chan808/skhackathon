@@ -1,0 +1,42 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "선택적 에이전트 실행 구조 예제와 Windows 읽기 전용 사전 점검",
+  "records": [
+    {
+      "title": "OpenAI Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "publisher": "OpenAI 공식 문서",
+      "read_method": "web 공식 본문",
+      "status": "read",
+      "supports": ["모델 함수 요청과 앱 함수 실행의 분리", "strict 함수 인수 스키마", "function_call_output과 상태 재전달"],
+      "caveats": ["예제의 실제 API 요청은 실행하지 않음", "모델별 도구·가격·가용성은 사용 시 별도 확인"]
+    },
+    {
+      "title": "OpenAI Reasoning models",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning",
+      "publisher": "OpenAI 공식 문서",
+      "read_method": "web 공식 본문",
+      "status": "read",
+      "supports": ["함수 호출 사이의 reasoning output 보존", "stateless 실행과 encrypted reasoning 상태"],
+      "caveats": ["라이브 경로는 계정·모델·네트워크에서 미검증"]
+    },
+    {
+      "title": "OpenAI Agents SDK",
+      "url": "https://developers.openai.com/api/docs/guides/agents/sdk",
+      "publisher": "OpenAI 공식 문서",
+      "read_method": "web 공식 본문",
+      "status": "read",
+      "supports": ["에이전트 실행 계층을 직접 모두 구현할 필요가 없음", "도구와 실행 기록의 역할"],
+      "caveats": ["이 폴더는 SDK를 설치하거나 SDK 구현을 제공하지 않음"]
+    },
+    {
+      "title": "GetPhysicallyInstalledSystemMemory",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getphysicallyinstalledsystemmemory",
+      "publisher": "Microsoft 공식 문서",
+      "read_method": "web 공식 본문",
+      "status": "read",
+      "supports": ["Windows 물리 메모리 정보 읽기 함수와 반환 조건"],
+      "caveats": ["현재 샌드박스의 호출은 실패하여 메모리 용량을 확정하지 못함"]
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "AI 기초 수학 고전 ML 딥러닝 LLM 및 응용의 학습 커리큘럼",
+  "date_policy": "본문에서 게시 날짜가 확인되지 않은 문서는 published null로 두었다. 문서의 main/stable·접근 날짜와 게시 날짜는 구분한다.",
+  "examples_policy": "회귀 업데이트 혼동행렬 CNN LoRA 가중치 및 KV 수치는 명시한 가정으로 독립 계산한 자체 학습 예제이다. 공식 기출이나 실제 모델 측정 결과가 아니다.",
+  "sources": [
+    {
+      "id": "foundation_ml_types",
+      "title": "What is Machine Learning?",
+      "url": "https://developers.google.com/machine-learning/intro-to-ml/what-is-ml",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "회귀 분류 비지도 강화 생성 구분"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_transformer_training",
+      "title": "How do Transformers work?",
+      "url": "https://huggingface.co/learn/llm-course/en/chapter1/4",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "자기지도 언어모델 학습",
+        "사전학습과 추가 학습"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_logistic",
+      "title": "Logistic regression",
+      "url": "https://developers.google.com/machine-learning/crash-course/logistic-regression",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "sigmoid 분류 확률과 log loss"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_tree",
+      "title": "Decision Trees",
+      "url": "https://scikit-learn.org/stable/modules/tree.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "조건 분기",
+        "깊이와 과적합",
+        "전처리 차이"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_ensemble",
+      "title": "Ensembles: Gradient boosting, random forests, bagging, voting, stacking",
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "random forest",
+        "boosting과 bagging"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_cluster",
+      "title": "Clustering",
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "K-means와 군집"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_pca",
+      "title": "Decomposing signals in components",
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "PCA와 분산의 차원 축소"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_loss",
+      "title": "Linear regression: Loss",
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/loss",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "MSE와 손실"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_gradient",
+      "title": "Linear regression: Gradient descent",
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "기울기와 파라미터 업데이트"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_lr",
+      "title": "Linear regression: Hyperparameters",
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/hyperparameters",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "학습률",
+        "batch epoch hyperparameter"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_split",
+      "title": "Datasets: Dividing the original dataset",
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "train validation test 분리"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_preprocess",
+      "title": "Preprocessing data",
+      "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "표준화와 범주형 인코딩"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_leakage",
+      "title": "Common pitfalls and recommended practices",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "전처리 fit과 test 누설"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_metrics",
+      "title": "Classification: Accuracy, recall, precision, and related metrics",
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "혼동행렬",
+        "precision recall accuracy F1"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_roc",
+      "title": "Classification: ROC and AUC",
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "임계값별 ROC와 AUC"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_calibration",
+      "title": "Probability calibration",
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "예측 확률과 실제 빈도",
+        "보정 데이터"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_bias_variance",
+      "title": "Single estimator versus bagging: bias-variance decomposition",
+      "url": "https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "bias variance noise",
+        "학습 자료 변화에 따른 예측 변동"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_l2",
+      "title": "Overfitting: L2 regularization",
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/regularization",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "가중치 penalty와 L2"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_dropout",
+      "title": "Dropout",
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.Dropout.html",
+      "publisher": "PyTorch",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "nn.Dropout의 train eval 동작"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_early_stopping",
+      "title": "MLPClassifier",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html",
+      "publisher": "scikit-learn",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "validation 기반 early_stopping"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_nn",
+      "title": "Neural networks",
+      "url": "https://developers.google.com/machine-learning/crash-course/neural-networks",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "층과 비선형 활성화"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_backprop",
+      "title": "Neural Networks: Training using backpropagation",
+      "url": "https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "역전파 기울기 계산"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_adam",
+      "title": "Adam",
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.optim.Adam.html",
+      "publisher": "PyTorch",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "learning rate와 모멘트 기반 파라미터 업데이트"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_conv",
+      "title": "Conv2d",
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.Conv2d.html",
+      "publisher": "PyTorch",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "NCHW 입출력",
+        "kernel stride padding dilation groups"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_transfer",
+      "title": "Transfer Learning for Computer Vision Tutorial",
+      "url": "https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html",
+      "publisher": "PyTorch",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "freeze",
+        "마지막 층 학습과 전체 추가 학습"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_sdpa",
+      "title": "scaled_dot_product_attention",
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "publisher": "PyTorch",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "Q K V",
+        "scaling softmax causal mask"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다.",
+        "일반 nn.Dropout 모듈과 functional attention의 dropout_p 동작을 동일시하지 않는다."
+      ]
+    },
+    {
+      "id": "foundation_lora",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "publisher": "Hu et al.; arXiv",
+      "published": "2021-06-17",
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "기반 가중치 고정과 저랭크 학습"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ],
+      "last_revised": "2021-10-16"
+    },
+    {
+      "id": "foundation_moe",
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "url": "https://arxiv.org/abs/2101.03961",
+      "publisher": "Fedus et al.; arXiv",
+      "published": "2021-01-11",
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "expert 선택과 희소 활성 파라미터"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+      ],
+      "last_revised": "2022-06-16"
+    },
+    {
+      "id": "foundation_quantization",
+      "title": "Quantization Overview",
+      "url": "https://huggingface.co/docs/transformers/main/en/quantization/overview",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "낮은 정밀도 저장과 품질 메모리 절충"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_kv_cache",
+      "title": "Cache strategies",
+      "url": "https://huggingface.co/docs/transformers/main/en/kv_cache",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "KV cache 용량",
+        "offload quantized cache 절충"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_paged_attention",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "url": "https://arxiv.org/abs/2309.06180",
+      "publisher": "Kwon et al.; arXiv",
+      "published": "2023-09-12",
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "serving의 KV 메모리 관리와 처리량"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "본문의 수치 계산은 독립적인 단순화 예제이며 특정 실제 모델의 메모리 측정값이 아니다."
+      ]
+    },
+    {
+      "id": "foundation_retrieval",
+      "title": "Retrieval",
+      "url": "https://developers.openai.com/api/docs/guides/retrieval",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "검색 속성 필터",
+        "문서 metadata"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_hybrid",
+      "title": "Hybrid search",
+      "url": "https://www.elastic.co/docs/solutions/search/hybrid-search",
+      "publisher": "Elastic",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "lexical semantic 결합"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "특정 검색 서비스 설치를 권하지 않는다. 작은 합성 자료로 검색 오류를 비교할 수 있다."
+      ]
+    },
+    {
+      "id": "foundation_rerank",
+      "title": "Retrieve & Re-Rank",
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "publisher": "Sentence Transformers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "후보 검색과 cross encoder 재정렬"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "특정 검색 서비스 설치를 권하지 않는다. 작은 합성 자료로 검색 오류를 비교할 수 있다."
+      ]
+    },
+    {
+      "id": "foundation_structured",
+      "title": "Structured model outputs",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "출력 형식과 의미 검증"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_function",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "모델 도구 요청과 실제 코드 실행"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+      ]
+    },
+    {
+      "id": "foundation_exercises",
+      "title": "Exercises",
+      "url": "https://developers.google.com/machine-learning/crash-course/exercises",
+      "publisher": "Google for Developers",
+      "published": null,
+      "accessed_kst": "2026-10-14",
+      "authority": "기술 1차 출처",
+      "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+      "supports": [
+        "공개 기초 연습의 학습 경로"
+      ],
+      "caveats": [
+        "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+        "공개 문서 학습과 실습 환경의 계정·자원 한도는 구분한다."
+      ]
+    }
+  ]
+}

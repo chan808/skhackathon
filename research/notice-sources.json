@@ -1,0 +1,196 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "공식 서류 합격 공지의 안내와 상세 메일 미수신 대응",
+  "records": [
+    {
+      "id": "notice_official_account_page",
+      "title": "SK하이닉스 AI 해커톤 2026 서류 전형 합격 및 1차 예선 안내",
+      "url": "https://skhynix-hackathon.com/my/notice",
+      "notice_date": "2026-10-10",
+      "publisher": "공식 대회 운영 사이트",
+      "read_method": "기존 계정 세션의 동일 대회 공지 화면 브라우저 확인",
+      "access": "account_notice_existing_session",
+      "status": "read",
+      "supports": [
+        "합격 안내",
+        "1차 일정·플랫폼·평가 목적",
+        "상세 안내 발송 예정 10월 13일",
+        "공지에 표시된 notice 발신 주소와 스팸 확인 안내"
+      ],
+      "caveats": [
+        "익명 web 도구에서는 접근 불가",
+        "새 로그인·대회 신청·시험 시작은 수행하지 않음",
+        "공지 본문은 실제 메일 발송 완료의 증거가 아님",
+        "개인별 시작시각·문항수·도구허용표가 보이지 않음",
+        "참가자 이름과 개인 토큰을 저장하지 않음"
+      ]
+    },
+    {
+      "id": "notice_event_faq_recheck",
+      "title": "공식 대회 예선 FAQ와 문의 안내",
+      "url": "https://skhynix-hackathon.com/ai-2026",
+      "publisher": "공식 대회 운영 사이트",
+      "read_method": "web 정적 본문과 10월 14일 Edge의 동적 예선 FAQ 재확인",
+      "status": "read",
+      "supports": [
+        "공개 예선 평가 목적",
+        "구체적인 설정표 미확인",
+        "support 문의 주소"
+      ],
+      "caveats": [
+        "읽은 페이지의 범위에 관한 확인이며 모든 새 공지의 부존재를 주장하지 않음"
+      ]
+    },
+    {
+      "id": "notice_programmers_service_guide",
+      "title": "프로그래머스 서비스 가이드",
+      "url": "https://www.programmers.co.kr/pages/service-guide",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "web full page 및 공식 응시자 도움말 링크 추적",
+      "status": "read",
+      "supports": [
+        "응시자 가이드의 공식 연결",
+        "일반 고객센터 번호·운영 시간"
+      ],
+      "caveats": [
+        "SK하이닉스 대회 배정·메일 발송 창구와 동일하다고 주장하지 않음"
+      ]
+    },
+    {
+      "id": "notice_accessing_test_guide",
+      "title": "Accessing the Test Page",
+      "url": "https://user-guide.grepp.co/en/articles/Accessing-the-Test-Page-5dff571a",
+      "publisher": "그렙 공식 응시자 가이드",
+      "read_method": "공식 서비스 가이드에서 연결된 문서 web full page",
+      "status": "read",
+      "supports": [
+        "등록 계정·스팸·프로모션 확인",
+        "최신 초대 메일 사용",
+        "미수신 시 주최 측 재발송 요청",
+        "일반 플랫폼 초대 메일 발신 주소",
+        "시험마다 접근·기기·유형이 다름"
+      ],
+      "caveats": [
+        "일반 플랫폼 초대 발신 주소를 이번 대회 실제 주소로 확정하지 않음",
+        "Monito+ 설치 등 조건은 해당 시험 안내가 요구할 때 적용",
+        "안내문의 일반 접속 코드를 추정하거나 실제 시험에 진입하지 않음"
+      ]
+    },
+    {
+      "id": "notice_demo_test_guide",
+      "title": "사전 테스트가 무엇인가요",
+      "url": "https://user-faq.grepp.co/ko/articles/%EC%82%AC%EC%A0%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-ca2e42b8",
+      "publisher": "그렙 공식 개인문의 도움말",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": [
+        "환경·기기·네트워크 확인용 사전 테스트",
+        "필수 시험에서는 체험 종료 버튼으로 완료"
+      ],
+      "caveats": [
+        "SK하이닉스 사전 테스트 제공·필수 여부는 미확인",
+        "공개 AI 샘플 체험과 다른 기능"
+      ]
+    },
+    {
+      "id": "notice_test_support_category",
+      "title": "온라인 테스트 도움말",
+      "url": "https://user-faq.grepp.co/ko/categories/%EC%98%A8%EB%9D%BC%EC%9D%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-4aabea7b",
+      "publisher": "그렙 공식 개인문의 도움말",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": [
+        "시험에 따라 장애 문의 채널 운영 여부가 다름",
+        "접속·기기·제출 방식은 유형과 주최 규정에 따라 다름"
+      ],
+      "caveats": [
+        "자동 제출에 대한 일반 시험 설명을 이번 AI 평가에 그대로 적용하지 않음"
+      ]
+    },
+    {
+      "id": "notice_minimum_requirements",
+      "title": "Minimum Requirements",
+      "url": "https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a",
+      "publisher": "그렙 공식 응시자 가이드",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": [
+        "일반 PC·브라우저·네트워크 사양 참고"
+      ],
+      "caveats": [
+        "이번 대회의 확정 환경표가 아님",
+        "영문 도입부의 Windows only 표현과 표의 macOS 지원이 함께 있어 단일 문장만으로 전체 지원 범위를 단정하지 않음",
+        "현재 사용자 PC의 카메라·네트워크를 테스트하지 않음"
+      ]
+    },
+    {
+      "id": "notice_ai_preview_recheck",
+      "title": "프로그래머스 공개 AI 응시자 체험과 FAQ",
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "10월 14일 Edge 공개 목록과 다섯 FAQ의 브라우저 재확인",
+      "status": "read",
+      "supports": [
+        "체험과 실전 시간·감독 차이",
+        "PC 전용",
+        "AI 대화 제한과 초기화 불가",
+        "결과 리포트 미제공"
+      ],
+      "caveats": [
+        "로그인·샘플 풀이·실제 시험을 수행하지 않음",
+        "앞선 readiness-sources.json의 동적 재확인 미완료 상태를 이 확인으로 보완",
+        "체험 제한은 SK 실전 설정이 아님"
+      ]
+    },
+    {
+      "id": "notice_assessment_explainer_reference",
+      "title": "프로그래머스는 왜 AI 역량평가를 만들었을까",
+      "url": "https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment",
+      "published": "2026-10-07",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "이전 조사에서 원문 확인한 평가 목적 참조",
+      "status": "reference_previous_read",
+      "supports": [
+        "개념과 AI 활용·검증을 함께 준비하는 방향"
+      ],
+      "caveats": [
+        "일반 플랫폼 설명을 특정 대회 점수 공식으로 사용하지 않음"
+      ]
+    }
+  ],
+  "search_scope": {
+    "official_domains": [
+      "skhynix-hackathon.com",
+      "talent.skhynix.com",
+      "news.skhynix.co.kr",
+      "programmers.co.kr",
+      "user-guide.grepp.co",
+      "user-faq.grepp.co",
+      "likelion.net"
+    ],
+    "topics": [
+      "공지 발신 주소",
+      "10월 13일 상세 안내",
+      "1차 예선",
+      "초대 메일 미수신",
+      "일반 응시 도움말"
+    ],
+    "external_leads_not_rules": [
+      {
+        "url": "https://community.linkareer.com/recruit_study/6609754",
+        "kind": "참가자 스터디 모집글",
+        "handling": "문항 수 주장에 대한 공식 근거가 없어 실전 규칙으로 채택하지 않음"
+      },
+      {
+        "url": "https://aviss.kr/blog/view.php?seq=165",
+        "kind": "외부 대비 글",
+        "handling": "공식 문서 확인의 단서만 활용하고 자체 해석·개인 후기·배점 추정을 채택하지 않음"
+      }
+    ],
+    "limits": [
+      "공개 검색은 개인별 시험 메일을 대신하지 못함",
+      "메일함과 실제 시험에 접근하지 않음",
+      "문의 초안만 작성하고 발송하지 않음"
+    ]
+  }
+}

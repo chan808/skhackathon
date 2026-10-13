@@ -1,0 +1,4022 @@
+{
+  "compiled_on_kst": "2026-10-14",
+  "source_checks": "Individual check dates and access status are recorded per source.",
+  "unique_url_count": 152,
+  "count_note": "URL 개수는 독립 근거 개수와 다르다. 동일 보도자료·미러·서로 다른 언어판·접근 제한은 records의 caveats를 따른다.",
+  "local_checks": [
+    {
+      "register": "readiness-sources.json",
+      "id": "ready_local_audit",
+      "title": "10월 13일 로컬 준비 도구 검증과 퀴즈 직접 검토",
+      "local_paths": [
+        "reports/verification.json",
+        "practice/quiz.json",
+        "practice/core.py",
+        "practice/__main__.py",
+        "practice/missions.md"
+      ],
+      "publisher": "이 작업 폴더의 자체 제작 학습 자료",
+      "read_method": "파일·검증 기록 읽기 및 보고서 폴더 목록 확인",
+      "status": "read",
+      "supports": [
+        "40문항 입문 객관식의 한계",
+        "9개 테스트는 도구 동작 검증",
+        "응시자별 완료 기록 미확인"
+      ],
+      "caveats": [
+        "준비도 점검은 자체 학습 평가",
+        "합격 보장이나 시험 배점이 아님",
+        "이번 턴에 추가되는 자료는 별도로 검증해야 함"
+      ]
+    },
+    {
+      "register": "advanced-quiz-sources.json",
+      "id": "AQS30",
+      "title": "Original synthetic token-cost arithmetic",
+      "publisher": "This workspace original practice",
+      "publication_date": "2026-10-14",
+      "accessed_date": "2026-10-14",
+      "verification": "Input/output charges recomputed independently with Python decimal arithmetic",
+      "question_ids": [
+        "AQ27"
+      ],
+      "supports": [
+        "Invented input price 2 USD per million tokens and output price 8 USD per million tokens yield 0.018 USD for the specified requests"
+      ],
+      "caveats": "No external URL because no actual vendor price is asserted."
+    },
+    {
+      "register": "advanced-quiz-sources.json",
+      "id": "AQS31",
+      "title": "Original synthetic goal-versus-experiment evidence",
+      "publisher": "This workspace original practice",
+      "publication_date": "2026-10-14",
+      "accessed_date": "2026-10-14",
+      "verification": "The two invented source statements are fully included in AQ31 and logically compared",
+      "question_ids": [
+        "AQ31"
+      ],
+      "supports": [
+        "30% planned target and 12% limited experiment are different claims and cannot be averaged as one demonstrated outcome"
+      ],
+      "caveats": "No external URL because these statements are invented, not quotations of a real company's announcement."
+    }
+  ],
+  "sources": [
+    {
+      "url": "http://mirlab.org/dataSet/public/",
+      "title": "MIR Lab public datasets",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC20",
+          "title": "MIR Lab public datasets",
+          "publisher": "MIR Lab",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "original dataset distribution location",
+          "verification": "Direct HTTP and HTTPS fetches failed or timed out",
+          "key_claims": [],
+          "license": "Unverified",
+          "download_status": "Not validated or downloaded",
+          "limits": "Do not infer original WM-811K license from Kaggle or third-party repository license labels. Use self-generated synthetic wafer maps until original rights are checked."
+        }
+      ]
+    },
+    {
+      "url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "title": "SECOM",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC13",
+          "title": "SECOM",
+          "publisher": "UCI Machine Learning Repository; Michael McCann and Adrian Johnston",
+          "publication_date": "2008-11-18",
+          "date_type": "dataset donation date",
+          "accessed_date": "2026-10-13",
+          "source_type": "official dataset record",
+          "verification": "Official record full text parsed in web search",
+          "key_claims": [
+            "Semiconductor manufacturing process data with 1567 examples and 104 failures.",
+            "Missing values and label timestamps are present.",
+            "Official website metadata lists 591 features; actual raw file width must be inspected."
+          ],
+          "license": "CC BY 4.0",
+          "doi": "10.24432/C54305",
+          "download_status": "Official page provides download; binary not downloaded in this research",
+          "limits": "Anonymized sensor names do not identify actual tools or physical quantities. Not SK hynix-specific data. Raw feature-count ambiguity should be resolved from downloaded schema rather than assumed."
+        }
+      ]
+    },
+    {
+      "url": "https://archive.ics.uci.edu/dataset/447",
+      "title": "Condition monitoring of hydraulic systems",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC14",
+          "title": "Condition monitoring of hydraulic systems",
+          "publisher": "UCI Machine Learning Repository; Nikolai Helwig, Eliseo Pignanelli and Andreas Schütze",
+          "publication_date": "2018-04-25",
+          "date_type": "dataset donation date; dataset citation year is 2015",
+          "accessed_date": "2026-10-13",
+          "source_type": "official dataset record",
+          "verification": "Official record full text parsed in web search",
+          "key_claims": [
+            "2205 experimentally acquired cycles of 60 seconds from a hydraulic test rig.",
+            "Pressures, flows and temperatures have different sampling rates.",
+            "Component condition labels and stability flag are provided."
+          ],
+          "license": "CC BY 4.0",
+          "doi": "10.24432/C5CW21",
+          "download_status": "Official download listed; binary not downloaded in this research",
+          "limits": "Experimental hydraulic system, not semiconductor fab equipment or a natural long-term run-to-failure series."
+        }
+      ]
+    },
+    {
+      "url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "title": "AI4I 2020 Predictive Maintenance Dataset",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC15",
+          "title": "AI4I 2020 Predictive Maintenance Dataset",
+          "publisher": "UCI Machine Learning Repository",
+          "publication_date": "2020-08-29",
+          "date_type": "dataset donation date",
+          "accessed_date": "2026-10-13",
+          "source_type": "official dataset record",
+          "verification": "Opened full official record including variables table and generation rules",
+          "key_claims": [
+            "Synthetic dataset with 10000 rows, six input features, IDs and failure targets.",
+            "Temperature units are K, speed rpm, torque Nm and tool wear minutes.",
+            "Failure-mode columns are targets and can leak Machine failure if used as predictors."
+          ],
+          "license": "CC BY 4.0",
+          "doi": "10.24432/C5HS5C",
+          "download_status": "Official approximately 510 KB CSV download listed; binary not downloaded in this research",
+          "limits": "Does not establish performance on real semiconductor assets or directly supply remaining useful life trajectories. Leakage diagnosis is a preparation recommendation based on the target schema."
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/1910.13413",
+      "title": "Feature relevance quantification in explainable AI A causal problem",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC31",
+          "title": "Feature relevance quantification in explainable AI A causal problem",
+          "publisher": "Authors Dominik Janzing, Lenon Minorics and Patrick Blöbaum via arXiv",
+          "publication_date": "2019-10-29",
+          "accessed_date": "2026-10-13",
+          "source_type": "original research paper",
+          "verification": "Original abstract and metadata returned by web search",
+          "key_claims": [
+            "Feature-relevance methods require distinguishing observational from interventional distributions."
+          ],
+          "limits": "Used to support caution about feature explanations versus intervention; not a blanket rejection of SHAP."
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2005.11401",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "publisher": "Lewis et al.; arXiv",
+          "published": "2020-05-22",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "모델 파라미터와 외부 검색 메모리 결합",
+            "RAG와 모델 자체 지식의 구분"
+          ],
+          "caveats": [
+            "2021-04-12 v4. 원 연구의 학습 구조와 일반적인 현대 RAG 구현의 세부 차이를 구분한다."
+          ]
+        },
+        {
+          "register": "agent-sources.json",
+          "id": "agents_rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "publisher": "Lewis et al.; arXiv",
+          "published": "2020-05-22",
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "검색 메모리와 생성 결합"
+          ],
+          "caveats": [
+            "v4 수정일 2021-04-12.",
+            "원 논문 학습 구조와 오늘날 일반적인 문맥 기반 RAG 구현의 세부 차이를 인정한다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS19",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "publisher": "Patrick Lewis and collaborators via arXiv / NeurIPS 2020",
+          "publication_date": "2020-05-22",
+          "last_revised": "2021-04-12",
+          "accessed_date": "2026-10-14",
+          "verification": "Original paper abstract and publication record opened",
+          "question_ids": [
+            "AQ18",
+            "AQ19",
+            "AQ24"
+          ],
+          "supports": [
+            "RAG combines parametric generation with retrieved nonparametric passages"
+          ],
+          "caveats": "Scenario remedies for omitted exceptions, claim grounding and leaked answer keys are preparation applications, not claims of guarantees in the original paper."
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2101.03961",
+      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_moe",
+          "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+          "publisher": "Fedus et al.; arXiv",
+          "published": "2021-01-11",
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "expert 선택과 희소 활성 파라미터"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ],
+          "last_revised": "2022-06-16"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2106.09685",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_lora",
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "publisher": "Hu et al.; arXiv",
+          "published": "2021-06-17",
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "기반 가중치 고정과 저랭크 학습"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ],
+          "last_revised": "2021-10-16"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2210.03629",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_react",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "publisher": "Yao et al.; arXiv",
+          "published": "2022-10-06",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "reasoning과 action의 상호작용",
+            "관찰에 따른 접근 조정"
+          ],
+          "caveats": [
+            "2023-03-10 v3. 다중 에이전트가 모든 과제에 우월하다는 결론의 근거가 아니다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.03172",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_lost",
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "publisher": "Liu et al.; arXiv",
+          "published": "2023-07-06",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "긴 입력의 정보 위치에 따른 성능 저하 가능성"
+          ],
+          "caveats": [
+            "2023-11-20 v3. 연구 결과를 2026년 모든 모델의 동일 실패율로 일반화하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06180",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC33",
+          "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+          "publisher": "Authors Woosuk Kwon and collaborators via arXiv; SOSP 2023",
+          "publication_date": "2023-09-12",
+          "accessed_date": "2026-10-13",
+          "source_type": "original research paper",
+          "verification": "Opened original abstract and metadata",
+          "key_claims": [
+            "KV cache fragmentation and redundant duplication can limit batching.",
+            "PagedAttention and vLLM address KV memory waste and sharing."
+          ],
+          "limits": "Historic throughput claims apply to paper evaluation conditions, not guaranteed current speedup or local setup performance."
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_paged_attention",
+          "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+          "publisher": "Kwon et al.; arXiv",
+          "published": "2023-09-12",
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "serving의 KV 메모리 관리와 처리량"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "본문의 수치 계산은 독립적인 단순화 예제이며 특정 실제 모델의 메모리 측정값이 아니다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7",
+      "title": "Attention Is All You Need",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_attention",
+          "title": "Attention Is All You Need",
+          "publisher": "Vaswani et al.; arXiv",
+          "published": "2017-06-12",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "Q/K/V scaled dot-product attention",
+            "decoder의 미래 위치 masking",
+            "embedding 및 softmax"
+          ],
+          "caveats": [
+            "읽은 HTML은 v7, 2023-08-02 수정. 원 Transformer 설명이며 모든 현대 구조에 동일한 세부 사항을 적용하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "title": "How Claude Code works",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_claude_code_loop",
+          "title": "How Claude Code works",
+          "publisher": "Anthropic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "맥락 수집·행동·검증의 agentic loop",
+            "built-in 도구와 harness",
+            "사용자 개입"
+          ],
+          "caveats": [
+            "읽은 페이지의 제품 기능과 사용자의 계정 활성 기능을 동일시하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/mcp",
+      "title": "Connect Claude Code to tools via MCP",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_claude_mcp",
+          "title": "Connect Claude Code to tools via MCP",
+          "publisher": "Anthropic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "MCP로 도구·DB·API 연결",
+            "외부 연결이 필요한 경우의 역할"
+          ],
+          "caveats": [
+            "연결·OAuth·패키지 설치는 실행하지 않았다.",
+            "공식 예시는 가능한 기능의 설명이며 이 사용자의 연결 권한을 입증하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/permissions",
+      "title": "Configure permissions",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_claude_permissions",
+          "title": "Configure permissions",
+          "publisher": "Anthropic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "도구 실행의 허용·거부·승인 설정"
+          ],
+          "caveats": [
+            "설치 상태와 실제 선택된 권한 mode를 구분한다.",
+            "권한을 변경하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/skills",
+      "title": "Extend Claude with skills",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_claude_skills",
+          "title": "Extend Claude with skills",
+          "publisher": "Anthropic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "SKILL.md 기반 재사용 지침",
+            "보조 자료와 스크립트"
+          ],
+          "caveats": [
+            "Claude Code-specific 속성·문법을 다른 클라이언트와 무조건 호환된다고 설명하지 않는다.",
+            "새 skill 파일이나 계정 업로드를 만들지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "title": "Create custom subagents",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_claude_subagents",
+          "title": "Create custom subagents",
+          "publisher": "Anthropic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "별도 context·지시·도구를 가진 작업자",
+            "분업 결과를 주 작업에 전달"
+          ],
+          "caveats": [
+            "현재 docs는 fork 예외도 설명하므로 모든 subagent가 항상 완전한 입력 격리라고 일반화하지 않는다.",
+            "서브에이전트 구성 개수를 대회 점수와 연결하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://cofathon.getcofa.com/",
+      "title": "코파톤 Cofathon — 크래프톤 × 올리브영 AI Native 해커톤",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_cofathon",
+          "title": "코파톤 Cofathon — 크래프톤 × 올리브영 AI Native 해커톤",
+          "publisher": "KRAFTON / CJ Olive Young",
+          "published": null,
+          "event_date": "2026-07-30",
+          "accessed_kst": "2026-10-13",
+          "authority": "다른 대회 공식",
+          "read_method": "web open 본문",
+          "supports": [
+            "현업 문제 정의와 작동 결과물의 선행 사례"
+          ],
+          "caveats": [
+            "SK하이닉스 동일 규칙이나 과제를 입증하지 않는다.",
+            "이전 대회 응시자의 공개 gist·개인 후기를 SK 규칙 근거로 사용하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://community.programmers.co.kr/post/14224",
+      "title": "HR담당자를 위한 프로그래머스 기업 AX 교육 세미나 후기",
+      "records": [
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_official_seminar",
+          "title": "HR담당자를 위한 프로그래머스 기업 AX 교육 세미나 후기",
+          "publisher": "프로그래머스 공식 작성자",
+          "read_method": "공식 원문 URL open 및 검색 반환 본문 확인",
+          "status": "read_partial_dynamic",
+          "supports": [
+            "지식평가의 원리·한계·윤리·보안",
+            "활용평가의 실무 과제",
+            "전문평가의 통제·재현성"
+          ],
+          "caveats": [
+            "커뮤니티 도메인이지만 본 게시물 작성자는 프로그래머스",
+            "행사 후기는 SK하이닉스 출제 범위표가 아님",
+            "게시일은 상대 날짜로 표시되어 정확한 날짜를 단정하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://data.nasa.gov/dataset/c-mapss-aircraft-engine-simulator-data",
+      "title": "C-MAPSS Aircraft Engine Simulator Data",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC18",
+          "title": "C-MAPSS Aircraft Engine Simulator Data",
+          "publisher": "NASA Open Data Portal / Dashlink",
+          "publication_date": null,
+          "page_last_updated": "2025-07-17",
+          "accessed_date": "2026-10-13",
+          "source_type": "official software/data availability record",
+          "verification": "Full official record parsed in web results",
+          "key_claims": [
+            "Page says C-MAPSS and C-MAPSS40K software packages are currently unavailable for download.",
+            "Record says license not specified and has no data resources."
+          ],
+          "license": "License not specified",
+          "limits": "This software availability notice does not invalidate separate downloadable turbofan degradation dataset links on NASA PCoE."
+        }
+      ]
+    },
+    {
+      "url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+      "title": "CMAPSS Jet Engine Simulated Data",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC17",
+          "title": "CMAPSS Jet Engine Simulated Data",
+          "publisher": "NASA Open Data Portal / PCoE",
+          "publication_date": null,
+          "page_last_updated": "2025-05-29",
+          "accessed_date": "2026-10-13",
+          "source_type": "official dataset record",
+          "verification": "Official record body parsed in web search",
+          "key_claims": [
+            "Data are split into engine-specific training and test series.",
+            "Training engines run to failure; test trajectories end before failure; target is remaining operating cycles."
+          ],
+          "license": "Dataset-specific license not confirmed",
+          "download_status": "CMAPSSData.zip listed; archive not downloaded",
+          "limits": "Group-by-engine evaluation is proposed preparation practice, not a rule of this SK hynix event."
+        }
+      ]
+    },
+    {
+      "url": "https://demo.arcade.software/b5dk0zn4GHjoXFKsAmpP?embed=&embed_desktop=inline&embed_mobile=inline&show_copy_link=true",
+      "title": "프로그래머스 AI 역량평가 안내형 데모",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "programmers_arcade_demo",
+          "title": "프로그래머스 AI 역량평가 안내형 데모",
+          "authority": "프로그래머스 공식 사이트에서 연결한 데모",
+          "read_method": "공식 링크를 web click으로 확인",
+          "supports": [
+            "응시환경 안내 접근경로"
+          ],
+          "caveats": [
+            "대회 응시 링크가 아님"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
+      "title": "Classification: Accuracy, recall, precision, and related metrics",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_metrics",
+          "title": "Classification: Accuracy, recall, precision, and related metrics",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "혼동행렬",
+            "precision recall accuracy F1"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc",
+      "title": "Classification: ROC and AUC",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_roc",
+          "title": "Classification: ROC and AUC",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "임계값별 ROC와 AUC"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/exercises",
+      "title": "Exercises",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_exercises",
+          "title": "Exercises",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "공개 기초 연습의 학습 경로"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "공개 문서 학습과 실습 환경의 계정·자원 한도는 구분한다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent",
+      "title": "Linear regression: Gradient descent",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_gradient",
+          "title": "Linear regression: Gradient descent",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "기울기와 파라미터 업데이트"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/hyperparameters",
+      "title": "Linear regression: Hyperparameters",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_lr",
+          "title": "Linear regression: Hyperparameters",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "학습률",
+            "batch epoch hyperparameter"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/loss",
+      "title": "Linear regression: Loss",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_loss",
+          "title": "Linear regression: Loss",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "MSE와 손실"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/logistic-regression",
+      "title": "Logistic regression",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_logistic",
+          "title": "Logistic regression",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "sigmoid 분류 확률과 log loss"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/neural-networks",
+      "title": "Neural networks",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_nn",
+          "title": "Neural networks",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "층과 비선형 활성화"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation",
+      "title": "Neural Networks: Training using backpropagation",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_backprop",
+          "title": "Neural Networks: Training using backpropagation",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "역전파 기울기 계산"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets",
+      "title": "Datasets: Dividing the original dataset",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_split",
+          "title": "Datasets: Dividing the original dataset",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "train validation test 분리"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting",
+      "title": "Overfitting",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_google_overfit",
+          "title": "Overfitting",
+          "publisher": "Google for Developers",
+          "published": null,
+          "last_updated": "2025-12-03",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 본문",
+          "supports": [
+            "학습 성능과 새로운 자료의 일반화",
+            "학습 검증 손실 차이"
+          ],
+          "caveats": [
+            "랜덤 분할 예시는 i.i.d. 가정의 조건과 함께 읽으며 시간·그룹 분할을 대체하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/regularization",
+      "title": "Overfitting: L2 regularization",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_l2",
+          "title": "Overfitting: L2 regularization",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "가중치 penalty와 L2"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.google.com/machine-learning/intro-to-ml/what-is-ml",
+      "title": "What is Machine Learning?",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_google_ml",
+          "title": "What is Machine Learning?",
+          "publisher": "Google for Developers",
+          "published": null,
+          "last_updated": "2026-01-27",
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 본문",
+          "supports": [
+            "지도 비지도 강화 생성 구분",
+            "분류와 회귀"
+          ],
+          "caveats": [
+            "여러 학습 방식이 결합될 수 있어 배타적 분류로 일반화하지 않는다."
+          ]
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_ml_types",
+          "title": "What is Machine Learning?",
+          "publisher": "Google for Developers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "회귀 분류 비지도 강화 생성 구분"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agent-evals",
+      "title": "Evaluate agent workflows",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_agent_evals",
+          "title": "Evaluate agent workflows",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "도구 선택·인계·지시 준수 등 trace 평가",
+            "반복 사례로 품질 확인"
+          ],
+          "caveats": [
+            "평가 개념만 참고했다. 별도 Evals 서비스나 legacy Agent Builder를 설치·설정하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents",
+      "title": "Agents",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_agent_runtimes",
+          "title": "Agents",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "SDK·Responses·managed harness의 개발 책임 구분",
+            "앱의 도구·저장·승인과 runner의 loop"
+          ],
+          "caveats": [
+            "현재 runtime 비교의 개념 근거로 읽었으며 API 키 생성·API 사용·유료 서비스 설정은 수행하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents/guardrails-approvals",
+      "title": "Guardrails and human review",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_guardrails",
+          "title": "Guardrails and human review",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "자동 검증과 실행 전 검토",
+            "실행·일시 중단·종료의 경계"
+          ],
+          "caveats": [
+            "SDK 기능의 적용 단계가 다를 수 있어 모든 호출에 자동 보호가 생긴다고 주장하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents/integrations-observability",
+      "title": "Integrations and observability",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_integrations_observability",
+          "title": "Integrations and observability",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "SDK의 MCP 연결",
+            "모델·도구·승인·인계의 tracing"
+          ],
+          "caveats": [
+            "문서의 require_approval=never 예시를 준비 지침이나 실제 권한 설정으로 복제하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents/orchestration",
+      "title": "Orchestration and handoffs",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_orchestration",
+          "title": "Orchestration and handoffs",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "handoff와 agents-as-tools의 소유권 차이",
+            "전문가 분업을 선택하는 기준"
+          ],
+          "caveats": [
+            "역할 분리·실제 별도 실행·대화 책임의 차이를 구분한다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents/running-agents",
+      "title": "Running agents",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_agent_loop",
+          "title": "Running agents",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "모델 호출·도구 실행·인계·종료의 SDK loop",
+            "상태 유지 전략"
+          ],
+          "caveats": [
+            "SDK runner의 기능과 업무별 앱 책임을 구분한다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/agents/sdk",
+      "title": "OpenAI Agents SDK",
+      "records": [
+        {
+          "register": "setup-sources.json",
+          "title": "OpenAI Agents SDK",
+          "publisher": "OpenAI 공식 문서",
+          "read_method": "web 공식 본문",
+          "status": "read",
+          "supports": [
+            "에이전트 실행 계층을 직접 모두 구현할 필요가 없음",
+            "도구와 실행 기록의 역할"
+          ],
+          "caveats": [
+            "이 폴더는 SDK를 설치하거나 SDK 구현을 제공하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/embeddings",
+      "title": "Vector embeddings",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_emb",
+          "title": "Vector embeddings",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "embedding이 텍스트의 관련성을 표현",
+            "벡터와 거리·cosine similarity"
+          ],
+          "caveats": [
+            "유사도는 사실 정확도나 현행 문서 여부를 의미한다는 근거가 아니다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "title": "Evaluation best practices",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_evals",
+          "title": "Evaluation best practices",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "업무별 평가 기준",
+            "사람 판정과 자동 평가 교정",
+            "기록·반복 평가"
+          ],
+          "caveats": [
+            "평가 방법론만 참고했다. 특정 Evals 플랫폼의 사용·계정 생성·시험 자동화를 권고하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "title": "Function calling",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_tools",
+          "title": "Function calling",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "모델 도구 요청과 애플리케이션 실행 단계",
+            "도구 반환 후 응답 생성"
+          ],
+          "caveats": [
+            "함수 호출 생성이 실제 실행·성공을 의미하지 않는 구분을 사용한다."
+          ]
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_function",
+          "title": "Function calling",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "모델 도구 요청과 실제 코드 실행"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+          ]
+        },
+        {
+          "register": "setup-sources.json",
+          "title": "OpenAI Function calling",
+          "publisher": "OpenAI 공식 문서",
+          "read_method": "web 공식 본문",
+          "status": "read",
+          "supports": [
+            "모델 함수 요청과 앱 함수 실행의 분리",
+            "strict 함수 인수 스키마",
+            "function_call_output과 상태 재전달"
+          ],
+          "caveats": [
+            "예제의 실제 API 요청은 실행하지 않음",
+            "모델별 도구·가격·가용성은 사용 시 별도 확인"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "title": "Prompt engineering",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_prompt",
+          "title": "Prompt engineering",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "명확한 지시·예시·맥락 구조",
+            "프롬프트 변경에 따른 행동 평가"
+          ],
+          "caveats": [
+            "SK 시험의 제공 모델 또는 요구 프롬프트 형식을 확정하는 출처가 아니다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/reasoning",
+      "title": "OpenAI Reasoning models",
+      "records": [
+        {
+          "register": "setup-sources.json",
+          "title": "OpenAI Reasoning models",
+          "publisher": "OpenAI 공식 문서",
+          "read_method": "web 공식 본문",
+          "status": "read",
+          "supports": [
+            "함수 호출 사이의 reasoning output 보존",
+            "stateless 실행과 encrypted reasoning 상태"
+          ],
+          "caveats": [
+            "라이브 경로는 계정·모델·네트워크에서 미검증"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/retrieval",
+      "title": "Retrieval",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_retrieval",
+          "title": "Retrieval",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "속성 기반 검색 필터",
+            "검색 문서 메타데이터",
+            "검색량·순위 설정"
+          ],
+          "caveats": [
+            "개념 근거로 읽었으며 클라우드 vector store나 유료 API를 설정하지 않는다."
+          ]
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_retrieval",
+          "title": "Retrieval",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "검색 속성 필터",
+            "문서 metadata"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "title": "Structured model outputs",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_structure",
+          "title": "Structured model outputs",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "JSON 구조와 schema 준수 구분",
+            "거부·불완전 응답 처리",
+            "구조화 출력의 의미 오류 가능성"
+          ],
+          "caveats": [
+            "스키마 준수가 수치·근거의 진실성을 보장하지 않는다는 제한을 함께 읽는다."
+          ]
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_structured",
+          "title": "Structured model outputs",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "출력 형식과 의미 검증"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "개념 학습을 위한 공식 문서 확인. API 키 생성이나 유료 호출은 수행하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/blog/codex-as-a-platform",
+      "title": "Codex as a platform: build on the open agent harness",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_codex_harness",
+          "title": "Codex as a platform: build on the open agent harness",
+          "publisher": "OpenAI",
+          "published": "2026-08-19",
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "공통 harness와 업무 맥락·도구·UI의 분리",
+            "기존 harness를 사용자 제품에 포함하는 접근"
+          ],
+          "caveats": [
+            "SDK나 app-server를 설치하거나 운영서비스로 구현하지 않았다.",
+            "기사의 benchmark와 모델 성능 수치는 준비 권고에 사용하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://devguide.python.org/versions/",
+      "title": "Python version status",
+      "records": [
+        {
+          "register": "preparation",
+          "checked_on_kst": "2026-10-13",
+          "title": "Python version status",
+          "authority": "Python 공식",
+          "supports": [
+            "지원 상태와 Python 3.9 지원 종료"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.astral.sh/uv/pip/environments/",
+      "title": "uv Using environments",
+      "records": [
+        {
+          "register": "preparation",
+          "checked_on_kst": "2026-10-13",
+          "title": "uv Using environments",
+          "authority": "Astral 공식",
+          "supports": [
+            "uv 가상환경 생성"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+      "title": "Retrieval",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS18",
+          "title": "Retrieval",
+          "publisher": "LangChain",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Current official retrieval page opened after canonical path redirects; text-splitter and retrieval-context sections read",
+          "question_ids": [
+            "AQ18",
+            "AQ20"
+          ],
+          "supports": [
+            "Retrieved documents become runtime context",
+            "Text splitters break documents into retrievable context-sized chunks"
+          ],
+          "caveats": "Preserving rules and exceptions is a proposed scenario remedy. AQ20 dates and policy applicability are defined entirely in the question, not by this documentation."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.python.org/3/library/datetime.html",
+      "title": "datetime Basic date and time types",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS23",
+          "title": "datetime Basic date and time types",
+          "publisher": "Python Software Foundation",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official datetime documentation opened",
+          "question_ids": [
+            "AQ29"
+          ],
+          "supports": [
+            "Aware datetimes and UTC offsets distinguish time zones"
+          ],
+          "caveats": "Policy dates are invented; KST offset and conversion are explicitly stated and calculated in the question."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.python.org/3/library/json.html",
+      "title": "json — JSON encoder and decoder",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_json",
+          "title": "json — JSON encoder and decoder",
+          "publisher": "Python Software Foundation",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "JSON 파싱과 문법",
+            "JSONDecodeError",
+            "문법 성공과 업무 타입 검증 구분"
+          ],
+          "caveats": [
+            "실습용 Python 표준라이브러리의 개념 근거. 특정 Python 최신 버전 설치를 요구하지 않는다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS26",
+          "title": "json JSON encoder and decoder",
+          "publisher": "Python Software Foundation",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official JSON serialization and decoding documentation opened",
+          "question_ids": [
+            "AQ34"
+          ],
+          "supports": [
+            "Parsing JSON is a format operation distinct from business calculations"
+          ],
+          "caveats": "The yield invariant and numbers are supplied synthetic task conditions, not requirements defined by Python json."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.python.org/3/library/sqlite3.html",
+      "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_sql",
+          "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+          "publisher": "Python Software Foundation",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "placeholder 바인딩",
+            "문자열 조합의 SQL injection 위험"
+          ],
+          "caveats": [
+            "값 바인딩과 별도의 허용 쿼리·권한 제한을 구분한다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS27",
+          "title": "sqlite3 DB-API interface for SQLite databases",
+          "publisher": "Python Software Foundation",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official parameter-binding guidance opened",
+          "question_ids": [
+            "AQ35"
+          ],
+          "supports": [
+            "Use placeholders for SQL values rather than string assembly"
+          ],
+          "caveats": "Fixed identifier mapping is an application recommendation for the supplied two-table scenario."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "title": "unittest — Unit testing framework",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_unit",
+          "title": "unittest — Unit testing framework",
+          "publisher": "Python Software Foundation",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "기대값 비교",
+            "예외 테스트",
+            "작은 기능의 검증"
+          ],
+          "caveats": [
+            "실습의 별도 기대값·경계조건은 이 조사자가 작성한 권고다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.python.org/3/library/venv.html",
+      "title": "Python venv",
+      "records": [
+        {
+          "register": "preparation",
+          "checked_on_kst": "2026-10-13",
+          "title": "Python venv",
+          "authority": "Python 공식",
+          "supports": [
+            "가상환경 생성과 직접 실행 및 재생성"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.modules.conv.Conv2d.html",
+      "title": "Conv2d",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS12",
+          "title": "Conv2d",
+          "publisher": "PyTorch",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official NCHW shape and output height/width formulas read",
+          "question_ids": [
+            "AQ12"
+          ],
+          "supports": [
+            "Convolution output channels and floor-based spatial output formula"
+          ],
+          "caveats": "Input tensor size and hyperparameters are original example values."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.14/generated/torch.optim.Adam.html",
+      "title": "Adam",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS11",
+          "title": "Adam",
+          "publisher": "PyTorch",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official Adam update formula and beta definitions read",
+          "question_ids": [
+            "AQ11"
+          ],
+          "supports": [
+            "Adam maintains first and second gradient moment estimates and has a learning-rate parameter"
+          ],
+          "caveats": "Versioned documentation is used for the definition, not as an installation requirement for this workspace."
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.Conv2d.html",
+      "title": "Conv2d",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_conv",
+          "title": "Conv2d",
+          "publisher": "PyTorch",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "NCHW 입출력",
+            "kernel stride padding dilation groups"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.Dropout.html",
+      "title": "Dropout",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_dropout",
+          "title": "Dropout",
+          "publisher": "PyTorch",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "nn.Dropout의 train eval 동작"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "title": "scaled_dot_product_attention",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_sdpa",
+          "title": "scaled_dot_product_attention",
+          "publisher": "PyTorch",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "Q K V",
+            "scaling softmax causal mask"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다.",
+            "일반 nn.Dropout 모듈과 functional attention의 dropout_p 동작을 동일시하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/main/generated/torch.optim.Adam.html",
+      "title": "Adam",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_adam",
+          "title": "Adam",
+          "publisher": "PyTorch",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "learning rate와 모멘트 기반 파라미터 업데이트"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "title": "Optimizing Model Parameters",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS09",
+          "title": "Optimizing Model Parameters",
+          "publisher": "PyTorch",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official training and test loops read, including eval and no_grad comments",
+          "question_ids": [
+            "AQ09",
+            "AQ10"
+          ],
+          "supports": [
+            "Loss backward computes gradients and optimizer step updates parameters",
+            "eval and no_grad serve distinct roles in evaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html",
+      "title": "Transfer Learning for Computer Vision Tutorial",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_transfer",
+          "title": "Transfer Learning for Computer Vision Tutorial",
+          "publisher": "PyTorch",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "freeze",
+            "마지막 층 학습과 전체 추가 학습"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/zeroing_out_gradients.html",
+      "title": "Zeroing out gradients in PyTorch",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS10",
+          "title": "Zeroing out gradients in PyTorch",
+          "publisher": "PyTorch",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official introduction explicitly describing accumulation into .grad read",
+          "question_ids": [
+            "AQ10"
+          ],
+          "supports": [
+            "Repeated backward calls accumulate gradients unless they are reset"
+          ],
+          "caveats": "The scalar loss and SGD numerical update are original independently checked arithmetic."
+        }
+      ]
+    },
+    {
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "title": "LLM01:2025 Prompt Injection",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_inject",
+          "title": "LLM01:2025 Prompt Injection",
+          "publisher": "OWASP Gen AI Security Project",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "간접 prompt injection",
+            "RAG·fine-tuning만으로 완전 방어 불가",
+            "민감정보 노출 위험"
+          ],
+          "caveats": [
+            "완전한 방어를 보장하지 않는 공식 제한을 함께 기록한다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+      "title": "LLM06:2025 Excessive Agency",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_agency",
+          "title": "LLM06:2025 Excessive Agency",
+          "publisher": "OWASP Gen AI Security Project",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "불필요한 기능·권한·자율성 위험",
+            "최소 기능과 최소 권한",
+            "고영향 작업의 독립 확인"
+          ],
+          "caveats": [
+            "2025 버전으로 표시된 공식 위험 분류. 게시 날짜는 본문에 명시되지 않아 null."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS25",
+          "title": "LLM06 2025 Excessive Agency",
+          "publisher": "OWASP Gen AI Security Project",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official excessive-permissions and least-privilege guidance opened",
+          "question_ids": [
+            "AQ33"
+          ],
+          "supports": [
+            "Access controls and minimum necessary permissions should limit sensitive data use"
+          ],
+          "caveats": "Cache partitioning is a proposed engineering application; this source does not define the synthetic cache implementation."
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/amazon-science/patchcore-inspection",
+      "title": "Towards Total Recall in Industrial Anomaly Detection PatchCore implementation",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC23",
+          "title": "Towards Total Recall in Industrial Anomaly Detection PatchCore implementation",
+          "publisher": "PatchCore authors / Amazon Science",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "authors official code repository",
+          "verification": "Opened official README and repository license",
+          "key_claims": [
+            "PatchCore stores a coreset-subsampled memory of pretrained locally aggregated normal training patch features.",
+            "Official implementation is Apache 2.0."
+          ],
+          "license": "Apache 2.0 for code; dataset license remains separate",
+          "limits": "Research environment used Python 3.8 and GPU/FAISS dependencies. No promise of trouble-free installation on the current Windows setup."
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/meta-pytorch/botorch",
+      "title": "BoTorch Bayesian optimization in PyTorch",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC30",
+          "title": "BoTorch Bayesian optimization in PyTorch",
+          "publisher": "Meta PyTorch / BoTorch developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official code repository",
+          "verification": "Official README and MIT license returned by web search",
+          "key_claims": [
+            "BoTorch is a Bayesian optimization library in PyTorch and is MIT licensed."
+          ],
+          "license": "MIT",
+          "limits": "No installation performed. The attempted closed-loop tutorial URL returned an error; tutorial details are not claimed as verified."
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+      "title": "LoRA",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS15",
+          "title": "LoRA",
+          "publisher": "Hugging Face PEFT",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official low-rank update and frozen original weight passages read",
+          "question_ids": [
+            "AQ15"
+          ],
+          "supports": [
+            "Low-rank update matrices can be trained while original weights remain frozen"
+          ],
+          "caveats": "The stable URL redirected to main. Main documentation can change; no PEFT version installation is required."
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+      "title": "Transformers How caching works",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC32",
+          "title": "Transformers How caching works",
+          "publisher": "Hugging Face",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official software documentation",
+          "verification": "Opened official caching explanation",
+          "key_claims": [
+            "Key/value pairs from prior tokens are reused during autoregressive inference.",
+            "Attention key/value tensor dimensions explain cache growth with sequence length and batch size."
+          ],
+          "limits": "The report's 14 GB, 512 MiB and 2 GiB examples are calculations under explicit hypothetical assumptions, not measured model or hardware values."
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS17",
+          "title": "How caching works",
+          "publisher": "Hugging Face Transformers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official autoregressive key/value reuse explanation read",
+          "question_ids": [
+            "AQ16",
+            "AQ17"
+          ],
+          "supports": [
+            "KV cache reuses key/value representations of previously processed tokens",
+            "KV memory is distinct from weight storage"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/en/quantization/overview",
+      "title": "Quantization overview",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS16",
+          "title": "Quantization overview",
+          "publisher": "Hugging Face Transformers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official overview description of lower-precision weight storage read",
+          "question_ids": [
+            "AQ16"
+          ],
+          "supports": [
+            "Lower-precision weight storage reduces model memory requirements subject to method tradeoffs"
+          ],
+          "caveats": "7 billion weights and 4 bits are explicit hypothetical assumptions; not a measured model memory claim."
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main/en/kv_cache",
+      "title": "Cache strategies",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_kv_cache",
+          "title": "Cache strategies",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "KV cache 용량",
+            "offload quantized cache 절충"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main/en/main_classes/text_generation",
+      "title": "Generation / GenerationConfig",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_gen",
+          "title": "Generation / GenerationConfig",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "logit·sampling·temperature·top-p",
+            "출력 길이와 생성 전략"
+          ],
+          "caveats": [
+            "main 브랜치의 문서를 읽었지만 설치나 특정 릴리스 사용을 권고하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main/en/pad_truncation",
+      "title": "Padding and truncation",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS21",
+          "title": "Padding and truncation",
+          "publisher": "Hugging Face Transformers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official documentation opened after redirect from versioned default",
+          "question_ids": [
+            "AQ22"
+          ],
+          "supports": [
+            "Token sequence length and model limits matter for input handling"
+          ],
+          "caveats": "8192 combined input/output tokens and overhead assumptions are invented for arithmetic and not a universal Transformers limit."
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main/en/quantization/overview",
+      "title": "Quantization Overview",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_quantization",
+          "title": "Quantization Overview",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "낮은 정밀도 저장과 품질 메모리 절충"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main/en/tokenizer_summary",
+      "title": "Tokenization algorithms",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_token",
+          "title": "Tokenization algorithms",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "토큰과 단어 수 구분",
+            "서브워드 토큰화"
+          ],
+          "caveats": [
+            "모델별 토큰 수는 실제 토크나이저로 확인해야 한다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/en/chapter1/4",
+      "title": "How do Transformers work?",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_transformer",
+          "title": "How do Transformers work?",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "사전학습·fine-tuning",
+            "자기회귀 언어모델과 masked language modeling"
+          ],
+          "caveats": [
+            "교육 자료의 예시는 모델 가족 이해에 사용했으며 현재 성능 순위 주장은 인용하지 않는다."
+          ]
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_transformer_training",
+          "title": "How do Transformers work?",
+          "publisher": "Hugging Face",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "자기지도 언어모델 학습",
+            "사전학습과 추가 학습"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "웹 문서의 원리를 읽었으며 해당 main 버전이나 라이브러리를 설치하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://imbalanced-learn.org/stable/common_pitfalls.html",
+      "title": "Common pitfalls and recommended practices",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS03",
+          "title": "Common pitfalls and recommended practices",
+          "publisher": "imbalanced-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official resampling-before-split leakage section read",
+          "question_ids": [
+            "AQ03"
+          ],
+          "supports": [
+            "Resampling the entire dataset before splitting causes leakage and changes evaluation distribution"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://kr.linkedin.com/company/grepp/",
+      "title": "그렙 공식 계정 SK하이닉스 1차 예선 AI 역량평가 발표",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "grepp_announcement",
+          "title": "그렙 공식 계정 SK하이닉스 1차 예선 AI 역량평가 발표",
+          "authority": "평가 플랫폼 업체 공식",
+          "read_method": "web 본문 게시물 확인",
+          "supports": [
+            "1차 프로그래머스 AI 역량평가",
+            "공식 응시 환경 체험 연결"
+          ],
+          "caveats": [
+            "회사 피드 URL은 추후 게시물 위치가 변할 수 있음",
+            "정확한 게시일 대신 상대 날짜 표시"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://kr.linkedin.com/posts/krafton-inc_krafton-%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4-cj%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-activity-7480523102427303936-P-ur",
+      "title": "크래프톤 CJ올리브영 Cofathon 공식 발표",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "krafton_cofathon_announcement",
+          "title": "크래프톤 CJ올리브영 Cofathon 공식 발표",
+          "authority": "크래프톤 공식",
+          "read_method": "web 본문",
+          "supports": [
+            "별개 대회였던 7월 Cofathon 구분"
+          ],
+          "caveats": [
+            "자유 도구 정책을 하이닉스 실전 규칙으로 이전하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/cli",
+      "title": "Codex CLI",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_codex_cli",
+          "title": "Codex CLI",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "로컬 코드 읽기·수정·명령·검증",
+            "개발 작업과 사용자 통제"
+          ],
+          "caveats": [
+            "페이지의 예시 모델·버전·설치 명령을 실제 설치 상태로 해석하지 않는다.",
+            "구 URL /codex/overview는 일반 docs로 redirect되어 직접 근거로 사용하지 않았다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview",
+      "title": "ChatGPT Work Overview",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_work_execution",
+          "title": "ChatGPT Work Overview",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "실행 위치·권한·연결에 따른 도구와 자료 범위"
+          ],
+          "caveats": [
+            "Enterprise/Edu 설명의 구체적 관리 기능을 모든 개인 계정으로 일반화하지 않는다.",
+            "플랜·기능 출시·권한에 따른 차이를 함께 명시했다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/use-chatgpt",
+      "title": "Use ChatGPT",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_chatgpt_use",
+          "title": "Use ChatGPT",
+          "publisher": "OpenAI",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "Chat의 검색 등 도구 사용",
+            "Work의 계획·도구·결과물 수행",
+            "Codex의 개발 도구 경험"
+          ],
+          "caveats": [
+            "현재 공식 용어를 기준으로 했으며 모든 계정에 Work가 열려 있다고 주장하지 않는다.",
+            "ChatGPT 앱을 도구 없는 단일 채팅으로 일반화하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getphysicallyinstalledsystemmemory",
+      "title": "GetPhysicallyInstalledSystemMemory",
+      "records": [
+        {
+          "register": "setup-sources.json",
+          "title": "GetPhysicallyInstalledSystemMemory",
+          "publisher": "Microsoft 공식 문서",
+          "read_method": "web 공식 본문",
+          "status": "read",
+          "supports": [
+            "Windows 물리 메모리 정보 읽기 함수와 반환 조건"
+          ],
+          "caveats": [
+            "현재 샌드박스의 호출은 실패하여 메모리 용량을 확정하지 못함"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "title": "What is the Model Context Protocol (MCP)?",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_mcp_intro",
+          "title": "What is the Model Context Protocol (MCP)?",
+          "publisher": "Model Context Protocol",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "AI 앱과 외부 도구·데이터의 표준 연결"
+          ],
+          "caveats": [
+            "URL의 문서 버전 날짜와 실제 게시 날짜를 구분한다.",
+            "MCP 자체를 agent loop·상태 저장·권한 승인으로 설명하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "title": "Model Context Protocol tools specification",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS14",
+          "title": "Model Context Protocol tools specification",
+          "publisher": "Model Context Protocol maintainers",
+          "publication_date": "2025-06-18",
+          "date_type": "Specification edition",
+          "accessed_date": "2026-10-14",
+          "verification": "Official input/output schema, isError and security consideration sections read",
+          "question_ids": [
+            "AQ14",
+            "AQ23",
+            "AQ33",
+            "AQ34"
+          ],
+          "supports": [
+            "Input schemas and access control are separate requirements",
+            "Tool execution errors can use isError inside a result",
+            "Structured results require validation"
+          ],
+          "caveats": "Uses a named published specification edition and does not assert this is the latest protocol revision. Cache-key and business-invariant designs are scenario applications."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.co.kr/ai-hackathon-2026/",
+      "title": "SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "event_press",
+          "title": "SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+          "published": "2026-09-21",
+          "authority": "SK하이닉스 공식 뉴스룸",
+          "read_method": "web 403 이후 브라우저 본문 확인",
+          "supports": [
+            "Cofa-Probe 등 도구 사용",
+            "본선 심사·인증서",
+            "일반인 대상 세미나"
+          ],
+          "caveats": [
+            "아래 Talent Hub와 동일 보도자료",
+            "도구별 라운드 배정은 이 본문만으로 알 수 없음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.co.kr/gaia_ep1_biz_ai_agent/",
+      "title": "Introduce GaiA 1편 AI로 일하는 시대 SK하이닉스 Biz 특화 AI Agent가 만든 변화",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC07",
+          "title": "Introduce GaiA 1편 AI로 일하는 시대 SK하이닉스 Biz 특화 AI Agent가 만든 변화",
+          "publisher": "SK hynix Newsroom; 황청석 TL DT AI Design Lab",
+          "publication_date": "2025-10-31",
+          "accessed_date": "2026-10-13",
+          "source_type": "company firsthand implementation article",
+          "verification": "Full article parsed by web search",
+          "key_claims": [
+            "Four agents cover equipment maintenance using Inform Notes, EDA script search and generation, AI log analysis, and Global Insight.",
+            "Log analysis compares firmware errors with NVMe specifications.",
+            "Company reports more than 20% shorter SSD specification-related defect analysis time."
+          ],
+          "limits": "Company-reported outcome for a specific workflow, not independent benchmark, competition topic or guarantee of benefit for a new demo. Internal systems and data are not publicly provided."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.co.kr/hackathon-season-3-site/",
+      "title": "일하는 방식의 변화 하이지니어에게 맡겨봐 해커톤 대회 시즌3 현장을 가다",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC12",
+          "title": "일하는 방식의 변화 하이지니어에게 맡겨봐 해커톤 대회 시즌3 현장을 가다",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2020-07-10",
+          "event_start_date": "2020-02-24",
+          "event_end_date": "2020-07-03",
+          "accessed_date": "2026-10-13",
+          "source_type": "company firsthand internal hackathon report",
+          "verification": "Full original article returned by exact-URL web search; direct open returned an error",
+          "key_claims": [
+            "The 2020 internal season-3 event used three-person employee teams and self-defined work problems.",
+            "Winning examples included dry-pump lifetime and stock optimization, coupling prediction, DRAM signal optimization, test maintenance automation and NAND defect visualization/detection."
+          ],
+          "limits": "Different event from 2026 external individual AI hackathon. Not a past edition of the same competition and not predictive evidence of this year's tasks."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.co.kr/jeonginseong-column-oxidation/",
+      "title": "반도체 전공정 2편 반도체 공정 개괄과 산화",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC06",
+          "title": "반도체 전공정 2편 반도체 공정 개괄과 산화",
+          "publisher": "SK hynix Newsroom; external expert column",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "technical educational column",
+          "verification": "Full relevant article passages parsed in web search",
+          "key_claims": [
+            "The common eight-process overview mixes individual operations and broader purpose-based categories.",
+            "Oxidation, lithography and etch can be used throughout FEOL and BEOL."
+          ],
+          "limits": "The page states that the expert column may differ from SK hynix's official position. Used for basic process explanation, not corporate policy."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.co.kr/the-first-grade-hygineer-part2/",
+      "title": "수많은 난제 극복해온 마경수 기정 기술명장에서 1등 하이지니어까지",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC11",
+          "title": "수많은 난제 극복해온 마경수 기정 기술명장에서 1등 하이지니어까지",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2022-01-05",
+          "accessed_date": "2026-10-13",
+          "source_type": "company practitioner introduction",
+          "verification": "Full relevant passage parsed in web search",
+          "key_claims": [
+            "FDC refers to Fault Detection Classification in the article and is an actual SK hynix technical field."
+          ],
+          "limits": "Not a technical specification of the company's FDC system."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/future-forum-2026/",
+      "title": "SK hynix Charts Its Business and Technology Direction at the 2026 Future Forum Now Is the Golden Time to Leap Forward",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC10",
+          "title": "SK hynix Charts Its Business and Technology Direction at the 2026 Future Forum Now Is the Golden Time to Leap Forward",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2026-09-09",
+          "event_date": "2026-09-08",
+          "accessed_date": "2026-10-13",
+          "source_type": "company firsthand event report",
+          "verification": "Opened full official article",
+          "key_claims": [
+            "SOP-based work redesign and semantic relationships of process and equipment data are part of the AI collaboration direction.",
+            "AI-assisted anomaly cause and countermeasure suggestions with human final decisions were described.",
+            "GaiA, safety-supervision robots and VLM drones were discussed as planned uses."
+          ],
+          "limits": "Distinguish intended direction and plans from confirmed deployment. This is a separate corporate forum, not the AI Hackathon syllabus."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/gauss-labss-ai-based-virtual-metrology-solution/",
+      "title": "SK hynix Deploys Gauss Labs’s AI-Based Virtual Metrology Solution to Predict Wafer Manufacturing Process Outcomes",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC08",
+          "title": "SK hynix Deploys Gauss Labs’s AI-Based Virtual Metrology Solution to Predict Wafer Manufacturing Process Outcomes",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2023-01-16",
+          "accessed_date": "2026-10-13",
+          "source_type": "company deployment press article and practitioner interviews",
+          "verification": "Full official article opened through Gauss Labs link",
+          "key_claims": [
+            "Panoptes VM was used in thin-film deposition from December 2022.",
+            "Sensor-based estimates of thickness and refractive index were combined with APC.",
+            "Company reported average 21.5% process variability reduction."
+          ],
+          "limits": "Variability reduction is not a quantified 21.5% yield increase. Historic result must retain date, process and baseline context."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/mwc-2026/",
+      "title": "SK hynix Unveils Latest AI Memory Solutions at MWC 2026 Showcasing Its Technological Capabilities as a Full Stack AI Memory Creator",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC04",
+          "title": "SK hynix Unveils Latest AI Memory Solutions at MWC 2026 Showcasing Its Technological Capabilities as a Full Stack AI Memory Creator",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2026-03-05",
+          "accessed_date": "2026-10-13",
+          "source_type": "company event and product article",
+          "verification": "Parsed full article content in web search",
+          "key_claims": [
+            "HBM vertically connects multiple DRAM chips to achieve high bandwidth.",
+            "MWC lineup includes HBM4, HBM3E, DDR5, eSSD, LPDDR6 and UFS 4.1."
+          ],
+          "limits": "Manufacturer statements. Product specifications and generation comparisons depend on the named product and date."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-explains-whats-what-in-the-semiconductor-world/",
+      "title": "Semiconductor 101 SK hynix Explains What’s What in the Semiconductor World",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC02",
+          "title": "Semiconductor 101 SK hynix Explains What’s What in the Semiconductor World",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "company educational article",
+          "verification": "Parsed article body in web results",
+          "key_claims": [
+            "DRAM and SRAM are volatile memory categories.",
+            "NAND flash is nonvolatile and used in solid-state drives."
+          ],
+          "limits": "Educational background; does not describe the competition syllabus."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-guide-to-key-industry-players/",
+      "title": "Semiconductor 101 SK hynix’s Guide to Who’s Who in the Semiconductor Industry",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC03",
+          "title": "Semiconductor 101 SK hynix’s Guide to Who’s Who in the Semiconductor Industry",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "company educational article",
+          "verification": "Parsed article body in web results",
+          "key_claims": [
+            "DRAM requires refresh and loses stored data when power is removed."
+          ],
+          "limits": "Used only for stable memory concepts."
+        }
+      ]
+    },
+    {
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/",
+      "title": "SK hynix Ships Samples of 12-Layer Next-Gen HBM4E",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC05",
+          "title": "SK hynix Ships Samples of 12-Layer Next-Gen HBM4E",
+          "publisher": "SK hynix Newsroom",
+          "publication_date": "2026-06-18",
+          "accessed_date": "2026-10-13",
+          "source_type": "company press release",
+          "verification": "Parsed full press release in web search",
+          "key_claims": [
+            "SK hynix announced shipment of 12-layer HBM4E samples to major customers."
+          ],
+          "limits": "Sample shipment is not proof of volume production or current shipment volumes."
+        }
+      ]
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "title": "Merge, join, concatenate and compare",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_merge",
+          "title": "Merge, join, concatenate and compare",
+          "publisher": "pandas developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "중복 키 병합의 행 수 증가",
+            "join cardinality 검증"
+          ],
+          "caveats": [
+            "SQL·CSV의 집계 단위 함정을 설명하는 근거. pandas 설치를 요구하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://programmers.co.kr/ai-assessment/insight",
+      "title": "프로그래머스 AI 역량평가 인사이트 목록",
+      "records": [
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_insight_index",
+          "title": "프로그래머스 AI 역량평가 인사이트 목록",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "현재 표시된 글 목록 확인"
+          ],
+          "caveats": [
+            "최신 표시 글은 10월 12일 일반 조직 관련 글",
+            "시험 참가자 공지함이나 개인 안내를 대신하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://programmers.co.kr/ai-assessment/insight/ai-literacy-training",
+      "title": "AI 리터러시 교육 실제 역량 변화로 연결하려면",
+      "records": [
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_literacy_training",
+          "title": "AI 리터러시 교육 실제 역량 변화로 연결하려면",
+          "published": "2026-08-27",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "독서·수료와 활용 능력의 구분",
+            "과제 수행과 재측정",
+            "동일 문항 기억 효과와 변형 평가"
+          ],
+          "caveats": [
+            "일반 교육 설명이며 SK하이닉스 합격 기준이 아님"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment",
+      "title": "프로그래머스는 왜 AI 역량평가를 만들었을까",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "programmers_explainer",
+          "title": "프로그래머스는 왜 AI 역량평가를 만들었을까",
+          "published": "2026-10-07",
+          "authority": "평가 플랫폼 공식",
+          "read_method": "web full page",
+          "supports": [
+            "일반 AI Assist 제약",
+            "과정·결과 평가",
+            "기업별 문항·시간 조합"
+          ],
+          "caveats": [
+            "일반 플랫폼 설명이며 SK하이닉스 실전 설정표는 아님"
+          ]
+        },
+        {
+          "register": "notice-sources.json",
+          "id": "notice_assessment_explainer_reference",
+          "title": "프로그래머스는 왜 AI 역량평가를 만들었을까",
+          "published": "2026-10-07",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "이전 조사에서 원문 확인한 평가 목적 참조",
+          "status": "reference_previous_read",
+          "supports": [
+            "개념과 AI 활용·검증을 함께 준비하는 방향"
+          ],
+          "caveats": [
+            "일반 플랫폼 설명을 특정 대회 점수 공식으로 사용하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "title": "프로그래머스 AI 역량평가 응시 환경 체험하기",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "programmers_preview",
+          "title": "프로그래머스 AI 역량평가 응시 환경 체험하기",
+          "authority": "평가 플랫폼 공식",
+          "read_method": "브라우저 공개 목록·FAQ 확인, 지식 체험 진입 시 로그인 화면 확인",
+          "supports": [
+            "공개 샘플 범위",
+            "체험 제한",
+            "체험과 실전 차이",
+            "PC 환경"
+          ],
+          "caveats": [
+            "실제 체험 진입에는 로그인 요구됨",
+            "실제 대회 시험이나 답안을 열지 않음",
+            "샘플 문항 수와 AI 대화 제한을 대회 설정으로 전용할 수 없음"
+          ]
+        },
+        {
+          "register": "ai-sources.json",
+          "id": "ai_programmers_preview",
+          "title": "프로그래머스 AI 역량평가 응시 환경 체험",
+          "publisher": "Grepp / Programmers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "평가 플랫폼 공식",
+          "read_method": "협업 event agent가 공개 목록과 FAQ를 브라우저로 확인",
+          "supports": [
+            "공개 지식 활용 전문평가의 체험 방향"
+          ],
+          "caveats": [
+            "장문 설명은 01-event.md에만 기록했다.",
+            "공개 체험의 문항 수·대화 횟수를 SK 실전으로 일반화하지 않는다.",
+            "로그인이 필요한 체험 문제를 열거나 복원하지 않았다."
+          ]
+        },
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_preview_reference",
+          "title": "프로그래머스 응시자용 공개 체험",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "초기 점검은 10월 14일 web 본문과 10월 13일 동적 목록·FAQ 기록을 참조; 이후 10월 14일 브라우저 재확인은 notice-sources.json 참조",
+          "status": "public_page_rechecked_followup_dynamic_record_available",
+          "supports": [
+            "공식 응시자 체험 접근 경로"
+          ],
+          "caveats": [
+            "개인회원 로그인이나 체험 풀이 수행하지 않음",
+            "체험과 실전 제한이 같다고 주장하지 않음"
+          ]
+        },
+        {
+          "register": "notice-sources.json",
+          "id": "notice_ai_preview_recheck",
+          "title": "프로그래머스 공개 AI 응시자 체험과 FAQ",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "10월 14일 Edge 공개 목록과 다섯 FAQ의 브라우저 재확인",
+          "status": "read",
+          "supports": [
+            "체험과 실전 시간·감독 차이",
+            "PC 전용",
+            "AI 대화 제한과 초기화 불가",
+            "결과 리포트 미제공"
+          ],
+          "caveats": [
+            "로그인·샘플 풀이·실제 시험을 수행하지 않음",
+            "앞선 readiness-sources.json의 동적 재확인 미완료 상태를 이 확인으로 보완",
+            "체험 제한은 SK 실전 설정이 아님"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://programmers.co.kr/b2b-education",
+      "title": "프로그래머스 AX 기업교육 4P 기준",
+      "records": [
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_4p_education",
+          "title": "프로그래머스 AX 기업교육 4P 기준",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "문제 정의·AI 협업·검증·책임 관리",
+            "결과와 과정의 평가 범주"
+          ],
+          "caveats": [
+            "기업교육의 일반 프레임워크",
+            "100점 감점·가점 설명을 SK하이닉스 점수 공식으로 이전하지 않음",
+            "상업 설명의 효과 수치를 준비도 근거로 사용하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "title": "Semantic Search",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS20",
+          "title": "Semantic Search",
+          "publisher": "Sentence Transformers maintainers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official asymmetric semantic-search and query/document encoding passages read",
+          "question_ids": [
+            "AQ21"
+          ],
+          "supports": [
+            "Use compatible query and document encoding paths appropriate to the retrieval task"
+          ],
+          "caveats": "The incompatibility of arbitrary independently trained spaces is the question's explicit assumption; different compatible asymmetric encoders can be valid."
+        }
+      ]
+    },
+    {
+      "url": "https://scholars.lib.ntu.edu.tw/entities/publication/563e8f2c-74ee-4733-bd62-ba5e409d8424",
+      "title": "Wafer map failure pattern recognition and similarity ranking for large-scale data sets",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC19",
+          "title": "Wafer map failure pattern recognition and similarity ranking for large-scale data sets",
+          "publisher": "National Taiwan University Scholars; original paper by Ming-Ju Wu, Jyh-Shing R. Jang and Jui-Long Chen, IEEE",
+          "publication_date": "2015",
+          "accessed_date": "2026-10-13",
+          "source_type": "author institution official paper record and abstract",
+          "verification": "Opened official NTU record and abstract",
+          "key_claims": [
+            "Original paper describes a dataset of 811457 real-world wafer maps and rotation/scale-invariant features."
+          ],
+          "doi": "10.1109/TSM.2014.2364237",
+          "license": "Data license not established by the paper record",
+          "limits": "Supports original paper provenance and total maps; does not establish commercial redistribution rights or labeled-count details of current mirrors."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html",
+      "title": "Single estimator versus bagging: bias-variance decomposition",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_bias_variance",
+          "title": "Single estimator versus bagging: bias-variance decomposition",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "bias variance noise",
+            "학습 자료 변화에 따른 예측 변동"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "title": "Common pitfalls and recommended practices",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_leakage",
+          "title": "Common pitfalls and recommended practices",
+          "publisher": "scikit-learn developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "data leakage 정의",
+            "train/test 분할 전 전체 fit 오류",
+            "train fit, test transform"
+          ],
+          "caveats": [
+            "모델 성능 검증 방법의 근거로 사용했으며 sklearn 설치는 필요하지 않다."
+          ]
+        },
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC27",
+          "title": "Common pitfalls and recommended practices",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official software documentation",
+          "verification": "Opened full data leakage section",
+          "key_claims": [
+            "Split before fitting preprocessing, scaling, imputation or feature selection.",
+            "Fit transformations on training data only; use pipelines to reduce leakage."
+          ],
+          "limits": "Applying these general practices does not replace competition-specific evaluation rules."
+        },
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_leakage",
+          "title": "Common pitfalls and recommended practices",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "전처리 fit과 test 누설"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "title": "Probability calibration",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_calibration",
+          "title": "Probability calibration",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "예측 확률과 실제 빈도",
+            "보정 데이터"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS02",
+          "title": "Probability calibration",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official definition and reliability-diagram passages read",
+          "question_ids": [
+            "AQ02"
+          ],
+          "supports": [
+            "Well-calibrated predicted probabilities correspond to observed positive fractions in prediction groups"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+      "title": "Tuning the decision threshold for class prediction",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS04",
+          "title": "Tuning the decision threshold for class prediction",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official probability-versus-decision and threshold-tuning sections read",
+          "question_ids": [
+            "AQ04",
+            "AQ26"
+          ],
+          "supports": [
+            "Threshold changes class decisions while fixed probability scores retain score-based ROC and PR curves",
+            "Business costs inform threshold selection"
+          ],
+          "caveats": "Thresholds, costs and capacity constraints in AQ26 are invented."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "title": "Clustering",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_cluster",
+          "title": "Clustering",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "K-means와 군집"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS07",
+          "title": "Clustering",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official K-means objective and cluster evaluation concepts checked",
+          "question_ids": [
+            "AQ06",
+            "AQ07"
+          ],
+          "supports": [
+            "K-means minimizes within-cluster squared distance",
+            "Cluster labels identify partitions rather than semantic fault classes"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "title": "Cross-validation: evaluating estimator performance",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_cv",
+          "title": "Cross-validation: evaluating estimator performance",
+          "publisher": "scikit-learn developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "독립 최종 테스트",
+            "그룹별 분할",
+            "시간 순서에 따른 평가"
+          ],
+          "caveats": [
+            "wafer와 lot는 원리 적용을 위해 만든 자체 사례다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS01",
+          "title": "Cross-validation evaluating estimator performance",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official page opened and held-out evaluation passages read",
+          "question_ids": [
+            "AQ01",
+            "AQ24"
+          ],
+          "supports": [
+            "Group-aware and time-aware validation",
+            "Test set leakage when selecting settings"
+          ],
+          "caveats": "RAG answer-key leakage is an application of the evaluation principle, not a claim that this page describes this particular synthetic question."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "title": "Decomposing signals in components",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_pca",
+          "title": "Decomposing signals in components",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "PCA와 분산의 차원 축소"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "title": "Ensembles: Gradient boosting, random forests, bagging, voting, stacking",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_ensemble",
+          "title": "Ensembles: Gradient boosting, random forests, bagging, voting, stacking",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "random forest",
+            "boosting과 bagging"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+      "title": "PCA",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS08",
+          "title": "PCA",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official centered-but-not-scaled definition and explained-variance selection read",
+          "question_ids": [
+            "AQ08"
+          ],
+          "supports": [
+            "PCA is linear dimensionality reduction",
+            "scikit-learn PCA centers but does not scale each feature",
+            "Variance explained differs from downstream label accuracy"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html",
+      "title": "average_precision_score",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC28",
+          "title": "average_precision_score",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official software documentation",
+          "verification": "Opened official API documentation",
+          "key_claims": [
+            "Average Precision is a recall-weighted summary of precision and is not identical to trapezoidal PR-curve integration."
+          ],
+          "limits": "AP, recall, budgets and confusion matrix are proposed drill metrics; the event may prescribe a different metric."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+      "title": "TimeSeriesSplit",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC29",
+          "title": "TimeSeriesSplit",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official software documentation",
+          "verification": "Opened official API documentation",
+          "key_claims": [
+            "Time-series splitting avoids training on future observations and evaluating on past ones.",
+            "Comparable fold durations require attention to sample spacing; gap can separate training and test windows."
+          ],
+          "limits": "The dataset may require group-aware or custom chronological splitting rather than blindly using this splitter."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html",
+      "title": "MLPClassifier",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_early_stopping",
+          "title": "MLPClassifier",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "validation 기반 early_stopping"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "title": "Metrics and scoring: quantifying the quality of predictions",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_metrics",
+          "title": "Metrics and scoring: quantifying the quality of predictions",
+          "publisher": "scikit-learn developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "accuracy·precision·recall",
+            "불균형 데이터 평가",
+            "혼동행렬 기반 지표"
+          ],
+          "caveats": [
+            "자체 숫자 예시는 새로 작성한 것으로 공식 문항이 아니다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS05",
+          "title": "Metrics and scoring quantifying the quality of predictions",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official page opened; regression and classification metric definitions checked",
+          "question_ids": [
+            "AQ05",
+            "AQ26",
+            "AQ28"
+          ],
+          "supports": [
+            "MAE, MSE and RMSE definitions",
+            "Precision and recall denominators"
+          ],
+          "caveats": "The top-k document metric convention is explicitly defined in AQ28; calculations use original data."
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+      "title": "Preprocessing data",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_preprocess",
+          "title": "Preprocessing data",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "표준화와 범주형 인코딩"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS06",
+          "title": "Preprocessing data",
+          "publisher": "scikit-learn developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official standardization and train-only fit example read",
+          "question_ids": [
+            "AQ06"
+          ],
+          "supports": [
+            "Feature scales can dominate objectives",
+            "Fit scaling on training data and apply the same transform to other data"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/tree.html",
+      "title": "Decision Trees",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_tree",
+          "title": "Decision Trees",
+          "publisher": "scikit-learn",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "조건 분기",
+            "깊이와 과적합",
+            "전처리 차이"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://sk.com/ko/media/news_view.jsp?idx=1775&pageNo=1",
+      "title": "SK 2026 SK AI 해커톤 성료",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "sk_internal_hackathon",
+          "title": "SK 2026 SK AI 해커톤 성료",
+          "published": "2026-09-16",
+          "authority": "SK그룹 공식",
+          "read_method": "web full page",
+          "supports": [
+            "사내 구성원 대회와 외부 하이닉스 대회 구분"
+          ],
+          "caveats": [
+            "이번 하이닉스 개인전의 규정 근거로 쓰지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://skhynix-hackathon.com/ai-2026",
+      "title": "SK하이닉스 AI 해커톤 2026 공식 홈페이지와 FAQ",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "event_official",
+          "title": "SK하이닉스 AI 해커톤 2026 공식 홈페이지와 FAQ",
+          "authority": "대회 공식",
+          "read_method": "web full page 및 브라우저 FAQ 여섯 분류 확인",
+          "supports": [
+            "일정",
+            "개인전",
+            "지원자격",
+            "포트폴리오",
+            "예선 목적",
+            "채용 혜택",
+            "운영 문의"
+          ],
+          "caveats": [
+            "정적 검색 추출과 실제 모집 마감 UI가 다름",
+            "혜택 배너와 채용 FAQ의 SKCT 표기 차이",
+            "실전 문항 수·시간·외부 도구 규칙은 미공개"
+          ]
+        },
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC01",
+          "title": "SK하이닉스 AI 해커톤 2026",
+          "publisher": "SK hynix hackathon official website",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official event page",
+          "verification": "Official page full parsed content returned by web search",
+          "key_claims": [
+            "First preliminary round is described as validation of basic AI knowledge and utilization capabilities.",
+            "Final round is described as solving semiconductor field problems with AI.",
+            "First preliminary round is scheduled for one day on October 17 or 18, 2026."
+          ],
+          "limits": "Does not announce the eight proposed practice projects or prove semiconductor specialization is required for the first preliminary round."
+        },
+        {
+          "register": "readiness-sources.json",
+          "id": "ready_event_recheck",
+          "title": "SK하이닉스 AI 해커톤 2026 공개 행사 페이지",
+          "publisher": "SK하이닉스 해커톤 운영 사이트",
+          "read_method": "web 정적 본문 재확인 및 공식 도메인 검색",
+          "status": "read",
+          "supports": [
+            "공개 일정·평가 목적 유지",
+            "읽은 공개 페이지에는 개인 시험 설정표가 없음"
+          ],
+          "caveats": [
+            "이 초기 점검의 동적 FAQ 확인은 10월 13일 기록을 사용함",
+            "이후 10월 14일 공식 공지와 동적 FAQ 재확인은 notice-sources.json 및 07 보고서에 기록",
+            "새 공지 전체의 부존재를 주장하지 않음",
+            "개인 상세 응시 메일은 읽지 않음"
+          ]
+        },
+        {
+          "register": "notice-sources.json",
+          "id": "notice_event_faq_recheck",
+          "title": "공식 대회 예선 FAQ와 문의 안내",
+          "publisher": "공식 대회 운영 사이트",
+          "read_method": "web 정적 본문과 10월 14일 Edge의 동적 예선 FAQ 재확인",
+          "status": "read",
+          "supports": [
+            "공개 예선 평가 목적",
+            "구체적인 설정표 미확인",
+            "support 문의 주소"
+          ],
+          "caveats": [
+            "읽은 페이지의 범위에 관한 확인이며 모든 새 공지의 부존재를 주장하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://skhynix-hackathon.com/my/notice",
+      "title": "SK하이닉스 AI 해커톤 2026 서류 전형 합격 및 1차 예선 안내",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_official_account_page",
+          "title": "SK하이닉스 AI 해커톤 2026 서류 전형 합격 및 1차 예선 안내",
+          "notice_date": "2026-10-10",
+          "publisher": "공식 대회 운영 사이트",
+          "read_method": "기존 계정 세션의 동일 대회 공지 화면 브라우저 확인",
+          "access": "account_notice_existing_session",
+          "status": "read",
+          "supports": [
+            "합격 안내",
+            "1차 일정·플랫폼·평가 목적",
+            "상세 안내 발송 예정 10월 13일",
+            "공지에 표시된 notice 발신 주소와 스팸 확인 안내"
+          ],
+          "caveats": [
+            "익명 web 도구에서는 접근 불가",
+            "새 로그인·대회 신청·시험 시작은 수행하지 않음",
+            "공지 본문은 실제 메일 발송 완료의 증거가 아님",
+            "개인별 시작시각·문항수·도구허용표가 보이지 않음",
+            "참가자 이름과 개인 토큰을 저장하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://skhynix-hackathon.com/my/privacy-policy",
+      "title": "대회 개인정보 처리방침",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "event_privacy",
+          "title": "대회 개인정보 처리방침",
+          "effective": "2026-09-21",
+          "authority": "대회 공식",
+          "read_method": "브라우저 본문 확인",
+          "supports": [
+            "제4조 회사별 플랫폼 역할",
+            "제4조 제공 정보와 보유기간",
+            "제10조 문의 경로"
+          ],
+          "caveats": [
+            "모델명·시험 인터페이스 설정까지 정한 문서는 아님"
+          ]
+        },
+        {
+          "register": "ai-sources.json",
+          "id": "ai_event_privacy",
+          "title": "SK하이닉스 AI 해커톤 2026 개인정보 처리방침",
+          "publisher": "대회 운영사",
+          "published": null,
+          "effective": "2026-09-21",
+          "accessed_kst": "2026-10-13",
+          "authority": "대회 공식",
+          "read_method": "협업 event agent가 브라우저에서 제4조 본문 확인",
+          "supports": [
+            "1차 Grepp 응시 플랫폼 및 관리",
+            "2차와 본선 Krafton 플랫폼 출제 채점"
+          ],
+          "caveats": [
+            "정적 web 추출은 본문을 표시하지 못했다. 협업 보고서 01-event.md 및 event-sources.json의 브라우저 검증 근거 사용.",
+            "회사 역할이 세부 모델·시간·도구 사용 규칙을 확정하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://skhynix-hackathon.com/my/term-of-service",
+      "title": "대회 이용약관",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "event_terms",
+          "title": "대회 이용약관",
+          "effective": "2026-09-21",
+          "authority": "대회 공식",
+          "read_method": "브라우저 본문 확인",
+          "supports": [
+            "제9조 금지행위",
+            "제11조 산출물 권리",
+            "제13조 제공자료 사용범위",
+            "제14조 실격·수상취소"
+          ],
+          "caveats": [
+            "구체적 시험 허용 도구·평가 설정은 개별 참가요강과 공지에 따름"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://talent.skhynix.com/hub/ko/company/story/237",
+      "title": "Talent Hub SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+      "records": [
+        {
+          "register": "event-sources.json",
+          "id": "event_talent_mirror",
+          "title": "Talent Hub SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+          "authority": "SK하이닉스 공식 Talent Hub",
+          "read_method": "web full page",
+          "supports": [
+            "보도자료 교차 확인"
+          ],
+          "caveats": [
+            "event_press와 내용 동일하므로 독립 근거로 중복 집계하지 않음"
+          ]
+        },
+        {
+          "register": "ai-sources.json",
+          "id": "ai_event_talent",
+          "title": "SK하이닉스, AI 실전 역량 겨루는 해커톤 개최",
+          "publisher": "SK hynix Talent Hub",
+          "published": "2026-09-21",
+          "accessed_kst": "2026-10-13",
+          "authority": "주최사 공식",
+          "read_method": "web open 본문",
+          "supports": [
+            "AI 기본 활용 역량·리터러시",
+            "문제 정의·AI 활용·결과 검증",
+            "Cofa-Probe 등 도구 사용"
+          ],
+          "caveats": [
+            "뉴스룸 발표의 공식 미러이며 독립 기사로 중복 집계하지 않는다.",
+            "이 보도자료만으로 1차와 2차의 플랫폼 배정을 확정하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-faq.grepp.co/ko/articles/%EC%82%AC%EC%A0%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-ca2e42b8",
+      "title": "사전 테스트가 무엇인가요",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_demo_test_guide",
+          "title": "사전 테스트가 무엇인가요",
+          "publisher": "그렙 공식 개인문의 도움말",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "환경·기기·네트워크 확인용 사전 테스트",
+            "필수 시험에서는 체험 종료 버튼으로 완료"
+          ],
+          "caveats": [
+            "SK하이닉스 사전 테스트 제공·필수 여부는 미확인",
+            "공개 AI 샘플 체험과 다른 기능"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-faq.grepp.co/ko/categories/%EC%98%A8%EB%9D%BC%EC%9D%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-4aabea7b",
+      "title": "온라인 테스트 도움말",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_test_support_category",
+          "title": "온라인 테스트 도움말",
+          "publisher": "그렙 공식 개인문의 도움말",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "시험에 따라 장애 문의 채널 운영 여부가 다름",
+            "접속·기기·제출 방식은 유형과 주최 규정에 따라 다름"
+          ],
+          "caveats": [
+            "자동 제출에 대한 일반 시험 설명을 이번 AI 평가에 그대로 적용하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/Accessing-the-Test-Page-5dff571a",
+      "title": "Accessing the Test Page",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_accessing_test_guide",
+          "title": "Accessing the Test Page",
+          "publisher": "그렙 공식 응시자 가이드",
+          "read_method": "공식 서비스 가이드에서 연결된 문서 web full page",
+          "status": "read",
+          "supports": [
+            "등록 계정·스팸·프로모션 확인",
+            "최신 초대 메일 사용",
+            "미수신 시 주최 측 재발송 요청",
+            "일반 플랫폼 초대 메일 발신 주소",
+            "시험마다 접근·기기·유형이 다름"
+          ],
+          "caveats": [
+            "일반 플랫폼 초대 발신 주소를 이번 대회 실제 주소로 확정하지 않음",
+            "Monito+ 설치 등 조건은 해당 시험 안내가 요구할 때 적용",
+            "안내문의 일반 접속 코드를 추정하거나 실제 시험에 진입하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a",
+      "title": "Minimum Requirements",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_minimum_requirements",
+          "title": "Minimum Requirements",
+          "publisher": "그렙 공식 응시자 가이드",
+          "read_method": "web full page",
+          "status": "read",
+          "supports": [
+            "일반 PC·브라우저·네트워크 사양 참고"
+          ],
+          "caveats": [
+            "이번 대회의 확정 환경표가 아님",
+            "영문 도입부의 Windows only 표현과 표의 macOS 지원이 함께 있어 단일 문장만으로 전체 지원 범위를 단정하지 않음",
+            "현재 사용자 PC의 카메라·네트워크를 테스트하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Building effective agents",
+      "records": [
+        {
+          "register": "agent-sources.json",
+          "id": "agents_effective_agents",
+          "title": "Building effective agents",
+          "publisher": "Anthropic",
+          "published": "2024-12-19",
+          "accessed_kst": "2026-10-14",
+          "authority": "공식 기술 1차 출처",
+          "read_method": "web open 또는 find로 본문 확인",
+          "supports": [
+            "고정 workflow와 모델 주도 agent 구분",
+            "간단한 설계부터 시작",
+            "도구 결과의 피드백과 종료 조건"
+          ],
+          "caveats": [
+            "현재 페이지는 2024년 이후 도구 지형이 달라졌다는 안내를 포함한다.",
+            "과거 프레임워크 이름·모델 성능 권고는 사용하지 않고 구조의 구분만 인용했다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS13",
+          "title": "Building effective agents",
+          "publisher": "Anthropic",
+          "publication_date": "2024-12-19",
+          "accessed_date": "2026-10-14",
+          "verification": "Official workflow/agent distinction and parallelization sections read",
+          "question_ids": [
+            "AQ13",
+            "AQ32"
+          ],
+          "supports": [
+            "Workflows use predefined paths while agents dynamically direct their processes",
+            "Independent subtasks can be parallelized"
+          ],
+          "caveats": "The page notes tooling has changed since publication. Only stable architecture concepts are used; no claim about currently preferred vendor model or framework."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elastic.co/docs/solutions/search/hybrid-search",
+      "title": "Hybrid search",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_hybrid",
+          "title": "Hybrid search",
+          "publisher": "Elastic",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "lexical semantic 결합"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "특정 검색 서비스 설치를 권하지 않는다. 작은 합성 자료로 검색 오류를 비교할 수 있다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.gausslabs.ai/vm",
+      "title": "Panoptes Virtual Metrology",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC09",
+          "title": "Panoptes Virtual Metrology",
+          "publisher": "Gauss Labs",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "vendor product page",
+          "verification": "Opened official product page",
+          "key_claims": [
+            "Virtual metrology predicts process outcomes using fab data.",
+            "Use cases include process control, monitoring, metrology sampling optimization and equipment maintenance."
+          ],
+          "limits": "Product capabilities are vendor statements. Different historic/current percentage figures on this and related pages should not be combined without matching scope."
+        }
+      ]
+    },
+    {
+      "url": "https://www.getcofa.com/en/probe",
+      "title": "Probe | AI-Native Talent Assessment Platform · Cofa",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_probe_en",
+          "title": "Probe | AI-Native Talent Assessment Platform · Cofa",
+          "publisher": "Cofa / KRAFTON",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "평가 플랫폼 공식",
+          "read_method": "web open 본문",
+          "supports": [
+            "Technique·Intent·Cognition 공개 축 설명"
+          ],
+          "caveats": [
+            "국문 안내와 세부 표현 차이가 있어 동일한 플랫폼 소개의 보완 자료로 사용한다.",
+            "국문·영문을 독립 증거 두 개로 세지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.getcofa.com/ko/probe",
+      "title": "Probe | AI Native 인재 역량 평가 플랫폼 · Cofa",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_probe_ko",
+          "title": "Probe | AI Native 인재 역량 평가 플랫폼 · Cofa",
+          "publisher": "Cofa / KRAFTON",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "평가 플랫폼 공식",
+          "read_method": "web open 본문",
+          "supports": [
+            "산출물·작업 기록·검증 기록",
+            "사후 Q&A",
+            "기술·의도·인지",
+            "과제별 감독 조건"
+          ],
+          "caveats": [
+            "플랫폼 일반 설명. SK 대회별 문항·시간·모델·외부 도구 규칙으로 대체하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm",
+      "title": "NIST Engineering Statistics Handbook 6.1.6 What is Process Capability",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC25",
+          "title": "NIST Engineering Statistics Handbook 6.1.6 What is Process Capability",
+          "publisher": "NIST / SEMATECH",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official statistics handbook",
+          "verification": "Opened full section",
+          "key_claims": [
+            "Capability compares a stable process with specification limits.",
+            "Standard Cp and Cpk interpretation assumes an appropriate distribution and sufficient observations."
+          ],
+          "limits": "Control limits and specification limits have different purposes. Capability formulas cannot establish causality or actual yield improvements."
+        }
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc31.htm",
+      "title": "NIST Engineering Statistics Handbook 6.3.1 What are Control Charts",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC24",
+          "title": "NIST Engineering Statistics Handbook 6.3.1 What are Control Charts",
+          "publisher": "NIST / SEMATECH",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official statistics handbook",
+          "verification": "Opened full section",
+          "key_claims": [
+            "Control charts monitor characteristics over samples/time using center lines and control limits.",
+            "Three-sigma limits and distribution assumptions influence false alarm behavior."
+          ],
+          "limits": "Does not prescribe a one-size-fits-all sensor anomaly detector or SK hynix control thresholds."
+        }
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm",
+      "title": "What are confidence intervals",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS28",
+          "title": "What are confidence intervals",
+          "publisher": "NIST / SEMATECH",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Full official confidence interval section read",
+          "question_ids": [
+            "AQ36"
+          ],
+          "supports": [
+            "Frequentist confidence levels describe repeated-interval coverage",
+            "One- and two-sided intervals are distinct"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc31.htm",
+      "title": "Do two processes have the same mean",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS29",
+          "title": "Do two processes have the same mean",
+          "publisher": "NIST / SEMATECH",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official two-sample comparison section opened",
+          "question_ids": [
+            "AQ36"
+          ],
+          "supports": [
+            "A difference estimate should be interpreted with uncertainty and the specified test alternative"
+          ],
+          "caveats": "Accuracy difference interval is hypothetical and its validity is explicitly assumed, rather than derived using this page's process-time example."
+        }
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section1/pri11.htm",
+      "title": "NIST Engineering Statistics Handbook 5.1.1 What is experimental design",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC26",
+          "title": "NIST Engineering Statistics Handbook 5.1.1 What is experimental design",
+          "publisher": "NIST / SEMATECH",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official statistics handbook",
+          "verification": "Opened section",
+          "key_claims": [
+            "Experimental design provides a systematic approach to changing inputs and studying their effects."
+          ],
+          "limits": "A synthetic optimization exercise is not authorization to alter a real manufacturing recipe."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "title": "MVTec AD Industrial anomaly detection benchmark dataset",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC21",
+          "title": "MVTec AD Industrial anomaly detection benchmark dataset",
+          "publisher": "MVTec Software GmbH",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "dataset creator official page",
+          "verification": "Opened full official page and explicit license section",
+          "key_claims": [
+            "15 industrial object/texture categories with defect-free training images, normal/anomalous test images and pixel annotations.",
+            "Data are for non-commercial use under CC BY-NC-SA 4.0."
+          ],
+          "license": "CC BY-NC-SA 4.0",
+          "download_status": "Official page provides download form; not submitted or downloaded",
+          "limits": "Not actual SK hynix manufacturing imagery. Code license does not override dataset noncommercial restriction; competition submission use needs rights and rule checks."
+        }
+      ]
+    },
+    {
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2",
+      "title": "MVTec AD 2 Advanced Industrial Anomaly Detection Dataset",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC22",
+          "title": "MVTec AD 2 Advanced Industrial Anomaly Detection Dataset",
+          "publisher": "MVTec Software GmbH",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "dataset creator official page",
+          "verification": "Official page parsed including evaluation and license sections",
+          "key_claims": [
+            "Advanced industrial anomaly detection settings and public/private evaluation data.",
+            "Private test evaluation uses the official evaluation server.",
+            "Data license is CC BY-NC-SA 4.0."
+          ],
+          "license": "CC BY-NC-SA 4.0",
+          "download_status": "Download form listed; no account details submitted",
+          "limits": "Useful later-stage benchmark, not first preliminary preparation priority."
+        }
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/",
+      "title": "Prognostics Center of Excellence Data Set Repository",
+      "records": [
+        {
+          "register": "semiconductor-sources.json",
+          "id": "SC16",
+          "title": "Prognostics Center of Excellence Data Set Repository",
+          "publisher": "NASA Ames Prognostics Center of Excellence",
+          "publication_date": null,
+          "accessed_date": "2026-10-13",
+          "source_type": "official dataset repository",
+          "verification": "Official page body parsed in web results",
+          "key_claims": [
+            "Turbofan Engine Degradation Simulation dataset is generated with C-MAPSS and download is linked.",
+            "Run-to-failure trajectories support remaining useful life model development."
+          ],
+          "license": "No dataset-specific permissive license established by this read; inspect downloaded distribution terms",
+          "download_status": "Download link listed; archive not downloaded in this research",
+          "limits": "Aerospace simulation, not semiconductor equipment. Data availability must not be confused with availability of C-MAPSS simulator software."
+        }
+      ]
+    },
+    {
+      "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+      "title": "Metric SI Prefixes",
+      "records": [
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS24",
+          "title": "Metric SI Prefixes",
+          "publisher": "NIST",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official SI prefix page opened after older NIST URL redirect",
+          "question_ids": [
+            "AQ30"
+          ],
+          "supports": [
+            "Decimal mega and giga scale factors"
+          ],
+          "caveats": "800 Mbps throughput and overhead-free transfer are hypothetical, and byte-to-bit conversion is defined in the question."
+        }
+      ]
+    },
+    {
+      "url": "https://www.programmers.co.kr/pages/service-guide",
+      "title": "프로그래머스 서비스 가이드",
+      "records": [
+        {
+          "register": "notice-sources.json",
+          "id": "notice_programmers_service_guide",
+          "title": "프로그래머스 서비스 가이드",
+          "publisher": "그렙 프로그래머스",
+          "read_method": "web full page 및 공식 응시자 도움말 링크 추적",
+          "status": "read",
+          "supports": [
+            "응시자 가이드의 공식 연결",
+            "일반 고객센터 번호·운영 시간"
+          ],
+          "caveats": [
+            "SK하이닉스 대회 배정·메일 발송 창구와 동일하다고 주장하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "title": "Retrieve & Re-Rank",
+      "records": [
+        {
+          "register": "foundation-sources.json",
+          "id": "foundation_rerank",
+          "title": "Retrieve & Re-Rank",
+          "publisher": "Sentence Transformers",
+          "published": null,
+          "accessed_kst": "2026-10-14",
+          "authority": "기술 1차 출처",
+          "read_method": "공식 문서 또는 원 논문을 web open/find로 확인",
+          "supports": [
+            "후보 검색과 cross encoder 재정렬"
+          ],
+          "caveats": [
+            "SK하이닉스 확정 출제나 배점을 뜻하지 않는다.",
+            "특정 검색 서비스 설치를 권하지 않는다. 작은 합성 자료로 검색 오류를 비교할 수 있다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.sqlite.org/lang_aggfunc.html",
+      "title": "Built-in Aggregate Functions",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_agg",
+          "title": "Built-in Aggregate Functions",
+          "publisher": "SQLite developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "COUNT(*)와 COUNT(column)",
+            "AVG·SUM 및 NULL 집계"
+          ],
+          "caveats": [
+            "SQLite 기준. lot별 단순 평균과 chip별 전체 수율의 숫자는 독립적으로 계산했다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.sqlite.org/lang_expr.html",
+      "title": "SQL Language Expressions",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_expr",
+          "title": "SQL Language Expressions",
+          "publisher": "SQLite developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "정수 나눗셈과 실수 연산",
+            "NULL과 비교 연산"
+          ],
+          "caveats": [
+            "SQLite 동작을 다른 DB 방언에 자동 적용하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.sqlite.org/lang_select.html",
+      "title": "SELECT",
+      "records": [
+        {
+          "register": "ai-sources.json",
+          "id": "ai_select",
+          "title": "SELECT",
+          "publisher": "SQLite developers",
+          "published": null,
+          "accessed_kst": "2026-10-13",
+          "authority": "기술 1차 출처",
+          "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+          "supports": [
+            "JOIN 행 수",
+            "LEFT JOIN과 WHERE의 NULL 처리",
+            "집계와 필터"
+          ],
+          "caveats": [
+            "SQLite 기준의 처리 의미. 실제 실행의 물리적 순서를 설명하는 용도는 아니다."
+          ]
+        },
+        {
+          "register": "advanced-quiz-sources.json",
+          "id": "AQS22",
+          "title": "SELECT",
+          "publisher": "SQLite developers",
+          "publication_date": null,
+          "accessed_date": "2026-10-14",
+          "verification": "Official SELECT documentation opened",
+          "question_ids": [
+            "AQ25"
+          ],
+          "supports": [
+            "Join row construction and aggregation semantics"
+          ],
+          "caveats": "Lot data and event duplication counts are invented and their ratios are independently checked."
+        }
+      ]
+    }
+  ]
+}

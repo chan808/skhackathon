@@ -1,0 +1,40 @@
+{
+  "checked_at_kst": "2026-10-13T23:43:19.752524+09:00",
+  "test_returncode": 0,
+  "test_count": 9,
+  "test_output": "test_answer_shape_is_not_truth_validation (test_practice.PracticeTests) ... ok\ntest_conflicting_duplicate_is_never_silently_dropped (test_practice.PracticeTests) ... ok\ntest_fahrenheit_conversion (test_practice.PracticeTests) ... ok\ntest_generated_data_health_and_crosscheck (test_practice.PracticeTests) ... ok\ntest_order_does_not_change_accepted_counts (test_practice.PracticeTests) ... ok\ntest_quit_preserves_partial_progress (test_practice.PracticeTests) ... ok\ntest_quiz_has_unique_ids_and_supported_answers (test_practice.PracticeTests) ... ok\ntest_quiz_scoring_and_saved_log_end_to_end (test_practice.PracticeTests) ... ok\ntest_wrong_answer_review_selects_only_prior_errors (test_practice.PracticeTests) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.052s\n\nOK\n",
+  "markdown_files_checked": 12,
+  "local_links_checked": 28,
+  "missing_local_links": [],
+  "quiz_questions": 40,
+  "quiz_categories": {
+    "LLM": 8,
+    "프롬프트": 4,
+    "RAG": 5,
+    "데이터": 8,
+    "에이전트": 4,
+    "평가": 7,
+    "보안": 4
+  },
+  "unique_source_urls": 73,
+  "source_count_note": "URL 개수는 독립 근거 개수와 다르다. 동일 보도자료·미러·서로 다른 언어판·접근 제한은 records의 caveats를 따른다.",
+  "lab": {
+    "raw_rows": 245,
+    "clean_rows": 232,
+    "rejected": {
+      "missing_or_invalid_count": 3,
+      "invalid_count_range": 4,
+      "invalid_timestamp": 1,
+      "exact_duplicate": 5
+    },
+    "weighted_yield": 0.9496559893551423,
+    "sqlite_weighted_yield": 0.9496559893551423
+  },
+  "limits": [
+    "Quiz and missions are original study exercises, not official exam questions.",
+    "Answer structure validation does not establish factual truth.",
+    "Public preview explanations were reviewed; participant login and real exam were not accessed.",
+    "Local links were checked; external source access status is recorded in source registers."
+  ],
+  "passed": true
+}

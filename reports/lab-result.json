@@ -1,0 +1,106 @@
+{
+  "kind": "synthetic_training_only",
+  "raw_rows": 245,
+  "clean_rows": 232,
+  "rejected": {
+    "missing_or_invalid_count": 3,
+    "invalid_count_range": 4,
+    "invalid_timestamp": 1,
+    "exact_duplicate": 5
+  },
+  "temperature_conversions": 1,
+  "tested_dies": 123252,
+  "good_dies": 117047,
+  "weighted_yield": 0.9496559893551423,
+  "unweighted_lot_yield": 0.9167709283591081,
+  "sqlite_weighted_yield": 0.9496559893551423,
+  "equipment_product": [
+    {
+      "equipment": "E1",
+      "product": "A",
+      "lots": 40,
+      "tested_dies": 35160,
+      "good_dies": 34087,
+      "yield": 0.9694823663253698
+    },
+    {
+      "equipment": "E1",
+      "product": "B",
+      "lots": 37,
+      "tested_dies": 5031,
+      "good_dies": 4427,
+      "yield": 0.8799443450606241
+    },
+    {
+      "equipment": "E2",
+      "product": "A",
+      "lots": 40,
+      "tested_dies": 36445,
+      "good_dies": 35310,
+      "yield": 0.9688571820551516
+    },
+    {
+      "equipment": "E2",
+      "product": "B",
+      "lots": 38,
+      "tested_dies": 5074,
+      "good_dies": 4465,
+      "yield": 0.8799763500197083
+    },
+    {
+      "equipment": "E3",
+      "product": "A",
+      "lots": 40,
+      "tested_dies": 36805,
+      "good_dies": 34729,
+      "yield": 0.9435946202961554
+    },
+    {
+      "equipment": "E3",
+      "product": "B",
+      "lots": 37,
+      "tested_dies": 4737,
+      "good_dies": 4029,
+      "yield": 0.850538315389487
+    }
+  ],
+  "equipment_period": [
+    {
+      "equipment": "E1",
+      "period": "after",
+      "lots": 26,
+      "yield": 0.9579317044011059
+    },
+    {
+      "equipment": "E1",
+      "period": "before",
+      "lots": 51,
+      "yield": 0.958445240226798
+    },
+    {
+      "equipment": "E2",
+      "period": "after",
+      "lots": 27,
+      "yield": 0.9608418034923117
+    },
+    {
+      "equipment": "E2",
+      "period": "before",
+      "lots": 51,
+      "yield": 0.9563257040235374
+    },
+    {
+      "equipment": "E3",
+      "period": "after",
+      "lots": 27,
+      "yield": 0.8794819259476072
+    },
+    {
+      "equipment": "E3",
+      "period": "before",
+      "lots": 50,
+      "yield": 0.9592122255703831
+    }
+  ],
+  "interpretation": "This synthetic association does not prove a real manufacturing root cause."
+}

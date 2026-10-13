@@ -1,0 +1,14 @@
+{
+  "answer": "합성 실습 자료에서 전체 수율은 로트별 수율의 평균 대신 양품 합계와 검사 수량 합계의 비율로 계산한다.",
+  "claims": [
+    {
+      "text": "양품 수와 검사 수의 합계를 사용한다.",
+      "source": "data/synthetic/lots.csv 및 practice/core.py analyze",
+      "evidence": "SUM(good_dies) / SUM(tested_dies), SQLite에서는 1.0을 곱해 정수 나눗셈 방지"
+    }
+  ],
+  "limitations": [
+    "교육용 합성 자료이며 SK하이닉스 데이터가 아니다.",
+    "JSON 구조 점검 통과는 사실의 정확성이나 산업 현장에서의 타당성을 보장하지 않는다."
+  ]
+}

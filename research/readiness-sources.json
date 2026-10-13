@@ -1,0 +1,83 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "1차 준비도 점검과 프로그래머스 공개 학습 분류",
+  "records": [
+    {
+      "id": "ready_event_recheck",
+      "title": "SK하이닉스 AI 해커톤 2026 공개 행사 페이지",
+      "url": "https://skhynix-hackathon.com/ai-2026",
+      "publisher": "SK하이닉스 해커톤 운영 사이트",
+      "read_method": "web 정적 본문 재확인 및 공식 도메인 검색",
+      "status": "read",
+      "supports": ["공개 일정·평가 목적 유지", "읽은 공개 페이지에는 개인 시험 설정표가 없음"],
+      "caveats": ["이 초기 점검의 동적 FAQ 확인은 10월 13일 기록을 사용함", "이후 10월 14일 공식 공지와 동적 FAQ 재확인은 notice-sources.json 및 07 보고서에 기록", "새 공지 전체의 부존재를 주장하지 않음", "개인 상세 응시 메일은 읽지 않음"]
+    },
+    {
+      "id": "ready_insight_index",
+      "title": "프로그래머스 AI 역량평가 인사이트 목록",
+      "url": "https://programmers.co.kr/ai-assessment/insight",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": ["현재 표시된 글 목록 확인"],
+      "caveats": ["최신 표시 글은 10월 12일 일반 조직 관련 글", "시험 참가자 공지함이나 개인 안내를 대신하지 않음"]
+    },
+    {
+      "id": "ready_literacy_training",
+      "title": "AI 리터러시 교육 실제 역량 변화로 연결하려면",
+      "url": "https://programmers.co.kr/ai-assessment/insight/ai-literacy-training",
+      "published": "2026-08-27",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": ["독서·수료와 활용 능력의 구분", "과제 수행과 재측정", "동일 문항 기억 효과와 변형 평가"],
+      "caveats": ["일반 교육 설명이며 SK하이닉스 합격 기준이 아님"]
+    },
+    {
+      "id": "ready_4p_education",
+      "title": "프로그래머스 AX 기업교육 4P 기준",
+      "url": "https://programmers.co.kr/b2b-education",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "web full page",
+      "status": "read",
+      "supports": ["문제 정의·AI 협업·검증·책임 관리", "결과와 과정의 평가 범주"],
+      "caveats": ["기업교육의 일반 프레임워크", "100점 감점·가점 설명을 SK하이닉스 점수 공식으로 이전하지 않음", "상업 설명의 효과 수치를 준비도 근거로 사용하지 않음"]
+    },
+    {
+      "id": "ready_official_seminar",
+      "title": "HR담당자를 위한 프로그래머스 기업 AX 교육 세미나 후기",
+      "url": "https://community.programmers.co.kr/post/14224",
+      "publisher": "프로그래머스 공식 작성자",
+      "read_method": "공식 원문 URL open 및 검색 반환 본문 확인",
+      "status": "read_partial_dynamic",
+      "supports": ["지식평가의 원리·한계·윤리·보안", "활용평가의 실무 과제", "전문평가의 통제·재현성"],
+      "caveats": ["커뮤니티 도메인이지만 본 게시물 작성자는 프로그래머스", "행사 후기는 SK하이닉스 출제 범위표가 아님", "게시일은 상대 날짜로 표시되어 정확한 날짜를 단정하지 않음"]
+    },
+    {
+      "id": "ready_preview_reference",
+      "title": "프로그래머스 응시자용 공개 체험",
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "publisher": "그렙 프로그래머스",
+      "read_method": "초기 점검은 10월 14일 web 본문과 10월 13일 동적 목록·FAQ 기록을 참조; 이후 10월 14일 브라우저 재확인은 notice-sources.json 참조",
+      "status": "public_page_rechecked_followup_dynamic_record_available",
+      "supports": ["공식 응시자 체험 접근 경로"],
+      "caveats": ["개인회원 로그인이나 체험 풀이 수행하지 않음", "체험과 실전 제한이 같다고 주장하지 않음"]
+    },
+    {
+      "id": "ready_local_audit",
+      "title": "10월 13일 로컬 준비 도구 검증과 퀴즈 직접 검토",
+      "local_paths": [
+        "reports/verification.json",
+        "practice/quiz.json",
+        "practice/core.py",
+        "practice/__main__.py",
+        "practice/missions.md"
+      ],
+      "publisher": "이 작업 폴더의 자체 제작 학습 자료",
+      "read_method": "파일·검증 기록 읽기 및 보고서 폴더 목록 확인",
+      "status": "read",
+      "supports": ["40문항 입문 객관식의 한계", "9개 테스트는 도구 동작 검증", "응시자별 완료 기록 미확인"],
+      "caveats": ["준비도 점검은 자체 학습 평가", "합격 보장이나 시험 배점이 아님", "이번 턴에 추가되는 자료는 별도로 검증해야 함"]
+    }
+  ]
+}

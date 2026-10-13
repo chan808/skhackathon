@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "checked_on_kst": "2026-10-14",
+  "scope": "Primary learning references for 36 original advanced practice questions",
+  "data_origin": "All question scenarios, figures, prices and policy statements are original synthetic examples. External sources support technical principles rather than the event syllabus or synthetic data values.",
+  "source_field_note": "AQ27 and AQ31 have empty source_urls and explicit synthetic_arithmetic_or_evidence source_type because their self-contained arithmetic and invented documents do not assert external facts. Local provenance records below document them without attaching unrelated web citations.",
+  "sources": [
+    {
+      "id": "AQS01", "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "title": "Cross-validation evaluating estimator performance", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official page opened and held-out evaluation passages read", "question_ids": ["AQ01", "AQ24"],
+      "supports": ["Group-aware and time-aware validation", "Test set leakage when selecting settings"],
+      "caveats": "RAG answer-key leakage is an application of the evaluation principle, not a claim that this page describes this particular synthetic question."
+    },
+    {
+      "id": "AQS02", "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "title": "Probability calibration", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official definition and reliability-diagram passages read", "question_ids": ["AQ02"],
+      "supports": ["Well-calibrated predicted probabilities correspond to observed positive fractions in prediction groups"]
+    },
+    {
+      "id": "AQS03", "url": "https://imbalanced-learn.org/stable/common_pitfalls.html",
+      "title": "Common pitfalls and recommended practices", "publisher": "imbalanced-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official resampling-before-split leakage section read", "question_ids": ["AQ03"],
+      "supports": ["Resampling the entire dataset before splitting causes leakage and changes evaluation distribution"]
+    },
+    {
+      "id": "AQS04", "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+      "title": "Tuning the decision threshold for class prediction", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official probability-versus-decision and threshold-tuning sections read", "question_ids": ["AQ04", "AQ26"],
+      "supports": ["Threshold changes class decisions while fixed probability scores retain score-based ROC and PR curves", "Business costs inform threshold selection"],
+      "caveats": "Thresholds, costs and capacity constraints in AQ26 are invented."
+    },
+    {
+      "id": "AQS05", "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "title": "Metrics and scoring quantifying the quality of predictions", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official page opened; regression and classification metric definitions checked", "question_ids": ["AQ05", "AQ26", "AQ28"],
+      "supports": ["MAE, MSE and RMSE definitions", "Precision and recall denominators"],
+      "caveats": "The top-k document metric convention is explicitly defined in AQ28; calculations use original data."
+    },
+    {
+      "id": "AQS06", "url": "https://scikit-learn.org/stable/modules/preprocessing.html",
+      "title": "Preprocessing data", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official standardization and train-only fit example read", "question_ids": ["AQ06"],
+      "supports": ["Feature scales can dominate objectives", "Fit scaling on training data and apply the same transform to other data"]
+    },
+    {
+      "id": "AQS07", "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "title": "Clustering", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official K-means objective and cluster evaluation concepts checked", "question_ids": ["AQ06", "AQ07"],
+      "supports": ["K-means minimizes within-cluster squared distance", "Cluster labels identify partitions rather than semantic fault classes"]
+    },
+    {
+      "id": "AQS08", "url": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+      "title": "PCA", "publisher": "scikit-learn developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official centered-but-not-scaled definition and explained-variance selection read", "question_ids": ["AQ08"],
+      "supports": ["PCA is linear dimensionality reduction", "scikit-learn PCA centers but does not scale each feature", "Variance explained differs from downstream label accuracy"]
+    },
+    {
+      "id": "AQS09", "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "title": "Optimizing Model Parameters", "publisher": "PyTorch", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official training and test loops read, including eval and no_grad comments", "question_ids": ["AQ09", "AQ10"],
+      "supports": ["Loss backward computes gradients and optimizer step updates parameters", "eval and no_grad serve distinct roles in evaluation"]
+    },
+    {
+      "id": "AQS10", "url": "https://docs.pytorch.org/tutorials/recipes/recipes/zeroing_out_gradients.html",
+      "title": "Zeroing out gradients in PyTorch", "publisher": "PyTorch", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official introduction explicitly describing accumulation into .grad read", "question_ids": ["AQ10"],
+      "supports": ["Repeated backward calls accumulate gradients unless they are reset"],
+      "caveats": "The scalar loss and SGD numerical update are original independently checked arithmetic."
+    },
+    {
+      "id": "AQS11", "url": "https://docs.pytorch.org/docs/2.14/generated/torch.optim.Adam.html",
+      "title": "Adam", "publisher": "PyTorch", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official Adam update formula and beta definitions read", "question_ids": ["AQ11"],
+      "supports": ["Adam maintains first and second gradient moment estimates and has a learning-rate parameter"],
+      "caveats": "Versioned documentation is used for the definition, not as an installation requirement for this workspace."
+    },
+    {
+      "id": "AQS12", "url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.modules.conv.Conv2d.html",
+      "title": "Conv2d", "publisher": "PyTorch", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official NCHW shape and output height/width formulas read", "question_ids": ["AQ12"],
+      "supports": ["Convolution output channels and floor-based spatial output formula"],
+      "caveats": "Input tensor size and hyperparameters are original example values."
+    },
+    {
+      "id": "AQS13", "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Building effective agents", "publisher": "Anthropic", "publication_date": "2024-12-19", "accessed_date": "2026-10-14",
+      "verification": "Official workflow/agent distinction and parallelization sections read", "question_ids": ["AQ13", "AQ32"],
+      "supports": ["Workflows use predefined paths while agents dynamically direct their processes", "Independent subtasks can be parallelized"],
+      "caveats": "The page notes tooling has changed since publication. Only stable architecture concepts are used; no claim about currently preferred vendor model or framework."
+    },
+    {
+      "id": "AQS14", "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "title": "Model Context Protocol tools specification", "publisher": "Model Context Protocol maintainers", "publication_date": "2025-06-18", "date_type": "Specification edition", "accessed_date": "2026-10-14",
+      "verification": "Official input/output schema, isError and security consideration sections read", "question_ids": ["AQ14", "AQ23", "AQ33", "AQ34"],
+      "supports": ["Input schemas and access control are separate requirements", "Tool execution errors can use isError inside a result", "Structured results require validation"],
+      "caveats": "Uses a named published specification edition and does not assert this is the latest protocol revision. Cache-key and business-invariant designs are scenario applications."
+    },
+    {
+      "id": "AQS15", "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora",
+      "title": "LoRA", "publisher": "Hugging Face PEFT", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official low-rank update and frozen original weight passages read", "question_ids": ["AQ15"],
+      "supports": ["Low-rank update matrices can be trained while original weights remain frozen"],
+      "caveats": "The stable URL redirected to main. Main documentation can change; no PEFT version installation is required."
+    },
+    {
+      "id": "AQS16", "url": "https://huggingface.co/docs/transformers/en/quantization/overview",
+      "title": "Quantization overview", "publisher": "Hugging Face Transformers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official overview description of lower-precision weight storage read", "question_ids": ["AQ16"],
+      "supports": ["Lower-precision weight storage reduces model memory requirements subject to method tradeoffs"],
+      "caveats": "7 billion weights and 4 bits are explicit hypothetical assumptions; not a measured model memory claim."
+    },
+    {
+      "id": "AQS17", "url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+      "title": "How caching works", "publisher": "Hugging Face Transformers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official autoregressive key/value reuse explanation read", "question_ids": ["AQ16", "AQ17"],
+      "supports": ["KV cache reuses key/value representations of previously processed tokens", "KV memory is distinct from weight storage"]
+    },
+    {
+      "id": "AQS18", "url": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+      "title": "Retrieval", "publisher": "LangChain", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Current official retrieval page opened after canonical path redirects; text-splitter and retrieval-context sections read", "question_ids": ["AQ18", "AQ20"],
+      "supports": ["Retrieved documents become runtime context", "Text splitters break documents into retrievable context-sized chunks"],
+      "caveats": "Preserving rules and exceptions is a proposed scenario remedy. AQ20 dates and policy applicability are defined entirely in the question, not by this documentation."
+    },
+    {
+      "id": "AQS19", "url": "https://arxiv.org/abs/2005.11401",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "publisher": "Patrick Lewis and collaborators via arXiv / NeurIPS 2020", "publication_date": "2020-05-22", "last_revised": "2021-04-12", "accessed_date": "2026-10-14",
+      "verification": "Original paper abstract and publication record opened", "question_ids": ["AQ18", "AQ19", "AQ24"],
+      "supports": ["RAG combines parametric generation with retrieved nonparametric passages"],
+      "caveats": "Scenario remedies for omitted exceptions, claim grounding and leaked answer keys are preparation applications, not claims of guarantees in the original paper."
+    },
+    {
+      "id": "AQS20", "url": "https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "title": "Semantic Search", "publisher": "Sentence Transformers maintainers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official asymmetric semantic-search and query/document encoding passages read", "question_ids": ["AQ21"],
+      "supports": ["Use compatible query and document encoding paths appropriate to the retrieval task"],
+      "caveats": "The incompatibility of arbitrary independently trained spaces is the question's explicit assumption; different compatible asymmetric encoders can be valid."
+    },
+    {
+      "id": "AQS21", "url": "https://huggingface.co/docs/transformers/main/en/pad_truncation",
+      "title": "Padding and truncation", "publisher": "Hugging Face Transformers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official documentation opened after redirect from versioned default", "question_ids": ["AQ22"],
+      "supports": ["Token sequence length and model limits matter for input handling"],
+      "caveats": "8192 combined input/output tokens and overhead assumptions are invented for arithmetic and not a universal Transformers limit."
+    },
+    {
+      "id": "AQS22", "url": "https://www.sqlite.org/lang_select.html",
+      "title": "SELECT", "publisher": "SQLite developers", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official SELECT documentation opened", "question_ids": ["AQ25"],
+      "supports": ["Join row construction and aggregation semantics"],
+      "caveats": "Lot data and event duplication counts are invented and their ratios are independently checked."
+    },
+    {
+      "id": "AQS23", "url": "https://docs.python.org/3/library/datetime.html",
+      "title": "datetime Basic date and time types", "publisher": "Python Software Foundation", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official datetime documentation opened", "question_ids": ["AQ29"],
+      "supports": ["Aware datetimes and UTC offsets distinguish time zones"],
+      "caveats": "Policy dates are invented; KST offset and conversion are explicitly stated and calculated in the question."
+    },
+    {
+      "id": "AQS24", "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+      "title": "Metric SI Prefixes", "publisher": "NIST", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official SI prefix page opened after older NIST URL redirect", "question_ids": ["AQ30"],
+      "supports": ["Decimal mega and giga scale factors"],
+      "caveats": "800 Mbps throughput and overhead-free transfer are hypothetical, and byte-to-bit conversion is defined in the question."
+    },
+    {
+      "id": "AQS25", "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+      "title": "LLM06 2025 Excessive Agency", "publisher": "OWASP Gen AI Security Project", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official excessive-permissions and least-privilege guidance opened", "question_ids": ["AQ33"],
+      "supports": ["Access controls and minimum necessary permissions should limit sensitive data use"],
+      "caveats": "Cache partitioning is a proposed engineering application; this source does not define the synthetic cache implementation."
+    },
+    {
+      "id": "AQS26", "url": "https://docs.python.org/3/library/json.html",
+      "title": "json JSON encoder and decoder", "publisher": "Python Software Foundation", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official JSON serialization and decoding documentation opened", "question_ids": ["AQ34"],
+      "supports": ["Parsing JSON is a format operation distinct from business calculations"],
+      "caveats": "The yield invariant and numbers are supplied synthetic task conditions, not requirements defined by Python json."
+    },
+    {
+      "id": "AQS27", "url": "https://docs.python.org/3/library/sqlite3.html",
+      "title": "sqlite3 DB-API interface for SQLite databases", "publisher": "Python Software Foundation", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official parameter-binding guidance opened", "question_ids": ["AQ35"],
+      "supports": ["Use placeholders for SQL values rather than string assembly"],
+      "caveats": "Fixed identifier mapping is an application recommendation for the supplied two-table scenario."
+    },
+    {
+      "id": "AQS28", "url": "https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm",
+      "title": "What are confidence intervals", "publisher": "NIST / SEMATECH", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Full official confidence interval section read", "question_ids": ["AQ36"],
+      "supports": ["Frequentist confidence levels describe repeated-interval coverage", "One- and two-sided intervals are distinct"]
+    },
+    {
+      "id": "AQS29", "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc31.htm",
+      "title": "Do two processes have the same mean", "publisher": "NIST / SEMATECH", "publication_date": null, "accessed_date": "2026-10-14",
+      "verification": "Official two-sample comparison section opened", "question_ids": ["AQ36"],
+      "supports": ["A difference estimate should be interpreted with uncertainty and the specified test alternative"],
+      "caveats": "Accuracy difference interval is hypothetical and its validity is explicitly assumed, rather than derived using this page's process-time example."
+    },
+    {
+      "id": "AQS30", "title": "Original synthetic token-cost arithmetic", "publisher": "This workspace original practice", "publication_date": "2026-10-14", "accessed_date": "2026-10-14",
+      "verification": "Input/output charges recomputed independently with Python decimal arithmetic", "question_ids": ["AQ27"],
+      "supports": ["Invented input price 2 USD per million tokens and output price 8 USD per million tokens yield 0.018 USD for the specified requests"],
+      "caveats": "No external URL because no actual vendor price is asserted."
+    },
+    {
+      "id": "AQS31", "title": "Original synthetic goal-versus-experiment evidence", "publisher": "This workspace original practice", "publication_date": "2026-10-14", "accessed_date": "2026-10-14",
+      "verification": "The two invented source statements are fully included in AQ31 and logically compared", "question_ids": ["AQ31"],
+      "supports": ["30% planned target and 12% limited experiment are different claims and cannot be averaged as one demonstrated outcome"],
+      "caveats": "No external URL because these statements are invented, not quotations of a real company's announcement."
+    }
+  ]
+}

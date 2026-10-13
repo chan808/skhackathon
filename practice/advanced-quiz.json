@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "bank_id": "advanced",
+  "created_date": "2026-10-14",
+  "disclaimer": "자체 제작 심화 연습 36문항이다. 공식 기출·복원·예상문항이나 확정 출제 범위가 아니다. 문항의 표·규정·가격·사례는 창작한 합성 자료이며 출처는 기술 개념의 학습 근거다. first_round_core와 extension은 이 폴더의 학습 순서 표시로 대회의 공식 분류가 아니다. 정답 인덱스는 0부터 시작한다.",
+  "questions": [
+    {
+      "id": "AQ01", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "같은 웨이퍼에서 나온 칩들이 비슷한 특징을 갖는다. 목표는 다음 달 처음 보는 웨이퍼의 불량 예측이며, 현재 데이터에는 날짜와 wafer_id가 있다. 평가 설계로 가장 적절한 것은?",
+      "options": ["클래스 비율을 맞춘 칩 단위 무작위 분할만 사용한다.", "wafer_id만 분리하고 다음 달 데이터를 학습에 포함해 날짜 효과를 평균낸다.", "시간 순서를 보존하고 웨이퍼 그룹이 겹치지 않게 분할해 목표 환경을 평가한다.", "시간 순서를 지키되 웨이퍼별 일부 칩을 양쪽에 넣어 동일 웨이퍼의 균형을 맞춘다."],
+      "answer": 2,
+      "explanation": "처음 보는 미래 웨이퍼가 목표이므로 시간과 그룹 독립성을 함께 고려한다. 층화 무작위 분할은 클래스 비율을 맞춰도 같은 웨이퍼의 관련 정보와 미래 정보를 섞을 수 있다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/cross_validation.html"]
+    },
+    {
+      "id": "AQ02", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "평가 자료에서 불량 확률을 약 0.8로 예측한 제품 100개 중 실제 불량은 50개였다. 이 결과의 가장 적절한 해석은?",
+      "options": ["이 모델의 전체 정확도는 80%라고 계산할 수 있다.", "이 구간의 확률이 과도하게 높게 추정됐을 가능성이 있어 calibration을 확인한다.", "모든 제품의 불량 순위가 잘못됐으므로 순위 평가도 무의미하다.", "임계값을 0.8로 바꾸면 확률 추정의 보정도 완료된다."],
+      "answer": 1,
+      "explanation": "잘 보정된 모델은 약 0.8로 예측한 집단의 실제 양성 비율도 약 80%여야 한다. 이 구간은 과신을 시사하지만 표본 변동과 다른 구간도 확인해야 한다. 확률 보정과 순위 성능·임계값 선택은 다르다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/calibration.html"]
+    },
+    {
+      "id": "AQ03", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "실제 운영의 불량률은 1%다. 학습에 oversampling을 사용하고 싶다. 운영 성능을 평가할 절차로 가장 적절한 것은?",
+      "options": ["전체 자료를 50:50으로 oversampling한 뒤 train/test로 나눈다.", "train은 1%를 유지하고 test만 50:50으로 바꿔 불량을 더 많이 평가한다.", "양성 표본을 복제한 전체 자료를 먼저 섞고 같은 복제본이 겹치지 않는지만 확인한다.", "분할 뒤 학습 부분에만 resampling을 적용하고 운영 분포를 반영한 독립 평가셋을 유지한다."],
+      "answer": 3,
+      "explanation": "학습 데이터의 균형 조정과 운영 평가 분포는 구분한다. 전체 resampling 후 분할은 정보 누수와 평가 분포 변경을 만들 수 있다. 평가를 50:50으로 바꾸면 운영 precision·비용 해석도 달라진다.",
+      "source_urls": ["https://imbalanced-learn.org/stable/common_pitfalls.html"]
+    },
+    {
+      "id": "AQ04", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "동일한 고정 예측 점수에서 score ≥ threshold를 불량으로 분류한다. 임계값을 0.6에서 0.3으로 낮출 때 맞는 설명은?",
+      "options": ["양성 판정 집합이 커져 recall과 FP 수는 감소하지 않는다. precision은 반드시 좋아지거나 나빠진다고 단정할 수 없다.", "recall과 precision이 모두 증가하며 점수 기반 ROC AUC도 증가한다.", "점수 순위가 바뀌므로 ROC 곡선도 새로 학습해야 한다.", "FP 수는 줄고 FN 수는 늘지만 전체 정확도는 유지된다."],
+      "answer": 0,
+      "explanation": "고정 점수에서 임계값을 낮추면 기존 양성 판정을 포함하는 더 큰 집합을 선택한다. TP와 FP가 감소하지 않아 recall은 비감소한다. precision과 정확도는 추가된 표본에 따라 달라지고 점수 자체의 AUC는 바뀌지 않는다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/classification_threshold.html"]
+    },
+    {
+      "id": "AQ05", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "네 표본의 회귀 예측 오차가 같은 단위로 [0, 0, 0, 8]이다. 표본 가중치는 모두 같다. MAE와 RMSE는 각각 얼마인가?",
+      "options": ["MAE 2, RMSE 16", "MAE 2, RMSE 4", "MAE 4, RMSE 2", "MAE 8, RMSE 4"],
+      "answer": 1,
+      "explanation": "MAE=(0+0+0+8)/4=2다. MSE=(0+0+0+64)/4=16이고 RMSE=√16=4다. RMSE는 목표 변수와 같은 단위이며 큰 오차에 더 민감하다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/model_evaluation.html"]
+    },
+    {
+      "id": "AQ06", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "K-means에 온도 90~110과 압력 0~2를 원래 단위 그대로 넣었다. 두 특성의 의미상 중요도는 아직 정하지 않았다. 다음 검토로 가장 적절한 것은?",
+      "options": ["각 샘플의 두 특성을 하나의 평균으로 합쳐 단위 차이를 제거한다.", "K-means가 각 열을 자동 표준화하므로 현재 단위를 그대로 유지한다.", "거리에서 큰 범위의 특성이 지배하는지 확인하고 학습 기준 scaling과 의미상 가중치를 검토한다.", "각 열을 test의 최대값으로 나누어 미래 분포를 학습에 반영한다."],
+      "answer": 2,
+      "explanation": "K-means는 거리의 제곱 합을 사용하므로 특성 척도가 영향을 준다. 학습 데이터로 scaling을 학습하되 표준화가 업무상의 동일 중요도를 뜻하는지는 별도로 판단한다. K-means가 자동으로 열을 표준화하지는 않는다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/preprocessing.html", "https://scikit-learn.org/stable/modules/clustering.html"]
+    },
+    {
+      "id": "AQ07", "category": "ML·DL 기초", "priority": "extension",
+      "question": "K-means 두 실행의 표본 분할은 같지만 첫 실행의 cluster 0이 두 번째 실행에서 cluster 1로 표시됐다. 고장 라벨은 없다. 가장 적절한 판단은?",
+      "options": ["클러스터 번호는 임의 표지이므로 번호를 대응시켜 분할을 비교하고 고장 의미는 추가 근거로 확인한다.", "번호가 바뀌었으므로 두 실행은 서로 다른 제품을 묶었다고 판정한다.", "번호가 큰 cluster 1을 더 높은 고장 위험으로 순위화한다.", "클러스터 수가 같으므로 모든 표본의 분할도 같다고 일반화한다."],
+      "answer": 0,
+      "explanation": "클러스터 번호 자체에는 정상·고장이나 위험 순위 의미가 없다. 같은 분할의 번호 순열은 같은 묶음을 나타낼 수 있다. 이 문제에서는 분할이 같다고 주어졌지만 군집 수만 같아도 분할이 같은 것은 아니다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/clustering.html"]
+    },
+    {
+      "id": "AQ08", "category": "ML·DL 기초", "priority": "extension",
+      "question": "PCA의 상위 성분이 입력 분산의 95%를 설명한다. 이 성분으로 불량 분류기를 학습하려 한다. 맞는 해석은?",
+      "options": ["불량 분류 정확도도 최소 95%가 될 것으로 보증할 수 있다.", "PCA는 라벨을 보고 성분을 고르므로 작은 분산의 불량 신호도 이미 보존했다.", "PCA가 표준화까지 수행하므로 다른 단위의 센서를 먼저 검토할 필요가 없다.", "입력 분산 보존률이지 분류 성능 보장이 아니므로 scaling과 독립 분류 평가를 확인한다."],
+      "answer": 3,
+      "explanation": "PCA는 큰 분산 방향을 찾는 비지도 차원 축소다. 작은 분산 방향에 중요한 라벨 신호가 있을 수 있다. scikit-learn PCA는 중심화하지만 각 열의 척도를 자동 표준화하지는 않는다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html"]
+    },
+    {
+      "id": "AQ09", "category": "ML·DL 기초", "priority": "first_round_core",
+      "question": "Dropout과 BatchNorm이 있는 PyTorch 모델로 일반적인 평가를 한다. eval()과 no_grad()의 역할을 가장 정확하게 구분한 것은?",
+      "options": ["no_grad()가 Dropout과 BatchNorm을 평가 모드로 바꾸므로 eval()은 생략한다.", "eval()은 해당 계층의 동작을 평가 모드로 바꾸고 no_grad()는 자동 미분 기록을 끈다.", "eval()이 가중치를 업데이트하고 no_grad()가 평가 데이터의 라벨을 숨긴다.", "eval()만 호출하면 자동 미분 기록과 파라미터 변경 가능성까지 차단된다."],
+      "answer": 1,
+      "explanation": "모델의 학습·평가 동작과 미분 기록 여부는 별개다. Dropout·BatchNorm의 평가 동작은 eval(), 불필요한 미분 기록 방지는 no_grad()로 구분한다. 평가에서 optimizer.step()을 하지 않는 것도 별도 조건이다.",
+      "source_urls": ["https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"]
+    },
+    {
+      "id": "AQ10", "category": "ML·DL 기초", "priority": "extension",
+      "question": "스칼라 가중치 w=2, 손실 L=w²다. gradient는 처음 비어 있다. 같은 w에서 새 손실을 계산해 backward를 두 번 호출하고, 중간에 gradient를 지우거나 업데이트하지 않았다. 이후 momentum·weight decay 없는 SGD를 학습률 0.1로 한 번 적용하면 w는?",
+      "options": ["1.2", "1.6", "0.8", "2.0"],
+      "answer": 0,
+      "explanation": "각 backward의 미분은 2w=4이고 gradient가 누적돼 8이 된다. 한 번의 SGD 업데이트는 2−0.1×8=1.2다. 1.6은 한 번의 gradient만 반영한 값이다. backward 자체가 w를 변경하는 것은 아니다.",
+      "source_urls": ["https://docs.pytorch.org/tutorials/recipes/recipes/zeroing_out_gradients.html", "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"]
+    },
+    {
+      "id": "AQ11", "category": "ML·DL 기초", "priority": "extension",
+      "question": "SGD 대신 Adam을 선택할 때 Adam의 기능에 대한 가장 정확한 설명은?",
+      "options": ["입력 데이터의 평균과 분산을 직접 표준화해 gradient 계산을 대체한다.", "여러 모델의 출력에 투표해 정답 확률을 보정한다.", "gradient와 그 제곱의 이동 통계를 사용해 파라미터 업데이트를 조절하며 학습률과 검증은 여전히 필요하다.", "목표 라벨의 순서를 학습해 학습 데이터의 분할을 자동 결정한다."],
+      "answer": 2,
+      "explanation": "Adam은 gradient의 1차·2차 모멘트 추정치를 이용하는 optimizer다. 전처리, 모델 앙상블, 분할 도구와 다르며 어떤 자료에서나 SGD보다 좋은 일반화 성능을 보장하지 않는다.",
+      "source_urls": ["https://docs.pytorch.org/docs/2.14/generated/torch.optim.Adam.html"]
+    },
+    {
+      "id": "AQ12", "category": "ML·DL 기초", "priority": "extension",
+      "question": "NCHW 입력 크기가 (8, 3, 32, 32)다. Conv2d의 out_channels=16, kernel_size=3, stride=2, padding=1, dilation=1이다. 출력 크기는?",
+      "options": ["(8, 3, 16, 16)", "(8, 16, 32, 32)", "(8, 16, 17, 17)", "(8, 16, 16, 16)"],
+      "answer": 3,
+      "explanation": "각 공간 길이는 floor((32+2×1−1×(3−1)−1)/2+1)=16이다. 배치 8은 유지되고 출력 채널은 16이므로 (8,16,16,16)이다. 채널 수와 공간 해상도는 서로 다른 축이다.",
+      "source_urls": ["https://docs.pytorch.org/docs/2.14/generated/torch.nn.modules.conv.Conv2d.html"]
+    },
+    {
+      "id": "AQ13", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "업무가 '파일 필드 추출 → 고정 공식 계산 → 형식 검증 → 보고'로 정해져 있고 성공 기준도 명확하다. 첫 구현으로 가장 적절한 설계는?",
+      "options": ["고정 workflow에 필요한 LLM 호출과 중간 검증을 두고, 동적 계획이 필요한지 실제로 비교한다.", "모든 단계의 순서와 계산식을 매번 모델이 새로 선택하는 자율 agent로 시작한다.", "형식 검증 단계만 LLM judge로 바꾸고 계산 결과는 검증 없이 전달한다.", "에이전트 역할 네 개를 먼저 만든 뒤 역할 수를 구현의 완료 기준으로 둔다."],
+      "answer": 0,
+      "explanation": "잘 정의된 고정 작업에는 명시적 workflow와 검증 지점이 적합한 기준선이다. agent는 동적으로 작업과 도구를 선택할 필요가 있을 때 비용·지연·성능을 비교해 도입한다. 프레임워크나 역할 수 자체는 완료 증거가 아니다.",
+      "source_urls": ["https://www.anthropic.com/engineering/building-effective-agents"]
+    },
+    {
+      "id": "AQ14", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "MCP 조회 도구의 inputSchema는 lot_id 문자열을 요구한다. 모델이 유효한 lot_id를 전달했지만 다른 조직의 로트다. 적절한 서버 처리는?",
+      "options": ["스키마에 맞는 인수이므로 조직 권한도 확인된 것으로 보고 조회한다.", "모델이 사용자 의도를 이해했을 것이므로 도구 설명에 보안 문구를 추가한 뒤 조회한다.", "인수 스키마와 별도로 인증 사용자의 조직·자료 접근 권한을 확인해 범위를 제한한다.", "조회 결과를 전부 모델에게 준 다음 최종 답변에서만 다른 조직 정보를 제거한다."],
+      "answer": 2,
+      "explanation": "도구 입력의 타입·필드 계약은 접근 권한을 증명하지 않는다. MCP 도구 규격도 입력 검증과 접근 통제를 각각 요구한다. 권한 없는 자료를 모델에 전달한 후 표시만 막는 방식은 자료 경계를 지키지 못한다.",
+      "source_urls": ["https://modelcontextprotocol.io/specification/2025-06-18/server/tools"]
+    },
+    {
+      "id": "AQ15", "category": "LLM·RAG·에이전트", "priority": "extension",
+      "question": "사전 학습 모델의 일부 선형 계층에 일반적인 LoRA를 적용한다. 원 가중치와 학습하는 값의 관계로 맞는 설명은?",
+      "options": ["원 가중치 전체를 4비트로 바꾸는 것이 LoRA이며 별도 학습 행렬은 없다.", "원 가중치를 동결하고 작은 저랭크 업데이트 행렬을 학습해 적용한다.", "검색 문서를 매번 입력에 붙이고 가중치에는 어떤 학습도 수행하지 않는다.", "원 가중치를 제거한 뒤 두 작은 행렬만으로 사전 학습 모델 전체를 대체한다."],
+      "answer": 1,
+      "explanation": "LoRA는 원 가중치를 유지한 채 저랭크 업데이트를 학습하는 미세조정 방식이다. 양자화나 추론 문맥에 문서를 넣는 RAG와 구분한다. LoRA 적용 범위에 따라 다른 학습 파라미터를 추가할 수 있으므로 문제는 일반적인 동결 계층을 가정한다.",
+      "source_urls": ["https://huggingface.co/docs/peft/main/en/conceptual_guides/lora"]
+    },
+    {
+      "id": "AQ16", "category": "LLM·RAG·에이전트", "priority": "extension",
+      "question": "7×10⁹개 가중치를 정확히 가중치당 4비트로 저장한다고 가정한다. 메타데이터·활성값·KV cache 등은 제외한다. 순수 가중치 용량과 실제 실행 메모리의 관계는?",
+      "options": ["순수 가중치 약 3.5 GiB이며 실제 실행 메모리도 같은 값이다.", "순수 가중치 약 7 GB이고 KV cache도 자동으로 4비트가 된다.", "순수 가중치 약 14 GB이며 4비트 설정은 토큰 수만 바꾼다.", "순수 가중치 약 3.5 GB이며 실제 메모리는 추가 요소와 구현을 확인해야 한다."],
+      "answer": 3,
+      "explanation": "7×10⁹×4/8=3.5×10⁹바이트이므로 십진 GB로 3.5 GB다. 실제 양자화에는 스케일 등 오버헤드가 있고 추론에는 활성값·KV cache도 필요하다. 가중치 양자화만으로 KV의 저장 형식까지 정해지지 않는다.",
+      "source_urls": ["https://huggingface.co/docs/transformers/en/quantization/overview", "https://huggingface.co/docs/transformers/en/cache_explanation"]
+    },
+    {
+      "id": "AQ17", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "자기회귀 LLM 추론에서 KV cache를 사용한다. 이 캐시가 재사용하는 것은 무엇인가?",
+      "options": ["이미 처리한 앞선 토큰의 attention key와 value 표현이며 새 토큰에서 일부 계산을 재사용한다.", "이전 사용자 질문의 최종 답변이며 현재 질문과 의미가 비슷하면 같은 답을 반환한다.", "최신 웹 문서의 원문이며 검색 없이 모델 지식이 갱신된다.", "학습 정답 라벨이며 새 입력을 처리할 때 모델 가중치를 업데이트한다."],
+      "answer": 0,
+      "explanation": "KV cache는 이전 토큰의 key/value 계산을 추론 중 재사용한다. 답변 캐시·검색 자료 저장·파라미터 학습과 다르다. 문맥 길이와 요청 수가 늘면 캐시 메모리도 고려해야 한다.",
+      "source_urls": ["https://huggingface.co/docs/transformers/en/cache_explanation"]
+    },
+    {
+      "id": "AQ18", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "규정의 일반 원칙은 chunk A, 바로 뒤의 적용 예외는 chunk B로 나뉘었다. 검색은 A만 반환해 답변이 예외를 놓친다. 우선 개선으로 가장 적절한 것은?",
+      "options": ["일반 원칙을 여러 번 복제해 유사도를 높인다.", "규칙과 예외가 함께 전달되도록 문서 구조·인접 구간과 chunk 단위를 검토한 뒤 평가한다.", "답변 모델의 temperature만 낮추고 검색 결과는 유지한다.", "chunk를 더 작게 나누고 top-1 결과만 제공해 단정적인 답을 유도한다."],
+      "answer": 1,
+      "explanation": "필요한 예외가 생성 문맥에 없으면 답변 모델만 바꾸어 해결하기 어렵다. 자료의 의미 경계를 보존하고 인접 구간·부모 문서 접근 등을 검토한다. 적절한 chunk 크기와 검색량은 실제 질문으로 평가해야 한다.",
+      "source_urls": ["https://docs.langchain.com/oss/python/deepagents/retrieval", "https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "id": "AQ19", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "정답에 필요한 근거 문서는 잘 검색됐지만 생성 답변이 근거에 없는 조치와 수치를 덧붙인다. 가장 직접적인 평가·개선 대상은?",
+      "options": ["검색 Recall@k만 높이면 최종 답변 문제도 해결된 것으로 판정한다.", "문서 임베딩 차원을 늘리고 생성 답변은 현재 상태로 유지한다.", "답변 주장과 인용 근거를 대조하는 충실성 평가와 근거 없는 내용의 보류 규칙을 추가한다.", "정답이 이미 검색됐으므로 출력 문장 길이만 늘려 상세성을 개선한다."],
+      "answer": 2,
+      "explanation": "검색이 필요한 자료를 포함하는지와 생성이 그 자료에 충실한지는 별도 문제다. 이 상황은 생성 주장과 근거의 연결을 평가해야 한다. 검색량 증가나 긴 답변이 근거 없는 주장 문제를 직접 해결하지 않는다.",
+      "source_urls": ["https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "id": "AQ20", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "가상의 같은 규정에 v2는 오늘 효력이 있고 v3는 오늘 게시됐지만 내일부터 효력이 있다. 사용자는 오늘 적용 규정을 묻는다. 검색 후 처리로 맞는 것은?",
+      "options": ["게시일이 최신인 v3만 사용한다.", "두 문서를 합쳐 v2와 v3의 수치 평균을 오늘 기준으로 제시한다.", "임베딩 유사도가 더 높은 버전을 적용하고 효력일은 답변에서 생략한다.", "오늘 효력이 있는 v2를 적용하고 v3는 미래 변경 사항으로 구분한다."],
+      "answer": 3,
+      "explanation": "이 문제의 효력 조건은 제시된 창작 규정에서 정해진다. 내용 관련성과 현행 적용 가능성은 다르다. 날짜·버전 메타데이터를 확인해 현재 답변과 미래 변경 정보를 나눈다.",
+      "source_urls": ["https://docs.langchain.com/oss/python/deepagents/retrieval"]
+    },
+    {
+      "id": "AQ21", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "문서 벡터는 모델 M1로 만들었고 질문 벡터만 별도로 학습된 모델 M2로 바꿨다. 두 출력 차원은 768로 같지만 임베딩 공간의 정렬은 확인하지 않았다. 적절한 조치는?",
+      "options": ["차원이 같으므로 기존 문서 벡터와 질문 벡터를 그대로 비교한다.", "질문·문서용으로 호환되는 인코더를 사용하고 변경 시 문서 재임베딩 또는 공간 호환성을 검증한다.", "모든 벡터 길이만 1로 정규화하면 의미 공간도 정렬됐다고 판단한다.", "cosine 대신 내적을 사용하면 두 모델의 의미 공간 차이가 없어질 것으로 본다."],
+      "answer": 1,
+      "explanation": "같은 차원은 같은 의미 공간을 보장하지 않는다. 검색 모델이 설계한 호환 query/document 인코더 쌍을 사용한다. 비대칭 검색은 서로 다른 인코더 경로를 사용할 수 있으나 호환 학습·정렬 없이 임의 모델을 섞는 것과 다르다.",
+      "source_urls": ["https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html"]
+    },
+    {
+      "id": "AQ22", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "가상 모델은 입력과 생성 출력의 합계 한도가 8192토큰이다. 측정된 시스템 지시 600, 질문·대화 3200토큰이며 출력 2000토큰을 확보한다. 다른 오버헤드는 없다고 가정한다. 검색 문서에 쓸 수 있는 최대 토큰 수는?",
+      "options": ["2392", "4392", "6192", "3000"],
+      "answer": 0,
+      "explanation": "8192−600−3200−2000=2392다. 문제에서 입력과 출력의 합계 한도를 명시했으므로 출력 여유도 빼야 한다. 실제 서비스는 해당 모델의 한도·토크나이저·메시지 오버헤드를 확인한다.",
+      "source_urls": ["https://huggingface.co/docs/transformers/main/en/pad_truncation"]
+    },
+    {
+      "id": "AQ23", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "MCP 조회 결과의 content는 'API rate limit exceeded', isError는 true다. 모델이 숫자 대신 이 오류를 받았다. 업무 흐름에서 가장 적절한 처리는?",
+      "options": ["JSON-RPC result가 존재하므로 조회 성공으로 보고 0건을 반환한다.", "오류 문장의 길이를 조회 건수로 대체해 출력 형식을 맞춘다.", "최근 다른 사용자의 조회 결과를 현재 로트 값으로 사용한다.", "조회 결과를 미확인으로 남기고 오류를 처리한 뒤 재시도 정책이나 사용자 안내로 분기한다."],
+      "answer": 3,
+      "explanation": "MCP의 도구 실행 오류는 결과 안의 isError로 전달될 수 있다. 응답 수신과 업무 성공을 구분한다. 실제 조회를 하지 못했는데 0건으로 표시하면 오류를 정상 데이터로 바꾸는 셈이다.",
+      "source_urls": ["https://modelcontextprotocol.io/specification/2025-06-18/server/tools"]
+    },
+    {
+      "id": "AQ24", "category": "LLM·RAG·에이전트", "priority": "first_round_core",
+      "question": "RAG를 평가하면서 정답 키 파일을 검색 대상에도 포함했다. 평가 질문마다 그 파일의 답이 검색돼 높은 점수를 얻었다. 가장 적절한 해석과 수정은?",
+      "options": ["검색으로 얻은 답이므로 정답 키 포함 여부와 관계없이 일반화 성능으로 인정한다.", "정답 파일의 이름만 바꾸면 내용이 그대로 있어도 독립 평가가 된다.", "정답 정보가 입력에 들어간 누수이므로 정답 키를 검색에서 제외하고 분리된 평가로 다시 확인한다.", "생성 모델 가중치를 수정하지 않았으므로 데이터 누수에는 해당하지 않는다."],
+      "answer": 2,
+      "explanation": "정답 키의 직접 노출은 실제 사용자가 제공하지 않을 답을 평가 입력에 넣는 것이다. 프롬프트·검색 자료에도 누수가 생길 수 있다. 평가용 정답과 사용 가능한 근거 문서의 경계를 구분해 다시 평가한다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/cross_validation.html", "https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "id": "AQ25", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "생산 표는 A 검사 100개·양품 95개, B 검사 200개·양품 120개다. 센서 이벤트와 JOIN한 뒤 A가 3행, B가 1행으로 복제돼 SUM 비율이 81%가 됐다. 실제 전체 제품 수율과 처리 원칙은?",
+      "options": ["77.5%이며 두 로트 수율을 단순 평균한다.", "81%이며 이벤트가 많을수록 검사 수량도 가중한다.", "약 71.67%이며 생산 집계 단위를 보존하고 이벤트를 별도 집계해 결합한다.", "135%이며 JOIN한 양품 합계를 원래 검사 수로 나눈다."],
+      "answer": 2,
+      "explanation": "원래 제품 수율은 (95+120)/(100+200)=215/300≈71.67%다. 일대다 JOIN은 수량을 복제하며 복제된 비율 405/500=81%는 이벤트 수로 잘못 가중한 값이다. 원래 생산 단위를 보존해야 한다.",
+      "source_urls": ["https://www.sqlite.org/lang_select.html"]
+    },
+    {
+      "id": "AQ26", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "가상 평가에서 임계값 0.5는 TP6·FN4·FP4, 0.3은 TP8·FN2·FP14, 0.1은 TP9·FN1·FP29다. FN 비용은 1000원, FP 비용은 100원이다. 경보 수 TP+FP가 25건 이하여야 할 때 최소 비용 선택은?",
+      "options": ["0.3: 경보 22건, 비용 3400원", "0.5: 경보 10건, 비용 1400원", "0.1: 경보 38건, 비용 3900원", "0.3: 경보 16건, 비용 2200원"],
+      "answer": 0,
+      "explanation": "0.5 비용은 4×1000+4×100=4400원이다. 0.3은 2×1000+14×100=3400원이고 경보 22건으로 가능하다. 0.1은 경보 38건으로 제약을 넘는다. 비용과 운영 제약을 함께 비교한다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/classification_threshold.html", "https://scikit-learn.org/stable/modules/model_evaluation.html"]
+    },
+    {
+      "id": "AQ27", "category": "계산·근거·보안", "priority": "first_round_core", "source_type": "synthetic_arithmetic_or_evidence",
+      "question": "가상의 API 단가는 입력 100만 토큰당 2달러, 출력 100만 토큰당 8달러다. 요청 3회가 각각 입력 1000·출력 500토큰이며 캐시·추가 요금은 없다. 총 토큰 비용은? 이 가격은 실제 서비스 가격이 아니다.",
+      "options": ["0.006달러", "0.012달러", "0.009달러", "0.018달러"],
+      "answer": 3,
+      "explanation": "입력 3000토큰 비용은 3000/1000000×2=0.006달러다. 출력 1500토큰은 1500/1000000×8=0.012달러로 합계 0.018달러다. 숫자와 단가는 이 연습의 가정이며 출처의 실제 요금이 아니다.",
+      "source_urls": []
+    },
+    {
+      "id": "AQ28", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "이 문제에서 정답 근거 문서는 총 5개다. 상위 4개 검색 결과 중 정답 근거는 2개이며 중복은 없다. 필요한 근거 전체 대비 찾은 비율을 Recall@4, 반환 결과 대비 정답 근거 비율을 Precision@4로 정의한다. 올바른 값은?",
+      "options": ["Recall@4=0.5, Precision@4=0.4", "Recall@4=0.4, Precision@4=0.5", "Recall@4=0.8, Precision@4=0.5", "Recall@4=0.4, Precision@4=0.8"],
+      "answer": 1,
+      "explanation": "Recall@4=2/5=0.4이고 Precision@4=2/4=0.5다. 필요한 근거 수와 반환 결과 수라는 분모가 다르다. 이 검색 지표만으로 생성 답변의 모든 주장이 근거에 맞는지도 확인된 것은 아니다.",
+      "source_urls": ["https://scikit-learn.org/stable/modules/model_evaluation.html"]
+    },
+    {
+      "id": "AQ29", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "가상 규정은 2026-10-15T00:00:00Z부터 효력이 있다. KST는 UTC+09:00이고 이전 규정은 그 직전까지 유효하다. 10월 15일 08:30 KST의 적용 판단은?",
+      "options": ["새 규정이 9시간 전에 발효됐으므로 적용한다.", "새 규정이 00:00 KST부터 발효됐으므로 적용한다.", "새 규정은 09:00 KST에 발효하므로 08:30에는 이전 규정을 적용한다.", "날짜가 같아 효력 시각은 비교할 수 없으므로 두 규정을 합친다."],
+      "answer": 2,
+      "explanation": "Z는 UTC이고 00:00 UTC는 09:00 KST다. 08:30 KST는 30분 전이므로 새 규정 시행 전이다. 날짜만 비교하지 않고 시간대가 있는 시각을 같은 기준으로 바꾼다.",
+      "source_urls": ["https://docs.python.org/3/library/datetime.html"]
+    },
+    {
+      "id": "AQ30", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "가상 링크가 800 Mbps를 일정하게 제공한다. 1 GB=10⁹바이트, 1바이트=8비트이며 프로토콜 오버헤드·압축은 없다고 가정한다. 1 GB 파일의 이상적인 전송 시간은?",
+      "options": ["1.25초", "8초", "80초", "10초"],
+      "answer": 3,
+      "explanation": "800×10⁶비트/초 ÷8=100×10⁶바이트/초다. 10⁹/10⁸=10초다. Mbps의 bit와 파일의 byte를 먼저 맞춘다. 현실 전송 시간에는 오버헤드·혼잡·저장 지연 등이 추가될 수 있다.",
+      "source_urls": ["https://www.nist.gov/pml/owm/metric-si-prefixes"]
+    },
+    {
+      "id": "AQ31", "category": "계산·근거·보안", "priority": "first_round_core", "source_type": "synthetic_arithmetic_or_evidence",
+      "question": "창작 자료 A는 '다음 분기 분석 시간을 30% 줄이는 것이 목표'라는 회사 계획이다. 창작 자료 B는 '한 종류의 문서 20개 실험에서 기존 대비 평균 12% 단축'이라고 보고한다. 두 자료를 보고할 가장 정확한 문장은?",
+      "options": ["30%는 목표이고 12%는 명시된 소규모 실험 결과다. 전체 운영 효과는 별도 검증이 필요하다.", "계획이 더 최신이라 검증된 운영 효과 30%로 정리한다.", "두 수치를 평균낸 21%를 통합 실험 성과로 제시한다.", "실험이 있으므로 30% 목표 달성도 확인됐다고 설명한다."],
+      "answer": 0,
+      "explanation": "목표, 관측 결과, 적용 범위를 구분한다. 두 숫자는 다른 상태와 근거이므로 평균내거나 전체 운영 성과로 확대할 수 없다. 문제 안의 두 자료는 창작 내용이며 실제 회사 발표 수치가 아니다.",
+      "source_urls": []
+    },
+    {
+      "id": "AQ32", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "workflow에서 A는 3초, B는 4초, C는 2초, D는 5초다. B는 A 뒤에 시작하고 C는 A와 독립적으로 바로 시작할 수 있다. D는 B와 C 모두 끝나야 시작한다. 자원 경쟁·호출 오버헤드가 없을 때 최소 완료 시간은?",
+      "options": ["14초", "12초", "10초", "9초"],
+      "answer": 1,
+      "explanation": "A→B는 7초, 독립 C는 2초에 끝난다. D는 둘 중 늦은 7초 이후 5초를 더 써 총 12초다. 병렬화는 독립 작업에 적용하며 의존 관계를 건너뛰지 않는다.",
+      "source_urls": ["https://www.anthropic.com/engineering/building-effective-agents"]
+    },
+    {
+      "id": "AQ33", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "사내 RAG의 답변 캐시 키가 질문 문자열뿐이다. 서로 다른 조직의 사용자가 같은 질문을 하면 첫 사용자의 비공개 문서를 인용한 답이 재사용된다. 적절한 수정은?",
+      "options": ["최종 출력에서 문서 제목만 숨기고 답변 캐시는 유지한다.", "모델에 현재 사용자 이름을 말해 주면 권한 검사가 된 것으로 본다.", "캐시 유효 시간을 줄이되 사용자·권한은 캐시 키에 넣지 않는다.", "검색에서 접근 통제를 적용하고 캐시도 권한 범위·자료 버전을 구분해 재사용 조건을 검증한다."],
+      "answer": 3,
+      "explanation": "질문이 같아도 사용자가 접근할 수 있는 자료는 다를 수 있다. 자료 전달 전 접근 통제와 캐시 재사용 범위를 함께 확인한다. 제목 숨김이나 짧은 만료 시간은 이미 노출된 비공개 답변 내용을 해결하지 않는다.",
+      "source_urls": ["https://genai.owasp.org/llmrisk/llm062025-excessive-agency/", "https://modelcontextprotocol.io/specification/2025-06-18/server/tools"]
+    },
+    {
+      "id": "AQ34", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "AI 출력은 {\"total\":1000,\"good\":875,\"yield_pct\":81.0}이다. 스키마의 타입과 yield_pct 0~100 범위 검사는 통과했다. 이 업무는 good/total×100을 수율로 정의한다. 필요한 다음 판정은?",
+      "options": ["JSON과 범위가 맞아 업무 계산도 충족했다고 승인한다.", "81.0을 문자열로 바꾸면 수율 공식과의 불일치가 해결된다.", "필드 간 계산이 맞지 않으므로 87.5%라는 독립 계산과 원자료를 확인한다.", "범위 검사를 통과한 결과는 전부 버리고 출력 길이가 짧은 응답을 선택한다."],
+      "answer": 2,
+      "explanation": "875/1000×100=87.5%다. JSON 문법·타입·범위 준수와 업무상의 필드 간 관계는 다르다. 구조 검사 뒤에도 원자료와 계산식에 맞는지 확인해야 한다.",
+      "source_urls": ["https://docs.python.org/3/library/json.html", "https://modelcontextprotocol.io/specification/2025-06-18/server/tools"]
+    },
+    {
+      "id": "AQ35", "category": "계산·근거·보안", "priority": "first_round_core",
+      "question": "SQL에서 검색 값은 placeholder로 바인딩했지만 FROM 뒤 테이블 이름은 사용자 입력을 문자열로 붙인다. 사용 가능한 테이블은 reports와 logs 두 개뿐이다. 적절한 처리는?",
+      "options": ["값을 바인딩했으므로 테이블 이름 문자열도 자동 보호된다고 본다.", "테이블 선택은 허용 목록의 고정 식별자로 매핑하고 검색 값은 계속 바인딩한다.", "테이블 이름까지 값용 placeholder에 넣어 같은 방식으로 처리한다.", "사용자가 고른 테이블 이름의 길이만 제한해 직접 SQL에 붙인다."],
+      "answer": 1,
+      "explanation": "값용 placeholder와 SQL 식별자는 구분한다. 허용된 테이블 이름으로 매핑한 뒤 값은 바인딩하며 계정 권한도 필요한 범위로 둔다. 입력 길이 제한만으로 임의 SQL 식별자 조합 문제를 해결할 수 없다.",
+      "source_urls": ["https://docs.python.org/3/library/sqlite3.html"]
+    },
+    {
+      "id": "AQ36", "category": "계산·근거·보안", "priority": "extension",
+      "question": "독립 평가에서 정확도 차이 A−B의 95% 양측 신뢰구간이 [−0.02, 0.06]이었다. 해당 구간의 가정이 적절하다고 할 때 가장 타당한 해석은?",
+      "options": ["0을 포함하므로 같은 기준의 양측 검정에서 A의 우위를 확정할 근거가 부족하며 두 모델이 같다는 증명도 아니다.", "구간 상한이 양수이므로 A의 정확도가 B보다 높음이 확정됐다.", "0을 포함하므로 두 모델의 정확도는 정확히 같다고 증명됐다.", "현재 고정된 진짜 차이가 95% 확률로 이 구간에 들어간다는 뜻으로만 해석해야 한다."],
+      "answer": 0,
+      "explanation": "구간에 음수·0·양수가 모두 들어 있어 같은 기준의 양측 검정으로 양의 차이를 확정하기 어렵다. 차이를 발견하지 못한 것과 동등성 증명은 다르다. 빈도주의 95%는 반복 표집으로 만든 구간의 포괄률을 뜻한다.",
+      "source_urls": ["https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm", "https://www.itl.nist.gov/div898/handbook/prc/section3/prc31.htm"]
+    }
+  ]
+}

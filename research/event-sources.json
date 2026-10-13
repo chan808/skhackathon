@@ -1,0 +1,110 @@
+{
+  "checked_on_kst": "2026-10-13",
+  "scope": "SK하이닉스 AI 해커톤 2026 공개 대회·규정·응시 환경 정보",
+  "sources": [
+    {
+      "id": "event_official",
+      "title": "SK하이닉스 AI 해커톤 2026 공식 홈페이지와 FAQ",
+      "url": "https://skhynix-hackathon.com/ai-2026",
+      "authority": "대회 공식",
+      "read_method": "web full page 및 브라우저 FAQ 여섯 분류 확인",
+      "supports": ["일정", "개인전", "지원자격", "포트폴리오", "예선 목적", "채용 혜택", "운영 문의"],
+      "caveats": ["정적 검색 추출과 실제 모집 마감 UI가 다름", "혜택 배너와 채용 FAQ의 SKCT 표기 차이", "실전 문항 수·시간·외부 도구 규칙은 미공개"]
+    },
+    {
+      "id": "event_press",
+      "title": "SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+      "url": "https://news.skhynix.co.kr/ai-hackathon-2026/",
+      "published": "2026-09-21",
+      "authority": "SK하이닉스 공식 뉴스룸",
+      "read_method": "web 403 이후 브라우저 본문 확인",
+      "supports": ["Cofa-Probe 등 도구 사용", "본선 심사·인증서", "일반인 대상 세미나"],
+      "caveats": ["아래 Talent Hub와 동일 보도자료", "도구별 라운드 배정은 이 본문만으로 알 수 없음"]
+    },
+    {
+      "id": "event_talent_mirror",
+      "title": "Talent Hub SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
+      "url": "https://talent.skhynix.com/hub/ko/company/story/237",
+      "authority": "SK하이닉스 공식 Talent Hub",
+      "read_method": "web full page",
+      "supports": ["보도자료 교차 확인"],
+      "caveats": ["event_press와 내용 동일하므로 독립 근거로 중복 집계하지 않음"]
+    },
+    {
+      "id": "event_privacy",
+      "title": "대회 개인정보 처리방침",
+      "url": "https://skhynix-hackathon.com/my/privacy-policy",
+      "effective": "2026-09-21",
+      "authority": "대회 공식",
+      "read_method": "브라우저 본문 확인",
+      "supports": ["제4조 회사별 플랫폼 역할", "제4조 제공 정보와 보유기간", "제10조 문의 경로"],
+      "caveats": ["모델명·시험 인터페이스 설정까지 정한 문서는 아님"]
+    },
+    {
+      "id": "event_terms",
+      "title": "대회 이용약관",
+      "url": "https://skhynix-hackathon.com/my/term-of-service",
+      "effective": "2026-09-21",
+      "authority": "대회 공식",
+      "read_method": "브라우저 본문 확인",
+      "supports": ["제9조 금지행위", "제11조 산출물 권리", "제13조 제공자료 사용범위", "제14조 실격·수상취소"],
+      "caveats": ["구체적 시험 허용 도구·평가 설정은 개별 참가요강과 공지에 따름"]
+    },
+    {
+      "id": "grepp_announcement",
+      "title": "그렙 공식 계정 SK하이닉스 1차 예선 AI 역량평가 발표",
+      "url": "https://kr.linkedin.com/company/grepp/",
+      "authority": "평가 플랫폼 업체 공식",
+      "read_method": "web 본문 게시물 확인",
+      "supports": ["1차 프로그래머스 AI 역량평가", "공식 응시 환경 체험 연결"],
+      "caveats": ["회사 피드 URL은 추후 게시물 위치가 변할 수 있음", "정확한 게시일 대신 상대 날짜 표시"]
+    },
+    {
+      "id": "programmers_preview",
+      "title": "프로그래머스 AI 역량평가 응시 환경 체험하기",
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "authority": "평가 플랫폼 공식",
+      "read_method": "브라우저 공개 목록·FAQ 확인, 지식 체험 진입 시 로그인 화면 확인",
+      "supports": ["공개 샘플 범위", "체험 제한", "체험과 실전 차이", "PC 환경"],
+      "caveats": ["실제 체험 진입에는 로그인 요구됨", "실제 대회 시험이나 답안을 열지 않음", "샘플 문항 수와 AI 대화 제한을 대회 설정으로 전용할 수 없음"]
+    },
+    {
+      "id": "programmers_explainer",
+      "title": "프로그래머스는 왜 AI 역량평가를 만들었을까",
+      "url": "https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment",
+      "published": "2026-10-07",
+      "authority": "평가 플랫폼 공식",
+      "read_method": "web full page",
+      "supports": ["일반 AI Assist 제약", "과정·결과 평가", "기업별 문항·시간 조합"],
+      "caveats": ["일반 플랫폼 설명이며 SK하이닉스 실전 설정표는 아님"]
+    },
+    {
+      "id": "programmers_arcade_demo",
+      "title": "프로그래머스 AI 역량평가 안내형 데모",
+      "url": "https://demo.arcade.software/b5dk0zn4GHjoXFKsAmpP?embed=&embed_desktop=inline&embed_mobile=inline&show_copy_link=true",
+      "authority": "프로그래머스 공식 사이트에서 연결한 데모",
+      "read_method": "공식 링크를 web click으로 확인",
+      "supports": ["응시환경 안내 접근경로"],
+      "caveats": ["대회 응시 링크가 아님"]
+    },
+    {
+      "id": "sk_internal_hackathon",
+      "title": "SK 2026 SK AI 해커톤 성료",
+      "url": "https://sk.com/ko/media/news_view.jsp?idx=1775&pageNo=1",
+      "published": "2026-09-16",
+      "authority": "SK그룹 공식",
+      "read_method": "web full page",
+      "supports": ["사내 구성원 대회와 외부 하이닉스 대회 구분"],
+      "caveats": ["이번 하이닉스 개인전의 규정 근거로 쓰지 않음"]
+    },
+    {
+      "id": "krafton_cofathon_announcement",
+      "title": "크래프톤 CJ올리브영 Cofathon 공식 발표",
+      "url": "https://kr.linkedin.com/posts/krafton-inc_krafton-%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4-cj%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-activity-7480523102427303936-P-ur",
+      "authority": "크래프톤 공식",
+      "read_method": "web 본문",
+      "supports": ["별개 대회였던 7월 Cofathon 구분"],
+      "caveats": ["자유 도구 정책을 하이닉스 실전 규칙으로 이전하지 않음"]
+    }
+  ]
+}

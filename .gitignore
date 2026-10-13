@@ -1,0 +1,17 @@
+.venv/
+.venv-study/
+.cache/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+data/private/
+reports/quiz-*.json
+reports/answer-*.json
+reports/readiness-*.json
+reports/agent-loop-live.json
+reports/environment.json
+reports/windows-preflight.json
+reports/participant-status.json
+tmp/

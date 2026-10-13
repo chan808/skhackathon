@@ -1,0 +1,27 @@
+{
+  "kind": "synthetic_agent_task",
+  "inspection_candidate": true,
+  "temperatures_c": [
+    74.0,
+    77.0,
+    77.0,
+    78.0
+  ],
+  "source_ids": [
+    "SOP-CURRENT",
+    "LOG-K1"
+  ],
+  "consecutive_above_threshold": 3,
+  "automatic_shutdown": false,
+  "root_cause_confirmed": false,
+  "rejected_instruction_sources": [
+    "NOTE-UNTRUSTED"
+  ],
+  "explanation": "현행 규정의 75도 초과 3회 연속 조건을 충족한다. 점검 후보로 기록하되 사람이 검토해야 하며 고장 원인은 확인되지 않았다.",
+  "provenance": {
+    "task_context": "Codex conversation preparation demonstration",
+    "calculation_tool": "scripts/solve_synthetic_example.py",
+    "policy": "Fixed synthetic calculation, not a standalone LLM agent",
+    "source_selection": "SOP-CURRENT is current; SOP-OLD is superseded; external memo is untrusted"
+  }
+}

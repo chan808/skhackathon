@@ -1,0 +1,590 @@
+{
+  "checked_on_kst": "2026-10-13",
+  "scope": "AI 기초·리터러시·AI Native 준비, 자체 연습문항의 기술 근거",
+  "method": "변경될 수 있는 기술 내용은 현재 공식 문서 또는 원 논문 본문을 열어 확인. 일반 준비 권고와 실제 SK 출제·규칙을 구분.",
+  "date_policy": "published가 null이면 게시 날짜를 본문에서 확인하지 못했다는 뜻이다. copyright 연도나 crawl 날짜를 게시 날짜로 쓰지 않았다.",
+  "sources": [
+    {
+      "id": "ai_event_talent",
+      "title": "SK하이닉스, AI 실전 역량 겨루는 해커톤 개최",
+      "url": "https://talent.skhynix.com/hub/ko/company/story/237",
+      "publisher": "SK hynix Talent Hub",
+      "published": "2026-09-21",
+      "accessed_kst": "2026-10-13",
+      "authority": "주최사 공식",
+      "read_method": "web open 본문",
+      "supports": [
+        "AI 기본 활용 역량·리터러시",
+        "문제 정의·AI 활용·결과 검증",
+        "Cofa-Probe 등 도구 사용"
+      ],
+      "caveats": [
+        "뉴스룸 발표의 공식 미러이며 독립 기사로 중복 집계하지 않는다.",
+        "이 보도자료만으로 1차와 2차의 플랫폼 배정을 확정하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_token",
+      "title": "Tokenization algorithms",
+      "url": "https://huggingface.co/docs/transformers/main/en/tokenizer_summary",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "토큰과 단어 수 구분",
+        "서브워드 토큰화"
+      ],
+      "caveats": [
+        "모델별 토큰 수는 실제 토크나이저로 확인해야 한다."
+      ]
+    },
+    {
+      "id": "ai_gen",
+      "title": "Generation / GenerationConfig",
+      "url": "https://huggingface.co/docs/transformers/main/en/main_classes/text_generation",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "logit·sampling·temperature·top-p",
+        "출력 길이와 생성 전략"
+      ],
+      "caveats": [
+        "main 브랜치의 문서를 읽었지만 설치나 특정 릴리스 사용을 권고하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_attention",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/html/1706.03762v7",
+      "publisher": "Vaswani et al.; arXiv",
+      "published": "2017-06-12",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "Q/K/V scaled dot-product attention",
+        "decoder의 미래 위치 masking",
+        "embedding 및 softmax"
+      ],
+      "caveats": [
+        "읽은 HTML은 v7, 2023-08-02 수정. 원 Transformer 설명이며 모든 현대 구조에 동일한 세부 사항을 적용하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_transformer",
+      "title": "How do Transformers work?",
+      "url": "https://huggingface.co/learn/llm-course/en/chapter1/4",
+      "publisher": "Hugging Face",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "사전학습·fine-tuning",
+        "자기회귀 언어모델과 masked language modeling"
+      ],
+      "caveats": [
+        "교육 자료의 예시는 모델 가족 이해에 사용했으며 현재 성능 순위 주장은 인용하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_emb",
+      "title": "Vector embeddings",
+      "url": "https://developers.openai.com/api/docs/guides/embeddings",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "embedding이 텍스트의 관련성을 표현",
+        "벡터와 거리·cosine similarity"
+      ],
+      "caveats": [
+        "유사도는 사실 정확도나 현행 문서 여부를 의미한다는 근거가 아니다."
+      ]
+    },
+    {
+      "id": "ai_lost",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "url": "https://arxiv.org/abs/2307.03172",
+      "publisher": "Liu et al.; arXiv",
+      "published": "2023-07-06",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "긴 입력의 정보 위치에 따른 성능 저하 가능성"
+      ],
+      "caveats": [
+        "2023-11-20 v3. 연구 결과를 2026년 모든 모델의 동일 실패율로 일반화하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_prompt",
+      "title": "Prompt engineering",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "명확한 지시·예시·맥락 구조",
+        "프롬프트 변경에 따른 행동 평가"
+      ],
+      "caveats": [
+        "SK 시험의 제공 모델 또는 요구 프롬프트 형식을 확정하는 출처가 아니다."
+      ]
+    },
+    {
+      "id": "ai_rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "publisher": "Lewis et al.; arXiv",
+      "published": "2020-05-22",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "모델 파라미터와 외부 검색 메모리 결합",
+        "RAG와 모델 자체 지식의 구분"
+      ],
+      "caveats": [
+        "2021-04-12 v4. 원 연구의 학습 구조와 일반적인 현대 RAG 구현의 세부 차이를 구분한다."
+      ]
+    },
+    {
+      "id": "ai_retrieval",
+      "title": "Retrieval",
+      "url": "https://developers.openai.com/api/docs/guides/retrieval",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "속성 기반 검색 필터",
+        "검색 문서 메타데이터",
+        "검색량·순위 설정"
+      ],
+      "caveats": [
+        "개념 근거로 읽었으며 클라우드 vector store나 유료 API를 설정하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_metrics",
+      "title": "Metrics and scoring: quantifying the quality of predictions",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "publisher": "scikit-learn developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "accuracy·precision·recall",
+        "불균형 데이터 평가",
+        "혼동행렬 기반 지표"
+      ],
+      "caveats": [
+        "자체 숫자 예시는 새로 작성한 것으로 공식 문항이 아니다."
+      ]
+    },
+    {
+      "id": "ai_structure",
+      "title": "Structured model outputs",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "JSON 구조와 schema 준수 구분",
+        "거부·불완전 응답 처리",
+        "구조화 출력의 의미 오류 가능성"
+      ],
+      "caveats": [
+        "스키마 준수가 수치·근거의 진실성을 보장하지 않는다는 제한을 함께 읽는다."
+      ]
+    },
+    {
+      "id": "ai_json",
+      "title": "json — JSON encoder and decoder",
+      "url": "https://docs.python.org/3/library/json.html",
+      "publisher": "Python Software Foundation",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "JSON 파싱과 문법",
+        "JSONDecodeError",
+        "문법 성공과 업무 타입 검증 구분"
+      ],
+      "caveats": [
+        "실습용 Python 표준라이브러리의 개념 근거. 특정 Python 최신 버전 설치를 요구하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_tools",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "모델 도구 요청과 애플리케이션 실행 단계",
+        "도구 반환 후 응답 생성"
+      ],
+      "caveats": [
+        "함수 호출 생성이 실제 실행·성공을 의미하지 않는 구분을 사용한다."
+      ]
+    },
+    {
+      "id": "ai_react",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "publisher": "Yao et al.; arXiv",
+      "published": "2022-10-06",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "reasoning과 action의 상호작용",
+        "관찰에 따른 접근 조정"
+      ],
+      "caveats": [
+        "2023-03-10 v3. 다중 에이전트가 모든 과제에 우월하다는 결론의 근거가 아니다."
+      ]
+    },
+    {
+      "id": "ai_agency",
+      "title": "LLM06:2025 Excessive Agency",
+      "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+      "publisher": "OWASP Gen AI Security Project",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "불필요한 기능·권한·자율성 위험",
+        "최소 기능과 최소 권한",
+        "고영향 작업의 독립 확인"
+      ],
+      "caveats": [
+        "2025 버전으로 표시된 공식 위험 분류. 게시 날짜는 본문에 명시되지 않아 null."
+      ]
+    },
+    {
+      "id": "ai_evals",
+      "title": "Evaluation best practices",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "publisher": "OpenAI",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "업무별 평가 기준",
+        "사람 판정과 자동 평가 교정",
+        "기록·반복 평가"
+      ],
+      "caveats": [
+        "평가 방법론만 참고했다. 특정 Evals 플랫폼의 사용·계정 생성·시험 자동화를 권고하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_leakage",
+      "title": "Common pitfalls and recommended practices",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "publisher": "scikit-learn developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "data leakage 정의",
+        "train/test 분할 전 전체 fit 오류",
+        "train fit, test transform"
+      ],
+      "caveats": [
+        "모델 성능 검증 방법의 근거로 사용했으며 sklearn 설치는 필요하지 않다."
+      ]
+    },
+    {
+      "id": "ai_cv",
+      "title": "Cross-validation: evaluating estimator performance",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "publisher": "scikit-learn developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "독립 최종 테스트",
+        "그룹별 분할",
+        "시간 순서에 따른 평가"
+      ],
+      "caveats": [
+        "wafer와 lot는 원리 적용을 위해 만든 자체 사례다."
+      ]
+    },
+    {
+      "id": "ai_agg",
+      "title": "Built-in Aggregate Functions",
+      "url": "https://www.sqlite.org/lang_aggfunc.html",
+      "publisher": "SQLite developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "COUNT(*)와 COUNT(column)",
+        "AVG·SUM 및 NULL 집계"
+      ],
+      "caveats": [
+        "SQLite 기준. lot별 단순 평균과 chip별 전체 수율의 숫자는 독립적으로 계산했다."
+      ]
+    },
+    {
+      "id": "ai_expr",
+      "title": "SQL Language Expressions",
+      "url": "https://www.sqlite.org/lang_expr.html",
+      "publisher": "SQLite developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "정수 나눗셈과 실수 연산",
+        "NULL과 비교 연산"
+      ],
+      "caveats": [
+        "SQLite 동작을 다른 DB 방언에 자동 적용하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_merge",
+      "title": "Merge, join, concatenate and compare",
+      "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "publisher": "pandas developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "중복 키 병합의 행 수 증가",
+        "join cardinality 검증"
+      ],
+      "caveats": [
+        "SQL·CSV의 집계 단위 함정을 설명하는 근거. pandas 설치를 요구하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_select",
+      "title": "SELECT",
+      "url": "https://www.sqlite.org/lang_select.html",
+      "publisher": "SQLite developers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "JOIN 행 수",
+        "LEFT JOIN과 WHERE의 NULL 처리",
+        "집계와 필터"
+      ],
+      "caveats": [
+        "SQLite 기준의 처리 의미. 실제 실행의 물리적 순서를 설명하는 용도는 아니다."
+      ]
+    },
+    {
+      "id": "ai_sql",
+      "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "url": "https://docs.python.org/3/library/sqlite3.html",
+      "publisher": "Python Software Foundation",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "placeholder 바인딩",
+        "문자열 조합의 SQL injection 위험"
+      ],
+      "caveats": [
+        "값 바인딩과 별도의 허용 쿼리·권한 제한을 구분한다."
+      ]
+    },
+    {
+      "id": "ai_inject",
+      "title": "LLM01:2025 Prompt Injection",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "publisher": "OWASP Gen AI Security Project",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "간접 prompt injection",
+        "RAG·fine-tuning만으로 완전 방어 불가",
+        "민감정보 노출 위험"
+      ],
+      "caveats": [
+        "완전한 방어를 보장하지 않는 공식 제한을 함께 기록한다."
+      ]
+    },
+    {
+      "id": "ai_unit",
+      "title": "unittest — Unit testing framework",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "publisher": "Python Software Foundation",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 또는 find로 공식 본문·원 논문 확인",
+      "supports": [
+        "기대값 비교",
+        "예외 테스트",
+        "작은 기능의 검증"
+      ],
+      "caveats": [
+        "실습의 별도 기대값·경계조건은 이 조사자가 작성한 권고다."
+      ]
+    },
+    {
+      "id": "ai_probe_ko",
+      "title": "Probe | AI Native 인재 역량 평가 플랫폼 · Cofa",
+      "url": "https://www.getcofa.com/ko/probe",
+      "publisher": "Cofa / KRAFTON",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "평가 플랫폼 공식",
+      "read_method": "web open 본문",
+      "supports": [
+        "산출물·작업 기록·검증 기록",
+        "사후 Q&A",
+        "기술·의도·인지",
+        "과제별 감독 조건"
+      ],
+      "caveats": [
+        "플랫폼 일반 설명. SK 대회별 문항·시간·모델·외부 도구 규칙으로 대체하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_probe_en",
+      "title": "Probe | AI-Native Talent Assessment Platform · Cofa",
+      "url": "https://www.getcofa.com/en/probe",
+      "publisher": "Cofa / KRAFTON",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "평가 플랫폼 공식",
+      "read_method": "web open 본문",
+      "supports": [
+        "Technique·Intent·Cognition 공개 축 설명"
+      ],
+      "caveats": [
+        "국문 안내와 세부 표현 차이가 있어 동일한 플랫폼 소개의 보완 자료로 사용한다.",
+        "국문·영문을 독립 증거 두 개로 세지 않는다."
+      ]
+    },
+    {
+      "id": "ai_cofathon",
+      "title": "코파톤 Cofathon — 크래프톤 × 올리브영 AI Native 해커톤",
+      "url": "https://cofathon.getcofa.com/",
+      "publisher": "KRAFTON / CJ Olive Young",
+      "published": null,
+      "event_date": "2026-07-30",
+      "accessed_kst": "2026-10-13",
+      "authority": "다른 대회 공식",
+      "read_method": "web open 본문",
+      "supports": [
+        "현업 문제 정의와 작동 결과물의 선행 사례"
+      ],
+      "caveats": [
+        "SK하이닉스 동일 규칙이나 과제를 입증하지 않는다.",
+        "이전 대회 응시자의 공개 gist·개인 후기를 SK 규칙 근거로 사용하지 않았다."
+      ]
+    },
+    {
+      "id": "ai_event_privacy",
+      "title": "SK하이닉스 AI 해커톤 2026 개인정보 처리방침",
+      "url": "https://skhynix-hackathon.com/my/privacy-policy",
+      "publisher": "대회 운영사",
+      "published": null,
+      "effective": "2026-09-21",
+      "accessed_kst": "2026-10-13",
+      "authority": "대회 공식",
+      "read_method": "협업 event agent가 브라우저에서 제4조 본문 확인",
+      "supports": [
+        "1차 Grepp 응시 플랫폼 및 관리",
+        "2차와 본선 Krafton 플랫폼 출제 채점"
+      ],
+      "caveats": [
+        "정적 web 추출은 본문을 표시하지 못했다. 협업 보고서 01-event.md 및 event-sources.json의 브라우저 검증 근거 사용.",
+        "회사 역할이 세부 모델·시간·도구 사용 규칙을 확정하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_programmers_preview",
+      "title": "프로그래머스 AI 역량평가 응시 환경 체험",
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "publisher": "Grepp / Programmers",
+      "published": null,
+      "accessed_kst": "2026-10-13",
+      "authority": "평가 플랫폼 공식",
+      "read_method": "협업 event agent가 공개 목록과 FAQ를 브라우저로 확인",
+      "supports": [
+        "공개 지식 활용 전문평가의 체험 방향"
+      ],
+      "caveats": [
+        "장문 설명은 01-event.md에만 기록했다.",
+        "공개 체험의 문항 수·대화 횟수를 SK 실전으로 일반화하지 않는다.",
+        "로그인이 필요한 체험 문제를 열거나 복원하지 않았다."
+      ]
+    },
+    {
+      "id": "ai_google_ml",
+      "title": "What is Machine Learning?",
+      "url": "https://developers.google.com/machine-learning/intro-to-ml/what-is-ml",
+      "publisher": "Google for Developers",
+      "published": null,
+      "last_updated": "2026-01-27",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 본문",
+      "supports": [
+        "지도 비지도 강화 생성 구분",
+        "분류와 회귀"
+      ],
+      "caveats": [
+        "여러 학습 방식이 결합될 수 있어 배타적 분류로 일반화하지 않는다."
+      ]
+    },
+    {
+      "id": "ai_google_overfit",
+      "title": "Overfitting",
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting",
+      "publisher": "Google for Developers",
+      "published": null,
+      "last_updated": "2025-12-03",
+      "accessed_kst": "2026-10-13",
+      "authority": "기술 1차 출처",
+      "read_method": "web open 본문",
+      "supports": [
+        "학습 성능과 새로운 자료의 일반화",
+        "학습 검증 손실 차이"
+      ],
+      "caveats": [
+        "랜덤 분할 예시는 i.i.d. 가정의 조건과 함께 읽으며 시간·그룹 분할을 대체하지 않는다."
+      ]
+    }
+  ]
+}

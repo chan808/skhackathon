@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-14",
+  "timezone": "Asia/Seoul",
+  "assessment_mode": "self_assessment",
+  "disclaimer": "모든 데이터·규정·AI 응답은 이 폴더를 위해 새로 창작한 합성 연습이다. SK하이닉스의 실제 데이터, 공식 기출, 복원문항, 예상 출제 주제, 실제 시험 시간·점수·질문 제한을 뜻하지 않는다. 자유 서술의 정답 여부는 자동 채점하지 않는다.",
+  "instructions": "처음에는 answer_key와 scoring_rubric를 보지 않고 context, data, documents, tasks만 읽는다. 계산기·스프레드시트·메모를 사용할 수 있고 코딩은 필요하지 않다. 사례당 AI 요청을 최대 3회로 제한하는 것은 자체 연습 규칙이다. 실제 응시에서는 공식 도구 사용 규정을 우선한다.",
+  "cases": [
+    {
+      "id": "RC01",
+      "title": "예산과 점검 시간 안에서 가장 이득이 큰 계획 고르기",
+      "recommended_minutes": 18,
+      "max_ai_requests": 3,
+      "context": "당신은 가상 공장의 다음 생산 묶음 6개에 대한 일회성 개선 시험을 검토한다. 제시된 before와 after 불량률은 계획용 기대값이며 실측 성과가 아니다. 각 시험은 선택된 해당 묶음에만 영향을 주고 서로 독립적이다. 목표는 예상 불량 감소에 따른 총 회피 손실에서 시험 비용을 뺀 예상 순이득의 최대화다. 불량 한 개를 줄일 때 회피하는 손실은 모든 묶음에서 3,000원이다. 총 시험 비용은 500,000원 이하, 점검 시간은 5시간 이하, 선택 시험은 최대 3개다. A 라인과 B 라인에서 각각 최소 한 개를 선택해야 한다. 시험은 전부 선택하거나 선택하지 않는 정수 선택이며 비용·시간은 가산된다. 선택하지 않은 묶음은 before 불량률을 유지한다. 예산을 전부 쓰거나 정확히 3개를 고를 의무는 없다.",
+      "data": {
+        "format": "csv",
+        "csv": "trial_id,line,units,before_defect_pct,after_defect_pct,cost_krw,hours\nA1,A,20000,1.5,1.0,150000,1\nA2,A,4000,5.0,1.0,150000,2\nA3,A,30000,1.0,0.7,100000,2\nB1,B,10000,3.0,1.0,300000,3\nB2,B,50000,0.6,0.4,150000,1\nB3,B,2000,10.0,2.0,100000,3",
+        "units_note": "불량률 열의 5.0은 5%를 뜻한다. units는 서로 중복되지 않는 제품 수, cost_krw는 원, hours는 시간이다. 소수 불량 수가 나오면 계획용 기대값으로 유지한다."
+      },
+      "documents": [],
+      "tasks": [
+        "시험별 예상 불량 감소 수, 회피 손실, 순이득을 계산하고 계산식을 적는다.",
+        "모든 제약을 만족하는 최적 시험 조합을 고른다. 비용·시간·라인 범위·선택 개수를 확인하고, 경쟁 후보 두 개와 비교해 최대화 근거를 제시한다.",
+        "6개 묶음 전체의 계획 전 불량률과 선택 계획을 적용한 기대 불량률을 생산량으로 가중해 계산한다. 변화는 퍼센트포인트와 상대 감소율로 구분한다.",
+        "담당자에게 4문장 이내로 계획과 근거를 보고한다. 기대값과 실측 성과를 구분하고 실제 적용 전에 확인할 한 가지를 제시한다."
+      ],
+      "suggested_prompts": [
+        "이 자료의 목적함수와 제약을 먼저 정리하고 시험별 예상 불량 감소·회피 손실·순이득 표를 계산해 줘. 기대값과 실측값을 구분하고, 최적 조합은 아직 확정하지 마.",
+        "내 후보 조합을 검토해 줘. 비용 50만원, 5시간, 최대 3개, A와 B 각각 최소 한 개라는 조건에서 더 큰 순이득 조합이 있는지 조합별로 검증해 줘. 불량 감소 수만 최대화하지 마.",
+        "내 최종 수치와 4문장 보고서를 원자료와 대조해 줘. 전체 가중 불량률, 퍼센트포인트, 상대 감소율, 기대값 표현 중 잘못된 부분만 지적해 줘."
+      ],
+      "answer_key": {
+        "formula": {
+          "avoided_defects": "units * (before_defect_pct - after_defect_pct) / 100",
+          "gross_saving_krw": "avoided_defects * 3000",
+          "net_gain_krw": "gross_saving_krw - cost_krw",
+          "weighted_defect_pct": "sum(expected_defects) / sum(units) * 100"
+        },
+        "trial_results": [
+          {"trial_id": "A1", "avoided_defects": 100, "gross_saving_krw": 300000, "net_gain_krw": 150000},
+          {"trial_id": "A2", "avoided_defects": 160, "gross_saving_krw": 480000, "net_gain_krw": 330000},
+          {"trial_id": "A3", "avoided_defects": 90, "gross_saving_krw": 270000, "net_gain_krw": 170000},
+          {"trial_id": "B1", "avoided_defects": 200, "gross_saving_krw": 600000, "net_gain_krw": 300000},
+          {"trial_id": "B2", "avoided_defects": 100, "gross_saving_krw": 300000, "net_gain_krw": 150000},
+          {"trial_id": "B3", "avoided_defects": 160, "gross_saving_krw": 480000, "net_gain_krw": 380000}
+        ],
+        "optimal_plan": {
+          "trial_ids": ["A2", "B3"],
+          "selected_count": 2,
+          "cost_krw": 250000,
+          "hours": 5,
+          "avoided_defects": 320,
+          "gross_saving_krw": 960000,
+          "net_gain_krw": 710000,
+          "unspent_budget_krw": 250000,
+          "unused_hours": 0,
+          "note": "시간 제약이 꽉 찬다. 예산이 남아도 추가 시험을 억지로 선택할 필요가 없다."
+        },
+        "competing_feasible_plans": [
+          {"trial_ids": ["A1", "B2", "B3"], "avoided_defects": 360, "cost_krw": 400000, "hours": 5, "net_gain_krw": 680000},
+          {"trial_ids": ["A2", "A3", "B2"], "avoided_defects": 350, "cost_krw": 400000, "hours": 5, "net_gain_krw": 650000},
+          {"trial_ids": ["A2", "B1"], "avoided_defects": 360, "cost_krw": 450000, "hours": 5, "net_gain_krw": 630000}
+        ],
+        "infeasible_example": {"trial_ids": ["A1", "A2", "B3"], "reason": "비용 400000원은 예산 안이지만 6시간이 필요해 시간 제약을 넘는다."},
+        "feasible_plan_count": 13,
+        "overall_cohort": {
+          "units": 116000,
+          "expected_defects_before": 1600,
+          "expected_defects_after": 1280,
+          "defect_pct_before": 1.3793103448275863,
+          "defect_pct_after": 1.103448275862069,
+          "defect_reduction_percentage_points": 0.27586206896551724,
+          "relative_defect_reduction_pct": 20.0
+        },
+        "verification_expectation": "일부 후보 비교만으로 전역 최대를 증명할 수 없다. 6개에서 최대 3개 선택하는 조합을 빠짐없이 검토하거나, 같은 결론을 보장하는 명확한 배제 근거를 제시한다. 정답 조합 자체에 더해 목적함수와 제약 검증을 평가한다.",
+        "acceptable_follow_up": ["선택된 시험의 효과 추정이 실제 파일럿에서도 재현되는지 확인", "시험 적용 범위와 생산 묶음 중복 여부 확인", "점검 시간 추정에 이동·셋업 시간이 포함되는지 확인"],
+        "sample_report": "A2와 B3를 선택하면 비용 25만원과 5시간으로 두 라인을 모두 포함하며 예상 순이득이 71만원으로 가장 큽니다. 이 계획은 불량 320개를 줄이는 기대값이고, 더 많은 불량을 줄이는 3개 시험 조합보다 비용을 뺀 순이득이 큽니다. 전체 기대 불량률은 1.3793%에서 1.1034%로 0.2759%p, 상대적으로 20% 감소합니다. 실측 성과가 아니므로 효과 추정의 파일럿 재현 여부를 먼저 확인해야 합니다."
+      },
+      "scoring_rubric": {
+        "max_points": 20,
+        "criteria": [
+          {"id": "RC01-C1", "points": 4, "criterion": "예상 불량 감소·회피 손실·순이득 공식을 정확히 구분하고 6개 시험 수치를 모두 맞힘. 공식 1점, 불량 감소 표 1점, 회피 손실 표 1점, 순이득 표 1점."},
+          {"id": "RC01-C2", "points": 5, "criterion": "A2와 B3 선택 2점, 총 비용·시간 검증 1점, 두 라인·선택 수 검증 1점, 모든 조합 또는 명확한 배제 근거로 최대화 확인 1점."},
+          {"id": "RC01-C3", "points": 3, "criterion": "경쟁 후보 두 개의 비용과 순이득을 맞히고 최대 불량 감소와 최대 순이득이 다를 수 있음을 설명. 비교 후보 각각 1점, 목적함수 차이 1점."},
+          {"id": "RC01-C4", "points": 5, "criterion": "분모 116000과 전후 불량 수 각 확인 2점, 전후 가중 불량률 1점, 0.2759%p 1점, 상대 20% 감소 1점. 비율은 소수 넷째 자리 반올림 차이를 허용."},
+          {"id": "RC01-C5", "points": 3, "criterion": "4문장 이내 보고 1점, 기대값과 실측을 구분 1점, 적용 전에 확인할 구체적 사항 1점."}
+        ]
+      },
+      "critical_errors": ["비용·시간·라인 조건을 위반하는 계획을 최종 선택", "불량률의 단순 평균을 전체 불량률로 제시", "기대 효과를 실제 검증된 성과로 단정"]
+    },
+    {
+      "id": "RC02",
+      "title": "새로 게시된 규정과 현행 규정이 충돌하는 파일 제출 판단",
+      "recommended_minutes": 18,
+      "max_ai_requests": 3,
+      "context": "2026년 10월 14일 09시 25분 KST, 가상의 G7 제출 게이트웨이에 파일 세 개를 자동 전송할 수 있는지 검토한다. 제공된 문서만 근거로 판단한다. 파일 규격 충족과 게이트웨이 운영 허용 상태는 별개이며 두 조건을 모두 만족해야 자동 전송할 수 있다. 문서 게시 시각과 효력 시작 시각은 다를 수 있다. 승인·해제 기록은 제공된 자료에 전부 포함돼 있으며 담당자 승인 기록은 없다. MB는 1,000,000바이트, MiB는 1,048,576바이트로 정의한다. missing은 측정값 없음이며 0 또는 이전 측정값으로 채우지 않는다.",
+      "data": {
+        "format": "two_csv_tables",
+        "files_csv": "file_id,bytes\nF-A,128000000\nF-B,134217728\nF-C,134217729",
+        "latency_csv": "timestamp_kst,gateway_id,value,unit\n2026-10-14T09:20:00+09:00,G7,1.95,s\n2026-10-14T09:21:00+09:00,G7,2050,ms\n2026-10-14T09:22:00+09:00,G7,2.10,s\n2026-10-14T09:23:00+09:00,G7,missing,missing\n2026-10-14T09:24:00+09:00,G7,2.20,s\n2026-10-14T09:25:00+09:00,G7,2000,ms",
+        "approval_records": []
+      },
+      "documents": [
+        {
+          "id": "G7-V1",
+          "title": "G7 제출 운영 규정 버전 1",
+          "published_at": "2026-09-01T09:00:00+09:00",
+          "valid_from": "2026-09-01T09:00:00+09:00",
+          "valid_until_exclusive": "2026-10-01T00:00:00+09:00",
+          "scope": "G7",
+          "sections": [
+            {"id": "1", "text": "파일 크기는 100 MB 이하여야 한다. 이 규정은 10월 1일부터 버전 2로 대체된다."}
+          ]
+        },
+        {
+          "id": "G7-V2",
+          "title": "G7 제출 운영 규정 버전 2",
+          "published_at": "2026-09-28T10:00:00+09:00",
+          "valid_from": "2026-10-01T00:00:00+09:00",
+          "valid_until_exclusive": "2026-10-15T00:00:00+09:00",
+          "scope": "G7",
+          "sections": [
+            {"id": "1", "text": "개별 파일의 크기가 128 MiB 이하일 때 파일 규격을 충족한다. 경계값과 같은 크기는 허용한다. 1 MiB는 1048576바이트다."},
+            {"id": "2", "text": "지연이 엄격히 2000 ms를 초과한 유효 측정 2회가 연속하면 검토 후보를 기록한다. 두 측정 시각 차이는 75초 이하여야 한다. 기준 이하의 값, missing, 알 수 없는 단위 또는 75초보다 긴 간격은 연속 횟수를 끊는다."},
+            {"id": "3", "text": "검토 후보가 한 번 기록되면 이후 정상 측정만으로 해제되지 않는다. 담당자 검토 승인 기록이 있어야 해제되며, 미해제 검토 후보가 있으면 모든 파일의 자동 전송을 보류한다. 이 규정은 실제 장애 원인을 진단하거나 자동 정지를 지시하지 않는다."}
+          ]
+        },
+        {
+          "id": "G7-V3",
+          "title": "G7 제출 운영 규정 버전 3",
+          "published_at": "2026-10-13T15:00:00+09:00",
+          "valid_from": "2026-10-15T00:00:00+09:00",
+          "valid_until_exclusive": null,
+          "scope": "G7",
+          "sections": [
+            {"id": "1", "text": "10월 15일부터 파일 크기는 140 MB 이하로 한다. 지연 2500 ms 이상이 3회 연속일 때 검토 후보를 기록한다. 게시일에 즉시 시행하는 규정은 아니다."}
+          ]
+        },
+        {
+          "id": "G8-V4",
+          "title": "G8 제출 운영 규정 버전 4",
+          "published_at": "2026-10-14T08:00:00+09:00",
+          "valid_from": "2026-10-14T09:00:00+09:00",
+          "valid_until_exclusive": null,
+          "scope": "G8",
+          "sections": [
+            {"id": "1", "text": "G8의 파일 크기는 160 MB 이하로 한다. G7에는 적용하지 않는다."}
+          ]
+        }
+      ],
+      "tasks": [
+        "판단 시점과 적용 대상을 기준으로 사용할 규정과 제외할 규정을 정하고 문서 ID와 이유를 적는다.",
+        "파일 세 개의 MiB 값을 계산한다. 각 파일이 파일 규격을 충족하는지 바이트 기준으로 판정하고 경계값을 확인한다.",
+        "로그를 ms로 통일해 연속 초과 횟수를 추적한다. 최초 검토 후보 시각과 09시 25분 현재 미해제 여부를 정한다. missing과 정확히 2000 ms인 값을 별도로 설명한다.",
+        "지금 자동 전송할 수 있는 파일이 있는지 결론을 내린다. 파일 규격, 운영 보류, 장애 원인 확정을 구분해 적용 조항 ID와 담당자의 다음 행동을 제시한다."
+      ],
+      "suggested_prompts": [
+        "판단 시점 2026-10-14 09:25 KST와 대상 G7에 적용되는 문서를 골라 줘. 게시 날짜, 효력 기간, 적용 대상의 세 기준을 각각 확인하고 아직 효력이 없는 문서를 분리해 줘.",
+        "내 파일 크기와 로그 정규화 표를 검증해 줘. MB와 MiB, 이하와 초과, missing, 75초 간격, 검토 후보의 해제 조건을 원문 조항별로 대조해 줘.",
+        "내 최종 제출 판단을 감사해 줘. 파일 규격을 만족한다는 이유만으로 자동 전송을 허용했는지, 최신 게시 문서를 현행으로 오해했는지, 실제 장애 원인을 근거 없이 확정했는지 확인해 줘."
+      ],
+      "answer_key": {
+        "applicable_document_id": "G7-V2",
+        "excluded_documents": {
+          "G7-V1": "효력이 10월 1일 전에 끝남",
+          "G7-V3": "게시됐지만 효력이 10월 15일부터 시작됨",
+          "G8-V4": "현재 효력이 있으나 적용 대상이 G8임"
+        },
+        "byte_limit": 134217728,
+        "file_results": [
+          {"file_id": "F-A", "size_mib": 122.0703125, "within_file_limit": true, "comparison": "128000000 <= 134217728"},
+          {"file_id": "F-B", "size_mib": 128.0, "within_file_limit": true, "comparison": "134217728 == 134217728"},
+          {"file_id": "F-C", "size_mib": 128.00000095367432, "within_file_limit": false, "comparison": "134217729 > 134217728; 한 바이트 초과"}
+        ],
+        "latency_results": [
+          {"timestamp_kst": "2026-10-14T09:20:00+09:00", "latency_ms": 1950, "consecutive_exceedances": 0},
+          {"timestamp_kst": "2026-10-14T09:21:00+09:00", "latency_ms": 2050, "consecutive_exceedances": 1},
+          {"timestamp_kst": "2026-10-14T09:22:00+09:00", "latency_ms": 2100, "consecutive_exceedances": 2},
+          {"timestamp_kst": "2026-10-14T09:23:00+09:00", "latency_ms": null, "consecutive_exceedances": 0},
+          {"timestamp_kst": "2026-10-14T09:24:00+09:00", "latency_ms": 2200, "consecutive_exceedances": 1},
+          {"timestamp_kst": "2026-10-14T09:25:00+09:00", "latency_ms": 2000, "consecutive_exceedances": 0}
+        ],
+        "first_review_candidate_at": "2026-10-14T09:22:00+09:00",
+        "first_pair_gap_seconds": 60,
+        "review_candidate_unresolved_at_decision_time": true,
+        "files_eligible_by_size_only": ["F-A", "F-B"],
+        "files_automatically_sendable_now": [],
+        "required_citations": ["G7-V2 §1", "G7-V2 §2", "G7-V2 §3"],
+        "next_actions": ["F-A와 F-B는 담당자가 미해제 검토 후보를 검토해 승인·해제 기록을 남긴 후 전송 여부 재판단", "F-C는 파일 크기를 한계 이하로 줄이고 다시 확인", "원인 진단 자료가 없으므로 지연의 실제 원인을 단정하지 않음"],
+        "rounding_note": "F-C를 소수 둘째 자리로 표시하면 128.00 MiB로 보일 수 있으나 허용 여부는 반올림 표시값이 아니라 원래 바이트 수로 판단한다.",
+        "sample_conclusion": "현행 규정은 G7-V2이며 최신 게시된 G7-V3는 아직 효력이 없습니다. F-A와 F-B는 크기 한계를 충족하지만 F-C는 1바이트 초과합니다. 09:21과 09:22의 60초 간격 측정이 2000 ms를 초과해 검토 후보가 기록됐고 담당자 승인 기록이 없어 현재 모든 자동 전송을 보류해야 합니다. 정상 측정으로 자동 해제하거나 지연의 실제 원인을 확정할 근거는 없습니다."
+      },
+      "scoring_rubric": {
+        "max_points": 20,
+        "criteria": [
+          {"id": "RC02-C1", "points": 4, "criterion": "G7-V2 선택 1점과 나머지 세 문서의 제외 이유 각각 1점."},
+          {"id": "RC02-C2", "points": 4, "criterion": "134217728바이트 한계 1점, F-A 환산과 통과 1점, F-B 경계 통과 1점, F-C 반올림에 속지 않고 1바이트 초과 판정 1점."},
+          {"id": "RC02-C3", "points": 4, "criterion": "ms 환산 표 1점, 09:22 최초 후보와 60초 간격 1점, missing의 연속 횟수 초기화 1점, 정확히 2000 ms는 초과가 아님 1점."},
+          {"id": "RC02-C4", "points": 5, "criterion": "미해제 후보 유지와 승인 필요 설명 2점, 지금 자동 전송 가능한 파일 없음 2점, 파일 규격 충족과 운영 보류를 분리 1점."},
+          {"id": "RC02-C5", "points": 3, "criterion": "해당 조항 ID로 근거 제시 1점, F-C 수정과 담당자 검토 행동 제시 1점, 장애 원인 미확정 설명 1점."}
+        ]
+      },
+      "critical_errors": ["G7-V3를 게시됐다는 이유로 현재 적용", "F-C를 반올림 값만 보고 허용", "담당자 승인 없는 미해제 검토 후보를 무시하고 자동 전송 허용", "제공된 로그만으로 장애 원인을 확정"]
+    },
+    {
+      "id": "RC03",
+      "title": "AI가 작성한 높은 정확도와 수율 개선 보고서 감사하기",
+      "recommended_minutes": 20,
+      "max_ai_requests": 3,
+      "context": "가상 팀이 공정 시작 전에 불량 위험을 예측하는 모델을 검토하고 있다. 배포 요구사항은 독립된 최종 평가에서 불량 recall 80% 이상이다. 평가에서 정상 950개, 불량 50개이며 두 모델의 혼동행렬 합계는 각각 1000개다. 불량을 놓친 FN 하나의 손실은 5000원, 정상에 잘못 경보한 FP 하나의 점검 비용은 200원이다. 이 비용은 연습용 가정이다. TP와 TN의 별도 비용은 0으로 둔다. 모델 평가 표와 생산 기간 비교 표는 서로 다른 자료이고, 모델을 실제 배포했다는 기록은 없다. 제공된 AI 보고서의 계산, 평가 타당성, 원인 주장과 배포 권고를 검토한다.",
+      "data": {
+        "format": "two_csv_tables_and_ai_report",
+        "confusion_csv": "model,TP,FN,FP,TN\nA,35,15,45,905\nB,20,30,5,945",
+        "production_csv": "period,product,inspected,good\nbefore,P,1000,900\nbefore,Q,1000,990\nafter,P,100,90\nafter,Q,1900,1881",
+        "ai_report": "모델 B의 정확도는 96.5%이므로 불량의 96.5%를 잡습니다. A의 정확도는 94%로 낮으므로 A보다 B가 비용도 작고 배포 요구사항을 만족합니다. A는 정답 라벨 없이 전체 데이터를 표준화했기 때문에 누수가 없고 같은 웨이퍼가 양쪽에 있어도 문제가 없습니다. 최종 검사 보고서의 사후 정보는 입력 정확도를 높이므로 유용합니다. A에서 압력 센서의 SHAP 기여도가 가장 크므로 압력을 10% 낮추면 불량도 10% 줄일 수 있습니다. 생산 수율이 94.5%에서 98.55%로 올라 4.05% 개선됐고 이것이 모델 B의 실제 효과를 증명하므로 즉시 배포를 권합니다."
+      },
+      "documents": [
+        {
+          "id": "PIPELINE-A",
+          "title": "모델 A 평가 기록",
+          "sections": [
+            {"id": "1", "text": "예측 시점은 각 제품의 공정 시작 직전이다. 입력에는 공정 시작 전 센서 요약과 공정 종료 후 작성되는 failure_report_closed 상태가 함께 포함됐다."},
+            {"id": "2", "text": "칩 행을 무작위로 train과 test로 나눴으며 같은 웨이퍼에서 나온 칩이 양쪽에 포함됐다. 목표는 처음 보는 다음 생산 웨이퍼에서의 성능이다."},
+            {"id": "3", "text": "스케일링의 평균과 표준편차는 train과 test를 합친 데이터에서 fit했다. 최종 test 성능을 보며 프롬프트와 임계값을 다섯 번 수정했다."},
+            {"id": "4", "text": "압력 특성이 모델 예측의 SHAP 기여도 순위에서 가장 컸다. 압력을 변경한 개입 실험이나 다른 제품·설비 조건을 통제한 인과 분석은 없다."}
+          ]
+        },
+        {
+          "id": "PIPELINE-B",
+          "title": "모델 B 평가 기록",
+          "sections": [
+            {"id": "1", "text": "입력은 예측 시점에 이용 가능한 정보만 사용했다. 웨이퍼 그룹이 겹치지 않는 시간순 train, validation, final test 분할을 사용했고 전처리는 train에만 fit했다."},
+            {"id": "2", "text": "임계값은 validation에서 고정했으며 final test를 보고 수정한 기록은 없다. 표의 B 혼동행렬은 이 final test 결과다. 실제 배포 기록은 없다."}
+          ]
+        }
+      ],
+      "tasks": [
+        "A와 B의 accuracy, precision, recall을 직접 계산한다. 모든 제품을 정상으로 예측하는 기준선의 accuracy와 recall도 구한다.",
+        "제공된 혼동행렬만으로 A와 B의 가정상 비용을 계산한다. 어느 것이 낮은지와 이 숫자를 실제 다음 생산 비용으로 주장할 수 있는지를 구분한다.",
+        "AI 보고서에서 평가 누수 또는 예측 시점 불일치 문제를 최소 세 가지 찾고 각 기록 조항을 연결한다. B의 기록도 확인해 배포 요건 충족 여부를 판단한다.",
+        "기간별 전체 수율과 제품별 수율을 계산한다. 전체 변화의 퍼센트포인트와 상대 변화율을 정하고, 모델의 실제 효과나 압력 변경 효과를 증명한다는 주장에 반례를 제시한다.",
+        "잘못된 AI 보고서를 6문장 이내로 고친다. 계산으로 확인된 사실, 검증되지 않은 주장, 배포 전 다음 확인을 나눠 설명한다."
+      ],
+      "suggested_prompts": [
+        "혼동행렬과 생산 표의 숫자만 사용해 계산표를 만들어 줘. accuracy·precision·recall, FN/FP 비용, 생산량으로 가중한 전후 수율, 제품별 수율을 구하고 공식과 분모를 보여 줘. 배포 결론은 아직 내리지 마.",
+        "AI 보고서와 PIPELINE-A/B를 대조해 줘. 예측 시점, 그룹 독립성, 전처리 fit 범위, 최종 test 재사용, recall 80% 요구사항을 각각 확인하고 주장별로 근거 조항을 붙여 줘.",
+        "내 수정 보고서를 검토해 줘. 비용 표를 실제 운영 성과로 확대했는지, 제품 구성 변화나 SHAP를 인과 증거로 오해했는지, %와 %p를 혼동했는지 확인하고 검증 가능한 다음 단계 하나를 제안해 줘."
+      ],
+      "answer_key": {
+        "metric_formulas": {
+          "accuracy": "(TP + TN) / (TP + FN + FP + TN)",
+          "precision": "TP / (TP + FP)",
+          "recall": "TP / (TP + FN)",
+          "cost_krw": "FN * 5000 + FP * 200"
+        },
+        "model_metrics": {
+          "A": {"accuracy": 0.94, "precision": 0.4375, "recall": 0.70, "cost_krw_from_supplied_table": 84000},
+          "B": {"accuracy": 0.965, "precision": 0.80, "recall": 0.40, "cost_krw_from_supplied_table": 151000},
+          "all_normal_baseline": {"accuracy": 0.95, "recall": 0.0, "cost_krw": 250000}
+        },
+        "cost_interpretation": "제공된 표의 산술 비용은 A가 B보다 67000원 작다. 그러나 A의 평가 절차가 새 생산 웨이퍼 성능을 적절히 측정하지 못하므로 이 차이를 실제 운영 비용 우위로 단정할 수 없다. B도 가정상 표 비용일 뿐 실제 운영 성과가 아니다.",
+        "evaluation_issues": [
+          {"issue": "예측 시점 뒤에 작성되는 failure_report_closed 사용", "source": "PIPELINE-A §1", "fix": "공정 시작 직전에 존재하는 입력만 사용해 다시 평가"},
+          {"issue": "동일 웨이퍼의 칩이 학습과 평가에 겹침", "source": "PIPELINE-A §2", "fix": "목표에 맞춰 웨이퍼 그룹이 겹치지 않는 시간순 분할"},
+          {"issue": "train과 test 전체로 스케일러 fit", "source": "PIPELINE-A §3", "fix": "train으로만 전처리를 fit하고 나머지는 transform"},
+          {"issue": "final test를 보면서 프롬프트와 임계값 반복 선택", "source": "PIPELINE-A §3", "fix": "validation에서 선택하고 손대지 않은 새 final test로 평가"}
+        ],
+        "deployment_decision": {
+          "A": "표상 recall 70%로 요구사항 미달이며 평가 누수도 있어 배포 근거 불충분",
+          "B": "주어진 기록상 분할·전처리·최종 평가 재사용 문제는 없지만 불량 recall 40%로 80% 요건 미달",
+          "approved_model_ids": [],
+          "next_check": "가용 시점 입력과 독립된 분할을 확정하고 validation에서 임계값을 조정한 뒤 새로운 final test에서 recall 80%와 비용을 함께 확인"
+        },
+        "production_metrics": {
+          "before": {"inspected": 2000, "good": 1890, "yield_pct": 94.5, "P_yield_pct": 90.0, "Q_yield_pct": 99.0, "Q_share_pct": 50.0},
+          "after": {"inspected": 2000, "good": 1971, "yield_pct": 98.55, "P_yield_pct": 90.0, "Q_yield_pct": 99.0, "Q_share_pct": 95.0},
+          "yield_change_percentage_points": 4.05,
+          "relative_yield_increase_pct": 4.285714285714286,
+          "explanation": "두 제품의 개별 수율은 그대로이며 수율이 높은 Q의 생산 비중이 50%에서 95%로 증가했다. 이 구성 변화만으로 전체 수율 상승이 설명되므로 모델 효과를 증명하지 못한다."
+        },
+        "causality_review": "SHAP 순위는 해당 모델 예측의 기여도 설명이다. 압력을 10% 낮춘 개입 효과나 실제 불량 10% 감소를 확인한 자료가 없다. 제품별 수율이 같은데 생산 구성만 변한 표는 모델의 실제 효과라는 주장에 대한 명확한 반례다.",
+        "sample_correction": "B의 정확도는 96.5%지만 불량 recall은 40%이며 요구사항 80%에 미달합니다. 표에서 계산한 비용은 A 84000원, B 151000원이지만 A는 사후 입력·웨이퍼 중복·전체 전처리·최종 test 반복 선택 때문에 운영 비용 우위를 입증하지 못합니다. 전체 수율은 94.5%에서 98.55%로 4.05%p, 상대적으로 약 4.2857% 상승했습니다. 각 제품 수율은 변하지 않고 Q 비중만 50%에서 95%로 바뀌었으므로 이 표는 모델 효과의 증거가 아닙니다. SHAP만으로 압력 변경의 인과 효과를 단정할 수 없습니다. 배포를 보류하고 예측 시점에 가용한 입력과 독립된 평가 분할을 확정해 validation에서 선택한 조건을 새 final test로 검증해야 합니다."
+      },
+      "scoring_rubric": {
+        "max_points": 20,
+        "criteria": [
+          {"id": "RC03-C1", "points": 4, "criterion": "두 accuracy 1점, 두 precision 1점, 두 recall 1점, 정상 기준선 accuracy 95%와 recall 0% 1점."},
+          {"id": "RC03-C2", "points": 3, "criterion": "A 84000원과 B 151000원 각각 1점, 산술 비용과 운영 성과를 구분 1점."},
+          {"id": "RC03-C3", "points": 5, "criterion": "사후 입력 문제 2점, 웨이퍼 그룹 중복 1점, 전체 전처리 fit 1점, 최종 test 반복 선택 1점. 각각 자료 조항 또는 해당 내용을 연결해야 함."},
+          {"id": "RC03-C4", "points": 4, "criterion": "전체 수율 94.5%와 98.55% 1점, 4.05%p와 상대 4.2857% 1점, 제품별 수율 불변 1점, Q 비중 변화로 전체 상승 설명 1점. 반올림 차이는 허용."},
+          {"id": "RC03-C5", "points": 4, "criterion": "두 모델 모두 배포 요건 미달 설명 1점, B에는 제공 기록상 A와 같은 누수 근거가 없다고 구분 1점, SHAP에서 개입 효과를 단정할 수 없음을 설명 1점, 6문장 이내 수정 보고와 독립 재평가 단계 1점."}
+        ]
+      },
+      "critical_errors": ["accuracy를 불량 recall로 해석", "제공된 결과로 즉시 배포를 승인", "A의 누수 평가 비용을 실제 미래 운영 비용으로 단정", "SHAP 또는 전후 총수율만으로 모델의 인과 효과를 확정"]
+    }
+  ]
+}
