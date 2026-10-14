@@ -1,6 +1,9 @@
 """Make an offline study ZIP from committed public files, never the workspace."""
+import argparse
 import hashlib
 import json
+import os
+import shutil
 import subprocess
 import zipfile
 from pathlib import Path, PurePosixPath
@@ -9,6 +12,24 @@ ROOT = Path(__file__).absolute().parents[1]
 OUTPUT = ROOT / "output" / "laptop-kit"
 EXCLUDED = (".venv/", ".venv-study/", ".cache/", ".codex-remote-attachments/", "tmp/", "data/private/", "output/laptop-kit/")
 PRIVATE_REPORTS = {"reports/environment.json", "reports/windows-preflight.json", "reports/participant-status.json", "reports/agent-loop-live.json", "reports/local-verification.json"}
+
+
+def find_git(explicit=None):
+    """Use installed Git, including the desktop bundle when it is not on PATH."""
+    if explicit:
+        candidate = Path(explicit)
+        if not candidate.is_file():
+            raise ValueError("--git-path must name an installed Git executable")
+        return str(candidate.absolute())
+    installed = shutil.which("git")
+    if installed:
+        return installed
+    profile = os.environ.get("USERPROFILE")
+    if profile:
+        bundled = Path(profile) / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
+        if bundled.is_file():
+            return str(bundled)
+    raise ValueError("Install Git or pass its executable with --git-path. No ZIP was created.")
 
 
 def validate_members(names):
@@ -25,16 +46,23 @@ def validate_members(names):
             raise ValueError("Private file is tracked; fix the index before exporting")
 
 
-def main():
-    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-    changes = subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True).strip()
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--git-path", help="Installed Git executable when Git is not on PATH")
+    args = parser.parse_args(argv)
+    try:
+        git = find_git(args.git_path)
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
+    revision = subprocess.check_output([git, "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    changes = subprocess.check_output([git, "status", "--porcelain"], cwd=ROOT, text=True).strip()
     if changes:
         raise SystemExit("Commit public changes first. The kit exports HEAD, not uncommitted files.")
-    committed_names = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "HEAD"], cwd=ROOT, text=True).splitlines()
+    committed_names = subprocess.check_output([git, "ls-tree", "-r", "--name-only", "HEAD"], cwd=ROOT, text=True).splitlines()
     validate_members(["skhackathon/" + name for name in committed_names])
     OUTPUT.mkdir(parents=True, exist_ok=True)
     archive = OUTPUT / ("skhackathon-study-" + revision[:7] + ".zip")
-    subprocess.run(["git", "archive", "--format=zip", "--prefix=skhackathon/", "--output=" + str(archive), "HEAD"], cwd=ROOT, check=True)
+    subprocess.run([git, "archive", "--format=zip", "--prefix=skhackathon/", "--output=" + str(archive), "HEAD"], cwd=ROOT, check=True)
     with zipfile.ZipFile(archive) as bundle:
         names = bundle.namelist()
         validate_members(names)

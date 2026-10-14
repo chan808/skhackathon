@@ -1,0 +1,505 @@
+{
+  "schema_version": 1,
+  "compiled_on_kst": "2026-10-15",
+  "scope": "유사 대회와 관련 기술의 비교 연구. 현재 SK 대회 공식 규정 검증은 다른 세션의 범위.",
+  "unique_url_count": 31,
+  "count_note": "URL 수는 독립적인 근거 수와 다르다. 접근 실패 2건과 비공식 참가자 사례 1건도 투명성을 위해 포함하며, 이들을 핵심 기술/규정 근거로 세지 않는다.",
+  "sources": [
+    {
+      "id": "CH01",
+      "title": "삼성전기 SEMCo Work 사내 해커톤",
+      "url": "https://sem.samsung.com/kr/newsroom/news/view.do?id=10585",
+      "publisher": "Samsung Electro-Mechanics",
+      "source_role": "competition",
+      "published_or_event_date": "2026-10-14",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "indexed_official_body",
+      "supports": [
+        "반복 업무용 에이전트, AI 활용과 실제 업무 적용성 평가"
+      ],
+      "caveats": [
+        "직접 open은 실패했지만 공식 도메인의 색인 본문을 읽음. 10월 13~16일 행사이며 기준일에 최종 수상 결과로 해석하지 않음."
+      ]
+    },
+    {
+      "id": "CH02",
+      "title": "IESA DeepTech Hackathon 2026 안내",
+      "url": "https://i4c.in/iesa-hackathon/",
+      "publisher": "i4C / IESA",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "문제 정의에서 작동하는 시연과 발표까지 이어지는 대회 구조"
+      ],
+      "caveats": [
+        "Broad track headings와 구체적인 웨이퍼 과제는 구분."
+      ]
+    },
+    {
+      "id": "CH03",
+      "title": "IESA DeepTech Hackathon 2026 브로슈어",
+      "url": "https://i4c.in/wp-content/uploads/2026/01/DeepTech-Hackathon-Brochure-1-3.pdf",
+      "publisher": "i4C / IESA",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_pdf_text",
+      "supports": [
+        "결함 최소 8클래스, 500장 이상, ONNX, NXP eIQ 소프트웨어 이식, 평가와 재현 코드"
+      ],
+      "caveats": [
+        "다른 대회의 요구다. 실제 SK 대회에 GPU, 8클래스, ONNX가 필요하다는 근거가 아님."
+      ]
+    },
+    {
+      "id": "CH04",
+      "title": "SEMICON India Hackathon 2026 문제와 제출 요구",
+      "url": "https://i4c.in/hackathon-2026",
+      "publisher": "i4C / SEMICON India",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "KLA 이미지 복원, Applied Materials 위치 복구, OOD 평가와 독립 실행 추론 스크립트"
+      ],
+      "caveats": [
+        "일반 소개에 이전 IESA 문구가 섞여 있어 구체적인 problem statement와 제출 항목을 우선."
+      ]
+    },
+    {
+      "id": "CH05",
+      "title": "DACON 반도체 소자 이상 탐지 데이터",
+      "url": "https://dacon.io/en/competitions/official/236224/data",
+      "publisher": "DACON",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "정상 학습 이미지 213장, 테스트 100장, 이진 제출, CC BY-NC-SA 4.0"
+      ],
+      "caveats": [
+        "데이터 다운로드와 모델 학습은 수행하지 않음."
+      ]
+    },
+    {
+      "id": "CH06",
+      "title": "DACON 반도체 소자 이상 탐지 규칙",
+      "url": "https://dacon.io/competitions/open/236224/overview/rules",
+      "publisher": "DACON",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "Binary F1, 공개 40%와 비공개 60%, 상위 팀 코드와 PPT 검증"
+      ],
+      "caveats": [
+        "접근 가능한 연습 페이지의 표시. 현재 SK 대회 규칙을 대신하지 않음."
+      ]
+    },
+    {
+      "id": "CH07",
+      "title": "LG 블럭 장난감 제조 공정 최적화 대회",
+      "url": "https://dacon.io/competitions/official/235612/overview/description",
+      "publisher": "LG Sciencepark / DACON",
+      "source_role": "competition",
+      "published_or_event_date": "2020",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "수요를 맞추는 생산 계획과 CSV 제출"
+      ],
+      "caveats": [
+        "과거 제조 최적화 대회이며 현 대회의 과제나 도구 허용을 추론하지 않음."
+      ]
+    },
+    {
+      "id": "CH08",
+      "title": "LG 제조 공정 공식 질의 응답",
+      "url": "https://dacon.io/competitions/official/235612/talkboard/400835?dtype=recent&page=1&ptype=pub",
+      "publisher": "DACON",
+      "source_role": "competition",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "indexed_official_excerpt",
+      "supports": [
+        "학습 개념과 순수 최적화의 허용 조건이 별도로 존재"
+      ],
+      "caveats": [
+        "직접 open 실패. 색인된 제한 문구만 확인. 알고리즘 허용을 판단할 때 원문 재확인 필요."
+      ]
+    },
+    {
+      "id": "CH09",
+      "title": "PHM 2016 CMP Data Challenge",
+      "url": "https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2016/phm-data-challenge-4/",
+      "publisher": "PHM Society",
+      "source_role": "competition",
+      "published_or_event_date": "2016",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "웨이퍼 CMP 제거율 예측, MSE 90%와 물리 모델 설명 10%"
+      ],
+      "caveats": [
+        "과거 대회의 배점이며 보편적 산업 AI 배점이 아님. 데이터 자체 라이선스는 재확인 필요."
+      ]
+    },
+    {
+      "id": "CH10",
+      "title": "DCASE 2026 Task 2",
+      "url": "https://dcase.community/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring",
+      "publisher": "DCASE task organizers",
+      "source_role": "competition",
+      "published_or_event_date": "2026",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "정상음 학습, 미관측 기계, 환경 변화, 2채널 소음, AUC와 pAUC"
+      ],
+      "caveats": [
+        "URL에 first-shot이 남아 있지만 실제 제목은 Noise-aware UASD. 2025와 2026 조건을 혼합하지 않음."
+      ]
+    },
+    {
+      "id": "CH11",
+      "title": "Bosch Production Line Performance",
+      "url": "https://www.kaggle.com/competitions/bosch-production-line-performance/overview",
+      "publisher": "Bosch / Kaggle",
+      "source_role": "competition",
+      "published_or_event_date": "2016",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "indexed_official_body",
+      "supports": [
+        "조립라인 측정으로 내부 불량 예측, MCC 평가"
+      ],
+      "caveats": [
+        "직접 open은 본문 0줄. 공식 페이지의 색인 본문으로 목적과 지표를 확인. 다운로드와 재사용 조건은 미확인."
+      ]
+    },
+    {
+      "id": "CH12",
+      "title": "HackZurich 2023 제출과 심사 기준",
+      "url": "https://hackzurich23.devpost.com/",
+      "publisher": "HackZurich organizers / Devpost",
+      "source_role": "competition",
+      "published_or_event_date": "2023",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "organizer_page",
+      "supports": [
+        "실제 작동, 사업 문제, UX, 기술, 문서, 2분 시연과 발표"
+      ],
+      "caveats": [
+        "일반 해커톤 구조 비교용이며 반도체 데이터 대회는 아님."
+      ]
+    },
+    {
+      "id": "CH13",
+      "title": "Samsung Semiconductor India Research SIC 해커톤",
+      "url": "https://news.samsung.com/in/samsung-semiconductor-india-research-celebrates-young-innovators-and-future-tech-leaders-conducts-a-hackathon-as-part-of-samsung-innovation-campus-programme",
+      "publisher": "Samsung Newsroom",
+      "source_role": "competition",
+      "published_or_event_date": "2024-08-28",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "캡스톤, 멘토링, 발표, 업무 보조 사례"
+      ],
+      "caveats": [
+        "주요 수상 주제는 의료와 재사용 등이다. 반도체 회사 주최가 반도체 제조 과제를 의미하지 않음."
+      ]
+    },
+    {
+      "id": "CH14",
+      "title": "Mic hackathon 2024 보고 논문",
+      "url": "https://arxiv.org/abs/2506.08423",
+      "publisher": "Hackathon participants / ML Science and Technology",
+      "source_role": "competition",
+      "published_or_event_date": "2025-06-10",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_paper_abstract",
+      "supports": [
+        "현미경 데이터, 메타데이터, 벤치마크, 디지털 트윈과 공개 코드"
+      ],
+      "caveats": [
+        "행사는 2024, 논문은 2025. 초록과 메타데이터까지 확인; 전체 논문 실험을 재현하지 않음."
+      ]
+    },
+    {
+      "id": "CH15",
+      "title": "Micron Smart Manufacturing 사례",
+      "url": "https://www.micron.com/about/blog/applications/ai/smart-manufacturing-at-micron-ai-at-enterprise-scale",
+      "publisher": "Micron",
+      "source_role": "industry",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "센서 AI, 영상, 음향, 열영상, 제조 워크플로와 agentic AI"
+      ],
+      "caveats": [
+        "기업의 자기 보고 사례. 발표 생산성 수치를 이 프로젝트의 효과로 전용하지 않음."
+      ]
+    },
+    {
+      "id": "CH16",
+      "title": "Samsung 반도체 GTC 2026 Agentic AI 사례",
+      "url": "https://semiconductor.samsung.com/news-events/tech-blog/samsung-showcases-agentic-ai-driven-semiconductor-engineering-innovation-at-nvidia-gtc-2026/",
+      "publisher": "Samsung Semiconductor",
+      "source_role": "industry",
+      "published_or_event_date": "2026",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_page",
+      "supports": [
+        "설계 제약, 장비 알람, 공정 제어, 수율 진단, MES와 디지털 트윈"
+      ],
+      "caveats": [
+        "연구와 산업 전략 비교용. 회사 발표 효과와 데모의 실측 효과는 구분."
+      ]
+    },
+    {
+      "id": "CH17",
+      "title": "UCI SECOM 원본 데이터",
+      "url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "publisher": "UCI / Michael McCann and Adrian Johnston",
+      "source_role": "dataset",
+      "published_or_event_date": "2008-11-18",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_dataset_page",
+      "supports": [
+        "1567개, 591특징, 104불량, 결측값, -1 pass와 +1 fail, CC BY 4.0"
+      ],
+      "caveats": [
+        "원본 레이블과 0/1 재가공본의 차이에 주의. feature relevance는 물리 원인 확정이 아님."
+      ]
+    },
+    {
+      "id": "CH18",
+      "title": "MVTec AD 원본",
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "publisher": "MVTec",
+      "source_role": "dataset",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_dataset_page",
+      "supports": [
+        "정상 학습 이미지와 정상/이상 테스트, 픽셀 주석, CC BY-NC-SA 4.0"
+      ],
+      "caveats": [
+        "모든 카테고리가 반도체는 아니다. 상업적 사용 허용으로 해석하지 않음."
+      ]
+    },
+    {
+      "id": "CH19",
+      "title": "MVTec AD 2 원본",
+      "url": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2",
+      "publisher": "MVTec",
+      "source_role": "dataset",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_dataset_page",
+      "supports": [
+        "8개 시나리오, 8000장 이상, 조명 변화, 일부 비공개 정답, 런타임과 메모리 측정"
+      ],
+      "caveats": [
+        "AD와 AD 2 조건을 분리. CC BY-NC-SA 4.0."
+      ]
+    },
+    {
+      "id": "CH20",
+      "title": "scikit learn 데이터 누수와 전처리",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "publisher": "scikit-learn project",
+      "source_role": "technical",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_documentation",
+      "supports": [
+        "먼저 분할하고 학습 데이터에서만 전처리와 특징 선택 fit, Pipeline"
+      ],
+      "caveats": [
+        "현재 설치를 권한 것은 아니며 원칙 검증에만 사용."
+      ]
+    },
+    {
+      "id": "CH21",
+      "title": "scikit learn 교차 검증",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "publisher": "scikit-learn project",
+      "source_role": "technical",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_documentation",
+      "supports": [
+        "GroupKFold, StratifiedGroupKFold, TimeSeriesSplit"
+      ],
+      "caveats": [
+        "한 분할법이 그룹 격리와 시간 격리를 동시에 보장한다고 단정하지 않음."
+      ]
+    },
+    {
+      "id": "CH22",
+      "title": "scikit learn 평가 지표",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "publisher": "scikit-learn project",
+      "source_role": "technical",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_documentation",
+      "supports": [
+        "Precision, Recall, F1, Average Precision, PR 곡선과 평균 방식"
+      ],
+      "caveats": [
+        "AP와 사다리꼴 PR AUC는 동일 계산이 아님. 실제 대회 지표를 우선."
+      ]
+    },
+    {
+      "id": "CH23",
+      "title": "PatchCore 원 논문",
+      "url": "https://arxiv.org/abs/2106.08265",
+      "publisher": "Karsten Roth et al. / CVPR 2022",
+      "source_role": "technical",
+      "published_or_event_date": "2022",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_paper_abstract",
+      "supports": [
+        "정상 이미지의 patch-feature memory bank를 사용하는 이상 탐지"
+      ],
+      "caveats": [
+        "초록과 메타데이터까지 확인. 논문의 AUROC를 현 데이터 성능으로 전용하지 않음."
+      ]
+    },
+    {
+      "id": "CH24",
+      "title": "Ragas 원 논문",
+      "url": "https://arxiv.org/abs/2309.15217",
+      "publisher": "Shahul Es et al.",
+      "source_role": "technical",
+      "published_or_event_date": "2023-09-26",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "primary_paper_abstract",
+      "supports": [
+        "검색 문맥, 생성 충실도, 답변 품질을 분리한 RAG 평가"
+      ],
+      "caveats": [
+        "논문 개념을 이용한 권고. 프레임워크를 설치하거나 자동 평가를 수행하지 않음."
+      ]
+    },
+    {
+      "id": "CH25",
+      "title": "Anthropic Building Effective Agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "publisher": "Anthropic",
+      "source_role": "technical",
+      "published_or_event_date": "2024-12-19",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_engineering_page",
+      "supports": [
+        "고정 workflow와 모델 판단 agent 구분, 단순 구성부터 시작"
+      ],
+      "caveats": [
+        "페이지에 도구 변화 주의문이 있으며 현재 SDK 선택 근거로 사용하지 않음."
+      ]
+    },
+    {
+      "id": "CH26",
+      "title": "Anthropic Demystifying Evals for AI Agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "publisher": "Anthropic",
+      "source_role": "technical",
+      "published_or_event_date": "2026-01-09",
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_engineering_page",
+      "supports": [
+        "task, trial, grader, 코드/모델/사람 판정, 실제 결과와 trace 평가"
+      ],
+      "caveats": [
+        "구조 검증과 모델 신뢰성 평가를 분리. 제안한 로컬 사례 수는 이 자료의 규정이 아님."
+      ]
+    },
+    {
+      "id": "CH27",
+      "title": "NIST Control Charts",
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc31.htm",
+      "publisher": "NIST",
+      "source_role": "technical",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_handbook",
+      "supports": [
+        "관리한계, 시간 변화, 오경보와 조사 후보의 의미"
+      ],
+      "caveats": [
+        "관리한계 초과를 특정 물리 원인 확정으로 바꾸지 않음."
+      ]
+    },
+    {
+      "id": "CH28",
+      "title": "NXP eIQ Toolkit",
+      "url": "https://www.nxp.com/design/design-center/software/eiq-ai-development-environment/eiq-toolkit-for-end-to-end-model-development-and-deployment:EIQ-TOOLKIT",
+      "publisher": "NXP",
+      "source_role": "technical",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "official_product_documentation",
+      "supports": [
+        "모델 가져오기와 변환, profiling, target inference"
+      ],
+      "caveats": [
+        "ONNX 생성만으로 장치 실행 성공이 확정되지 않음. 설치하지 않음."
+      ]
+    },
+    {
+      "id": "CH29",
+      "title": "WM 811K 원 배포처 탐색",
+      "url": "https://mirlab.org/dataSet/public/",
+      "publisher": "MIRLab",
+      "source_role": "excluded",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "access_failed",
+      "supports": [
+        "원 배포처 접근 실패 기록"
+      ],
+      "caveats": [
+        "시간 초과. 원본 파일, 클래스 수, 라이선스 근거로 사용하지 않음."
+      ]
+    },
+    {
+      "id": "CH30",
+      "title": "Wafer map failure pattern 논문 DOI 탐색",
+      "url": "https://doi.org/10.1109/TSM.2014.2364237",
+      "publisher": "IEEE",
+      "source_role": "excluded",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "access_failed",
+      "supports": [
+        "DOI 원문 접근 실패 기록"
+      ],
+      "caveats": [
+        "원문 접근 불가. 이 세션에서 논문 내용과 데이터 재사용 조건을 확정하지 않음."
+      ]
+    },
+    {
+      "id": "CH31",
+      "title": "IESA 공개 참가자 Edge AI README",
+      "url": "https://github.com/iammdsaadkhan/IESA-Edge-AI-Hackathon-2026/blob/main/README.md",
+      "publisher": "iammdsaadkhan",
+      "source_role": "participant_example",
+      "published_or_event_date": null,
+      "checked_on_kst": "2026-10-15",
+      "read_method": "author_repository_page",
+      "supports": [
+        "INT8 크기가 estimated로 적힌 공개 구현 사례"
+      ],
+      "caveats": [
+        "공식 수상/평가 결과가 아님. 데이터나 모델을 내려받지 않았고 점수/장치 실행을 재현하지 않음."
+      ]
+    }
+  ]
+}

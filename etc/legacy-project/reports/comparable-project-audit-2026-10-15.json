@@ -1,0 +1,67 @@
+{
+  "checked_at_kst": "2026-10-15T03:18:04.722861+09:00",
+  "scope": "Comparable-competition research and offline preparation-tool audit; official SK event compliance and learner ability are not assessed.",
+  "baseline_commit": "4e9eb5f15cf8e73c8213d575df24a6c3a32cccd0",
+  "python_version": "3.12.14",
+  "initial_observations": {
+    "study_environment_present": false,
+    "git_on_path": false,
+    "git_installed_in_bundle": true,
+    "original_export_command_failed": "FileNotFoundError: Git executable not found on PATH"
+  },
+  "fixed": [
+    "Exporter discovers installed bundled Git and accepts --git-path without changing system PATH."
+  ],
+  "clean_committed_export": {
+    "commit": "4e9eb5f15cf8e73c8213d575df24a6c3a32cccd0",
+    "bytes": 634921,
+    "sha256": "519d9dab194735dd2ff95ee88f60d82cdd09bbe3ee63f9cbddfcad5514c20970",
+    "file_count": 95,
+    "privacy_path_check_passed": true
+  },
+  "fresh_folder_baseline": {
+    "passed": true,
+    "test_count": 39,
+    "missing_local_links": [],
+    "path_with_spaces": true,
+    "created_new_venv": true,
+    "additional_packages_installed": false
+  },
+  "fresh_folder_with_local_code_overlay": {
+    "passed": true,
+    "test_count": 43,
+    "missing_local_links": [],
+    "overlay_files": [
+      "scripts/build_laptop_kit.py",
+      "tests/test_laptop_kit.py"
+    ],
+    "committed_release": false
+  },
+  "tracked_head_privacy_paths_passed": true,
+  "gitignore_probes_passed": true,
+  "limits": [
+    "Fresh folder is on the same Windows host and uses the same installed base Python; this is not a separate hardware or macOS test.",
+    "ZIP contains the baseline committed HEAD; current uncommitted changes require a later commit before exporting.",
+    "Default agent is a scripted offline replay; live model quality, credentials and API calls were not tested.",
+    "Synthetic data and reference answers do not establish held-out industrial performance or participant ability.",
+    "Camera, microphone, screen sharing, login, official exam tools and network quality were not tested."
+  ],
+  "passed": true,
+  "current_workspace_verification": {
+    "checked_at_kst": "2026-10-15T03:26:27.093889+09:00",
+    "passed": true,
+    "test_count": 43,
+    "markdown_files_checked": 34,
+    "local_links_checked": 139,
+    "missing_local_links": [],
+    "unique_source_urls": 205,
+    "minimum_knowledge_files_match_reviewed_versions": true,
+    "lab_matches_saved_reference": true
+  },
+  "comparison_research": {
+    "competition_cases": 11,
+    "source_urls_recorded": 31,
+    "excluded_access_failures": 2,
+    "unofficial_participant_examples": 1
+  }
+}

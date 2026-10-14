@@ -1,159 +1,129 @@
-# SK하이닉스 AI 해커톤 조사와 준비
+# SK하이닉스 AI 해커톤 1차 예선 당일 안내
 
-2026년 10월 14일 KST 재점검 반영. 서류 합격 후 AI 학습과 체험을 시작하는 백엔드 개발자를 위한 조사와 로컬 연습 환경이다. 공부할 첫 문서는 **[최소 AI 지식](MINIMUM-KNOWLEDGE.md)**이다. 한 번에 한 블록을 3~5분 읽고, 확인 질문에 답한다. 전체 조사 파일을 먼저 읽을 필요는 없다. 읽은 뒤 [학습 순서](LEARNING-PATH.md)를 따라 짧은 연습을 시작한다.
+**당일에는 이 파일 하나만 읽고 진행한다.** 현재 Windows 노트북과 일본 응시를 기준으로 정리했다. 기준일은 2026년 10월 15일이다. 시험은 프로그래머스에서 진행하며 이 프로젝트는 절차·자료 검증·환경 복구를 돕는 준비 자료다.
 
-[프로젝트 준비 점검](PREPARATION-CHECK.md)은 실제로 검증한 항목과 남은 응시 조건을 구분한다. 도구 테스트 통과를 본인의 응시 준비 완료로 해석하지 않는다.
+**프로젝트 파일과 복구 설치본은 준비되어 있다. 지정 사전점검, 일본 현지 회선의 감독 연결, 해외 접속·VPN 조건은 완료 증거가 없어 “아무 확인 없이 즉시 응시 가능”으로 판정하지 않는다.** 아래 네 항목을 먼저 확인한다.
 
-새 노트북이나 해외 응시는 **[노트북 준비 안내](LAPTOP-PREPARATION.md)**를 따른다. 설치·로그인·VPN 조건·현지 통신 확인과 Windows/Mac 실행 명령을 정리했다. Python 진입점 `scripts/study.py`는 설치된 Python 3.11 이상으로 별도 환경을 만들며 추가 패키지를 받지 않는다.
+## 지금 확인할 네 가지
 
-초대가 **20문항·30분과 16문항·90분** 구성이라면 [두 세션의 학습 전략](research/09-first-round-time-strategy.md)과 [백엔드 경험을 AI에 연결하는 노트](research/10-backend-ai-bridge.md)를 먼저 읽는다. 세션 명칭과 외부 도구 허용은 문항 수만으로 확정하지 않는다.
+1. **개인 초대와 지정 사전점검:** 두 세션의 링크, 입장 마감, 요구 브라우저, 장치·감독 점검 완료 여부를 확인한다. 공개 미리보기는 지정 사전점검을 대신하지 않는다.
+2. **일본 접속과 VPN:** 일본 IP 직접 접속, 한국 IP 필요 여부, VPN 허용·지정 조건을 확인한다. 한국 IP가 필요하면서 VPN이 허용된 경우에만 검사한 한국 서버 구성을 사용한다. 휴대폰 VPN이 노트북 테더링에도 적용된다고 가정하지 않는다.
+3. **실제 장소와 회선:** 시험을 볼 자리에서 노트북·폰을 동시에 충전하며 같은 회선으로 공식 감독·장치·저장 점검을 마친다. 테더링 허용, 고속 데이터 잔량, 국내 번호의 인증 수신을 확인한다. 카메라·마이크·폰 감독이 요구되면 실제 동시 사용을 검사한다.
+4. **허용 도구와 복구:** 외부 ChatGPT/Codex, 검색, 로컬 코드, 메모·계산기, 추가 화면의 허용 여부와 연결 단절 후 재접속·회선/IP 변경·새로고침·문의 절차를 확인한다. 내장 AI Assist 제공은 외부 AI 사용 허가를 뜻하지 않는다.
 
-전체 조사 결과는 [REPORT.md](REPORT.md)에서 시작한다. 상세 응시 메일은 공지상 10월 13일 발송 예정이었다. [메일 검색·미확정 조건·재발송 문의 초안](research/07-notice-and-open-questions.md)을 확인한다. 풀이 인터페이스는 [프로그래머스 공식 공개 체험](https://programmers.co.kr/ai-assessment/preview)에서 경험한다. 체험 풀이에는 개인회원 로그인이 필요하며 실전의 감독·시간·허용 도구는 개인 안내를 따른다.
+개인 링크·토큰·계정·운영자 답변은 `private/`에만 보관하고 GitHub에 올리지 않는다. 공식 문의 경로는 [대회 홈페이지 FAQ](https://skhynix-hackathon.com/ai-2026)에 있다. 문의는 자동 발송하지 않았다.
 
-[공식 체험 상세 분석](research/11-programmers-preview-analysis.md)은 문제 선택·파일의 AI 전달·첨부 토큰·답안 입력을 구분하고, 제한된 질문으로 자료를 검증하는 연습 순서를 설명한다.
+## 10월 18일 시간표
 
-틈틈이 복습할 때는 [3쪽 요약 PDF](output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf) 또는 [요약 원문](SUMMARY.md)을 읽는다.
+전달받은 배정은 **14:00-14:30 / 15:00-16:30**이다. 한국·일본은 UTC+9이므로 일본 현지 시각도 같다. 현재 1차 예선 안의 두 세션으로 관리하며 공식 일정의 10월 31일-11월 1일 2차 예선과 구분한다. 최종 입장·마감 시각은 개인 초대가 기준이다. [공식 일정](https://skhynix-hackathon.com/ai-2026)
 
-처음 배우는 용어의 설명과 확인 질문을 읽으려면 [최소지식 PDF](output/pdf/SK-hynix-minimum-AI-knowledge.pdf)를 사용한다. 3쪽 요약은 개념을 익힌 뒤 빠르게 복습할 때 쓴다.
-
-## 바로 실행
-
-PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성화하지 않아도 실행된다. 추가 패키지 설치, API 키, 유료 서비스가 필요하지 않다.
-
-진입 명령을 줄인 실행 스크립트도 있다. `learn`은 해설을 보며 풀기, `timed`는 30분 예산 기록, `case`는 RC02 자료 검증이다. 기존 환경을 점검하고 없으면 설치된 지원 버전의 Python으로 새 환경을 만든다. Python을 내려받거나 모델 계정을 연결하지 않는다.
-
-```powershell
-.\scripts\study.ps1 -Mode learn
-.\scripts\study.ps1 -Mode timed
-.\scripts\study.ps1 -Mode case
-.\scripts\study.ps1 -Mode check
-```
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice doctor
-.\.venv-study\Scripts\python.exe -m practice quiz --count 10
-```
-
-백엔드 개발자에게 먼저 필요한 20문항을 조합한 연습은 다음과 같다. `--minutes`는 예산과 문항별 시간을 기록하며 입력을 강제 종료하지 않는다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice quiz --bank backend --count 20 --exam --minutes 30 --seed 18
-```
-
-전체 40문항을 끝난 뒤 채점하려면 다음을 사용한다. 자가 점검용 창작 문제이며 실제 출제 범위나 기출문제가 아니다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice quiz --count 40 --exam --seed 17
-```
-
-오답 기록은 `reports/quiz-시각.json`으로 자동 저장된다. 생성된 파일 경로를 그대로 넣어 오답만 다시 풀 수 있다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice quiz --review 'reports\quiz-생성된파일명.json' --count 40
-```
-
-## 데이터와 문서 검증 연습
-
-기초 풀이 후에는 그럴듯한 오답을 구분하는 **심화 36문항**을 사용한다. 핵심 28개와 확장 8개는 자체 학습 순서이며 실제 출제 범위를 뜻하지 않는다. [심화 학습 안내](practice/advanced-quiz-guide.md)에서 문항별 개념과 오답 보완 방법을 확인한다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice quiz --bank advanced --priority first_round_core --count 12 --exam
-```
-
-심화 기록을 `--review`에 넣으면 저장된 문제집을 자동 선택한다.
-
-[합성 데이터 과제](data/synthetic/README.md)와 [AI 활용 미션](practice/missions.md)을 먼저 읽고 자신의 풀이를 작성한다. 기준 결과는 이미 `reports/lab-result.json`에 있으므로 첫 시도에서는 열지 않는다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice lab
-.\.venv-study\Scripts\python.exe -m practice check-answer templates\answer.example.json
-.\.venv-study\Scripts\python.exe -m unittest discover -s tests -v
-```
-
-`lab`은 오류가 있는 합성 CSV를 정제하고 전체·장비·제품·기간별 수율을 계산한다. Python과 SQLite 계산 결과를 교차 확인한다. `check-answer`는 답변 JSON의 형식과 근거 필드를 검사한다. 내용의 진실성을 자동 판정하지 않는다.
-
-## 낯선 서술형 과제
-
-예산·시간 최적화, 문서 효력·단위·예외, AI 결론 검토의 창작 과제 3개를 추가했다. 정답을 보기 전에 풀고 소요 시간과 질문 초안을 기록한다. 자유서술은 자동 채점하지 않고 기준 풀이와 비교해 자가 평가한다. [사용 안내](practice/readiness-guide.md)를 참고한다.
-
-```powershell
-.\.venv-study\Scripts\python.exe -m practice.readiness list
-.\.venv-study\Scripts\python.exe -m practice.readiness start --case RC01
-.\.venv-study\Scripts\python.exe -m practice.readiness review 'reports\readiness-생성된파일명.json'
-```
-
-`/prompt`는 질문을 기록하며 AI를 호출하지 않는다. `/done`으로 풀이를 저장한다. 시간과 질문 수는 자체 연습 조건이며 실제 대회의 제한을 뜻하지 않는다.
-
-## 파일 안내
-
-| 파일 | 용도 |
+| 일본 현지 시각 | 할 일 |
 | --- | --- |
-| REPORT.md | 조사 결론과 상세 자료 안내 |
-| MINIMUM-KNOWLEDGE.md | 3~5분씩 읽는 여섯 블록과 확인 문답 |
-| PREPARATION-CHECK.md | 학습 세팅 검증 결과와 남은 실전 확인 |
-| LAPTOP-PREPARATION.md | 새 노트북 설치·해외 회선·VPN·이동용 자료 안내 |
-| templates/laptop-checklist.md | 개인 노트북에서 실제 수행한 점검 기록 양식 |
-| output/pdf/SK-hynix-minimum-AI-knowledge.pdf | 별도 최소지식 책의 PDF |
-| SUMMARY.md | 3쪽 복습 요약의 원문 |
-| output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf | 휴대·출력용 한글 복습 요약 |
-| LEARNING-PATH.md | 미학습 상태에서 시작하는 첫 90분과 전체 주제 지도 |
-| research/01-event.md | 공식 일정 FAQ 플랫폼 규정 채용 혜택 |
-| research/02-ai-and-assessment.md | AI 개념 평가 방식 학습 주제 |
-| research/03-semiconductor-and-projects.md | 반도체 배경 산업 적용 사례 데이터셋 |
-| research/04-preparation-plan.md | 1차 전 일정과 2차 이후 준비 |
-| research/05-first-round-readiness.md | 준비 자료와 실제 수행 능력 구분 |
-| research/06-agents-and-ai-tools.md | 기존 에이전트 사용과 앱 개발 비교 |
-| research/07-notice-and-open-questions.md | 합격 공지 재확인 메일 검색과 미확정 시험 조건 |
-| research/08-ai-foundations-curriculum.md | ML 통계 최적화 DL LLM 기초와 수치 예제 |
-| research/09-first-round-time-strategy.md | 30분 개념 판단과 90분 자료 검증 준비 |
-| research/10-backend-ai-bridge.md | 하네스·workflow·agent·모델과 백엔드 경험 연결 |
-| research/11-programmers-preview-analysis.md | 공식 체험 관계·화면 흐름·자료 선택·질문·검증 연습 |
-| research/sources.json | 통합 출처 등록부 |
-| practice/quiz.json | 해설과 출처가 있는 40문항 |
-| practice/advanced-quiz.json | 심화 36문항과 핵심·확장 표시 |
-| practice/backend-core-selection.json | 기존 76개에서 최우선20개를 조합하는 선택 목록 |
-| practice/missions.md | 데이터 문서 코드 검증 미션 |
-| practice/readiness-cases.json | 낯선 서술형 과제 3개와 기준 풀이 |
-| templates/agent-task.md | 기존 에이전트로 수행하는 목표와 출력 계약 |
-| examples/README.md | 선택적 에이전트 실행 구조 시연과 API 연결 초안 |
-| templates/learning-progress.csv | 주제별 설명 계산 변형 적용 기록 |
-| templates/exam-preflight.md | 본인 응시 안내 확인 |
-| templates/problem-solving.md | 문제 정의 AI 질문 검증 기록 |
-| templates/prompt-library.md | 연습용 질문 양식 |
-| reports/local-status.md | 실행 환경·공개 제외 파일·미검증 범위 |
-| reports/verification.json | 연습 도구 검증 결과 |
+| 12:30 이전 | 이동·식사·화장실을 마치고 17:00까지 쓸 고정된 자리 확보. 숙소 퇴실 시간 확인 |
+| 13:00 | 노트북·폰 충전, 검사한 회선 연결, 데이터 잔량 확인. 백업·업데이트·다운로드를 수동으로 정리 |
+| 13:15 | 실제 Chrome에서 계정·초대·두 세션 경로 확인. 안내가 허용하는 입장 절차만 수행 |
+| 13:30 전후 | 지정 감독·장치 확인. 더 이른 입장 마감이 있으면 우선 |
+| 14:00-14:30 | 첫 세션. 답안 저장·최종 제출 상태 확인 |
+| 14:30-14:45 | 첫 제출 확인, 휴식, 충전·통신 재확인 |
+| 14:45 전후 | 같은 자리와 검사한 연결을 유지하며 두 번째 세션 입장 |
+| 15:00-16:30 | 두 번째 세션. 마지막 8-10분은 미응답·형식·제출 점검에 확보 |
+| 16:30 이후 | 제출 완료·종료 확인 후 이동 |
 
-## 환경 재생성
+## 노트북에서 준비된 것
 
-일반 점검 결과는 Git에서 제외된 `reports/local-verification.json`에 저장한다. 공개 `reports/verification.json`은 문서 작성 시의 검증 기록으로 보존하므로, 노트북에서 `check`를 실행해도 그 파일을 수정하지 않는다. 공개 기록을 갱신하는 작성자는 `scripts/verify.py --publish-report`를 명시한다.
+| 항목 | 확인 범위 |
+| --- | --- |
+| Chrome | 실행 파일 확인. 당시 버전 155.0.8059.41 |
+| 메모리 | 실제 장치 8GB 확인. 시험 중 불필요한 앱·탭과 대용량 작업을 닫고 공식 요구 조건은 사전점검에서 확인 |
+| Monito+ | 실행 파일 확인. 당시 버전 3.2.6.0. 요구 버전과 실제 감독 연결은 지정 점검에서 확인 |
+| 프로그래머스 체험 | 앱 내 브라우저 로그인 후 6개 유형·24문항과 핵심 자료 확인 |
+| Chrome 복구 설치본 | `offline/installers/googlechromestandaloneenterprise64.msi`, 약 170MB |
+| Python 복구 설치본 | `offline/installers/python-3.13.16-amd64.exe`, 약 30MB. 브라우저 응시에는 필수 아님 |
+| 무결성 | 설치본 크기·SHA256·게시자 서명 검사 도구와 기준값 보관 |
+| 라이브러리 | 현재 응시 방식에는 추가 pip/npm 패키지, CUDA, Docker, 로컬 모델이 필요하지 않음 |
+| VPN | 설치·한국 서버 로그인·현지 사용 허용 여부 미확인. 접속 조건에 따라 준비 |
 
-현재 PC의 `.venv-study`는 설치된 Codex 번들의 Python 3.12.14로 검증했다. 새 노트북에는 Codex가 없어도 설치된 Python 3.11 이상이면 된다. 기존 `.venv`는 Python 3.9.13 환경으로 남아 있다. 연습 도구는 표준 라이브러리만 사용한다. 폴더를 옮기면 가상환경도 새로 만든다. 10월 13일의 환경과 준비 계획은 [기존 준비 계획](research/04-preparation-plan.md)에 남겨두고, 현재 실행 환경은 `reports/environment.json`을 기준으로 한다.
+설치본 보관과 설치·로그인·연결 검사는 구분한다. 정상 브라우저를 시험 직전에 재설치하지 않는다. 설치본은 GitHub에 포함하지 않으므로 **현재 노트북의 `offline/`를 별도 저장장치에도 복사**해 둔다. 새로 클론한 저장소에는 설치본과 `private/`가 없다.
 
-새 위치에서는 지원 중인 Python 실행 파일을 지정해 복원한다. 아래는 Python 3.12 런처가 등록된 PC의 예다. PowerShell 스크립트 실행 정책을 바꿀 필요가 없다.
+최종 로컬 검사에서 두 설치본의 크기·SHA256·게시자 서명이 일치했고 문서 링크·점검 스크립트 문법·폴더 구성 검사를 통과했다. 이는 위 네 가지 실전 확인을 대신하지 않는다.
+
+## 최종 로컬 점검
+
+**이 노트북의 로컬 점검은 이미 실행하여 통과했다. 당일에는 명령을 다시 실행하지 않아도 된다.** 아래는 준비 자료를 변경했을 때 재검사하는 선택 명령이다. 현재 Codex의 PowerShell 7 환경에서 확인했으며 계정·VPN·방화벽·시스템 설정을 바꾸거나 시험을 시작하지 않는다.
 
 ```powershell
-py -3.12 -m venv .venv-study --without-pip
-.\.venv-study\Scripts\python.exe -m practice doctor
+.\tools\check.ps1 -VerifyInstallers
+.\tools\verify.ps1
+.\tools\package.ps1
 ```
 
-실제 대회 데이터·문제·답안의 외부 공개 범위와 시험 중 도구 사용 범위는 대회 약관과 개인 안내를 따른다. 이 폴더의 데이터와 문제는 사전 학습용으로 직접 만든 자료다.
+`check.ps1`은 로컬 장치·설치본 결과를 `private/system-check.json`에 기록한다. **카메라·마이크의 실시간 작동, 인터넷 품질, 로그인, 감독·제출은 자동 검사하지 않는다.** `verify.ps1`은 문서 링크·문법·폴더 구성·복구 기준값을 검사한다. `package.ps1`은 학습 자료와 개인정보를 제외한 `offline/contest-kit.zip` 및 SHA256을 만든다.
 
-개인 점수·진도는 템플릿을 `data/private/`에 복사해 기록한다. 가상환경·개인 실행 기록·PC 정보·참가 상태·API 키는 Git에서 제외한다. [공개 파일 범위](reports/local-status.md)를 참고한다.
+이 PC의 Windows PowerShell 5.1은 현재 정책상 스크립트 실행을 차단한다. 실행 정책을 변경하거나 우회하지 말고 이 문서의 수동 절차를 따른다. 브라우저 시험 자체에는 점검 명령 실행이 필수 조건이 아니다.
 
-## 새 PC에서 재현
+## 30분 세션에서 할 일
 
-저장소를 내려받고 그 폴더에서 Python 3.11 이상으로 환경을 만든다. 아래 첫 명령은 Python 3.12 런처가 등록된 Windows PC의 예다.
+지식평가라면 **지문의 요구 조건을 모두 만족하는 보기**를 고른다. 실제 문항 수·유형은 초대와 입장 화면에서 확인한다. 샘플 10문항을 실제 문항 수로 간주하지 않는다. 확신하는 문제부터 풀고 재방문이 허용되면 표시한 문제로 돌아온다. 시간의 약 20%를 재검토·미응답·제출에 남긴다. 문제 예산은 `(30분 - 검토시간) / 실제 문항 수`다.
 
-```powershell
-git clone https://github.com/chan808/skhackathon.git
-cd skhackathon
-py -3.12 -m venv .venv-study --without-pip
-.\.venv-study\Scripts\python.exe -m practice doctor
-.\.venv-study\Scripts\python.exe scripts\verify.py
+확인한 지식 주제는 생성형 AI의 텍스트·이미지 기능과 한계, 확률적 **토큰** 생성, 프롬프트 다중 조건, 문화적 편향, 합성 데이터·개인정보, 상업적 이용 허용과 권리 침해 위험의 차이, RAG 날짜·버전 메타데이터, API 필드 매핑, XAI, 가명 처리와 익명 처리다.
+
+‘최신 사실을 스스로 보장한다’, ‘가명 처리하면 관리 의무가 사라진다’, ‘프롬프트만으로 잘못된 데이터 연결이 해결된다’ 같은 단정을 경계한다. 기술 용어가 많은 보기보다 확인된 원인을 직접 해결하는 보기를 우선한다.
+
+## 90분 세션에서 할 일
+
+자료형 활용·서술형 과제라면 아래 순서로 진행한다. 샘플에서 도출한 방식이며 실제 출제 구성을 확정하지 않는다.
+
+1. **질문부터 읽는다.** 대상, 시점, 필터, 단위, 출력 형식을 적는다.
+2. **규칙을 표로 만든다.** 국가·버전·발효일·최소 조건·예외·정렬을 확인한다.
+3. **필요 자료만 AI에 추가한다.** 원문 열람과 `AI 질문에 추가`는 다른 상태다. 목록과 토큰 표시를 확인한다.
+4. **작업을 나눠 지시한다.** 추출, 판정·계산, 검산, 최종 답안을 구분하고 공통 기준을 유지한다.
+5. **원문으로 검증한다.** 규칙 하나와 핵심 수치·대상 하나 이상을 독립 대조한다. 같은 AI의 답 반복만으로 검산을 완료하지 않는다.
+6. **답안 칸에 입력한다.** 채팅 답변은 제출 답안이 아니다. 코드·정수·쉼표 목록·서술형 등 형식과 저장·제출 상태를 확인한다.
+
+체험에서 대화 잔여 **10회**, 첨부 **20,000토큰** 한도를 확인했다. 실제 시험의 한도·모델·카운터 범위는 화면에서 다시 확인한다. 활용 예제는 1-4번에 대한 하나의 AI 패널을 보여주므로 ‘4문항 x 10회’로 예산을 잡지 않는다. 첨부 한도와 모델 전체 컨텍스트 길이도 구분한다.
+
+공식 제품 설명은 질문 제한·응답 대기·지문 복사 제한·과정과 결과 평가를 안내한다. 실제 설정은 개인 안내가 기준이다. 복사 제한이 있으면 우회하지 말고 문제·파일 선택 기능을 쓴다. [공식 설명](https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment)
+
+### 첫 지시에 넣을 요소
+
+허용된 기능으로 과제에 맞춰 직접 작성한다.
+
+```text
+목표: [찾을 대상 또는 계산할 값]
+범위: [기간, 국가, ID, 문서 버전]
+규칙: [마지막 기록, AND 조건, 예외, 단위]
+작업: 사실을 추출하고 규칙에 따라 판정·계산해 줘.
+근거: 결론마다 파일과 페이지·행·조항을 표시해 줘.
+검증: 합계·누락·중복·문서 충돌을 검사해 줘. 없는 내용은 추측하지 마.
+출력: 근거 표와 최종 답을 분리하고 요구 형식을 따라 줘.
+보안: 프롬프트와 보고서의 식별 정보는 역할·코드로 표현해 줘.
 ```
 
-PDF 재생성만 선택적으로 `reportlab`과 한글 TrueType 글꼴이 필요하다. 이미 생성된 PDF를 보거나 퀴즈·실습·검증을 실행할 때는 추가 패키지가 필요 없다. `scripts/build_summary.py --font 경로 --bold-font 경로`로 글꼴을 지정할 수 있다.
+후속 지시는 실제 오류를 특정한다. 예: ‘퇴사 여부가 아니라 5월 기록에 등장했는지가 기준이다. 그 조건으로 유휴 대상을 재계산하고 바뀐 행을 보여줘.’ 발견하지 않은 오류나 수행하지 않은 검증을 꾸며 쓰지 않는다.
 
-최소지식 PDF 재생성은 `scripts/build_minimum_knowledge.py`가 같은 글꼴 옵션을 사용한다.
+### 자료가 많을 때
 
-문서 저작 시에는 선택적으로 `pypdf`로 `scripts/check_minimum_knowledge.py`를 실행해 원문과 PDF의 버전·인용·수치를 기록한다. 최신 PDF를 렌더링해 직접 확인한 뒤에만 `--visual-reviewed`를 지정한다. 일반 학습 검증은 추가 패키지 없이 저장된 해시와 현재 파일을 비교하므로, 원문만 바꾸고 PDF를 갱신하지 않은 상태를 발견한다.
+공통 규칙의 필요한 부분과 비교 표를 유지하고 대상 파일을 작은 묶음으로 처리한다. 같은 컬럼으로 결과를 합친다. 구독 샘플 파일 합은 **43,720토큰**으로 첨부 한도보다 크고, 규정 샘플은 규칙 2개와 상품 45개 파일이 있어 전부 한 번에 추가할 수 없다.
+
+파일 누락·ID 중복·마지막 상태·전체 합계·모든 조건의 동시 충족을 검산한다. 서술형에는 요구 섹션·근거·실행 순서·테스트 기준을 넣는다.
+
+## 연결이 끊겼을 때
+
+저장 상태와 공식 안내를 먼저 확인한다. 감독 시험에서는 회선·VPN·IP를 임의로 바꾸거나 반복 새로고침하지 않는다. 확인한 복구 절차로 재접속하고 미응답·저장·제출 상태를 다시 확인한다. 문의 시각·오류를 기록하되 문제 촬영·외부 공유는 시험 안내를 따른다.
+
+같은 폰의 Wi-Fi와 USB 테더링은 무선 구간의 대안이며 통신사 장애의 독립 예비 회선은 아니다. 한국 IP가 필수이면 VPN 장애 때 일본 직접 접속으로 바꾸기 전에 복구 지침을 따른다.
+
+## 파일 위치와 완료 기준
+
+| 위치 | 용도 |
+| --- | --- |
+| `README.md` | 당일 읽을 유일한 루트 문서 |
+| `tools/` | 점검·검증·휴대용 ZIP 생성 |
+| `offline/` | 로컬 복구 설치본·ZIP. Git 제외 |
+| `private/` | 개인 초대·운영자 답변·점검 결과. Git 제외 |
+| [상세 샘플 분석](etc/analysis/preview-analysis.md) | 6개 유형의 풀이·검산·함정. 준비 중 추가 열람용 |
+| `etc/legacy-project/` | 이전 학습·조사·실습·테스트·PDF·가상환경 보관 |
+
+**완료 기준은 네 가지 필수 확인 + 지정 사전점검 통과 + 로컬 파일 준비 + 제출 확인 절차 확보다.** 로컬 검사는 파일 준비의 증거이며 실전 접속·감독·제출은 별도 증거다. 문항 수·합격선·실제 모델·허용 도구·회선 상태를 미리보기만으로 확정하지 않는다.
+
+공식 자료: [SK 대회](https://skhynix-hackathon.com/ai-2026), [SK하이닉스 발표](https://talent.skhynix.com/hub/ko/company/story/237), [프로그래머스 체험](https://programmers.co.kr/ai-assessment/preview).

@@ -1,0 +1,8 @@
+{
+  "checked_date": "2026-10-15",
+  "purpose": "Local recovery installers; not installation or exam access verification",
+  "files": [
+    {"name":"googlechromestandaloneenterprise64.msi","bytes":169848832,"sha256":"2734dc5577dcbab49be037e5a074aef9948faca14453b52defb01224c196a3f5","publisher":"Google LLC","source":"https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi"},
+    {"name":"python-3.13.16-amd64.exe","bytes":29935584,"sha256":"fb4f9f5d438b2396da0086dc70b935c530cb578e37adc6d354f7ad2037fee83b","publisher":"Python Software Foundation","source":"https://www.python.org/ftp/python/3.13.16/python-3.13.16-amd64.exe"}
+  ]
+}

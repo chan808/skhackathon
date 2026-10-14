@@ -1,6 +1,6 @@
 # 해커톤과 기술 조사 출처
 
-2026년 10월 14일 KST에 통합한 참고 URL이다. 원문별 확인 날짜는 등록부의 개별 기록을 따른다. URL 수는 독립적인 근거 수와 다르다. 동일 보도자료와 미러, 언어판을 중복 근거로 해석하지 않는다. 원 배포처의 접근 제한과 미확인 라이선스는 각 상세 조사와 JSON 등록부에 표시했다.
+2026-10-15 KST에 통합한 참고 URL이다. 원문별 확인 날짜는 등록부의 개별 기록을 따른다. URL 수는 독립적인 근거 수와 다르다. 동일 보도자료와 미러, 언어판을 중복 근거로 해석하지 않는다. 원 배포처의 접근 제한과 미확인 라이선스는 각 상세 조사와 JSON 등록부에 표시했다.
 
 세부 확인 범위와 날짜 및 한계는 [통합 등록부](sources.json)에 있다.
 
@@ -13,10 +13,13 @@
 | [Feature relevance quantification in explainable AI A causal problem](https://arxiv.org/abs/1910.13413) | Authors Dominik Janzing, Lenon Minorics and Patrick Blöbaum via arXiv | Original abstract and metadata returned by web search |
 | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | Lewis et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](https://arxiv.org/abs/2101.03961) | Fedus et al.; arXiv | 공식 문서 또는 원 논문을 web open/find로 확인 |
+| [PatchCore 원 논문](https://arxiv.org/abs/2106.08265) | Karsten Roth et al. / CVPR 2022 | primary_paper_abstract |
 | [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) | Hu et al.; arXiv | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) | Yao et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) | Liu et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180) | Authors Woosuk Kwon and collaborators via arXiv; SOSP 2023 | Opened original abstract and metadata |
+| [Ragas 원 논문](https://arxiv.org/abs/2309.15217) | Shahul Es et al. | primary_paper_abstract |
+| [Mic hackathon 2024 보고 논문](https://arxiv.org/abs/2506.08423) | Hackathon participants / ML Science and Technology | primary_paper_abstract |
 | [Attention Is All You Need](https://arxiv.org/html/1706.03762v7) | Vaswani et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Chrome full enterprise installer download](https://chromeenterprise.google/download/) | Google | Official body read by research team |
 | [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | Anthropic | web open 또는 find로 본문 확인 |
@@ -26,8 +29,13 @@
 | [Create custom subagents](https://code.claude.com/docs/en/sub-agents) | Anthropic | web open 또는 find로 본문 확인 |
 | [코파톤 Cofathon — 크래프톤 × 올리브영 AI Native 해커톤](https://cofathon.getcofa.com/) | KRAFTON / CJ Olive Young | web open 본문 |
 | [HR담당자를 위한 프로그래머스 기업 AX 교육 세미나 후기](https://community.programmers.co.kr/post/14224) | 프로그래머스 공식 작성자 | 공식 원문 URL open 및 검색 반환 본문 확인 |
+| [LG 블럭 장난감 제조 공정 최적화 대회](https://dacon.io/competitions/official/235612/overview/description) | LG Sciencepark / DACON | official_page |
+| [LG 제조 공정 공식 질의 응답](https://dacon.io/competitions/official/235612/talkboard/400835?dtype=recent&page=1&ptype=pub) | DACON | indexed_official_excerpt |
+| [DACON 반도체 소자 이상 탐지 규칙](https://dacon.io/competitions/open/236224/overview/rules) | DACON | official_page |
+| [DACON 반도체 소자 이상 탐지 데이터](https://dacon.io/en/competitions/official/236224/data) | DACON | official_page |
 | [C-MAPSS Aircraft Engine Simulator Data](https://data.nasa.gov/dataset/c-mapss-aircraft-engine-simulator-data) | NASA Open Data Portal / Dashlink | Full official record parsed in web results |
 | [CMAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data) | NASA Open Data Portal / PCoE | Official record body parsed in web search |
+| [DCASE 2026 Task 2](https://dcase.community/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring) | DCASE task organizers | official_page |
 | [프로그래머스 AI 역량평가 안내형 데모](https://demo.arcade.software/b5dk0zn4GHjoXFKsAmpP?embed=&embed_desktop=inline&embed_mobile=inline&show_copy_link=true) | 프로그래머스 공식 사이트에서 연결한 데모 | 공식 링크를 web click으로 확인 |
 | [Classification: Accuracy, recall, precision, and related metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) | Google for Developers | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Classification: ROC and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) | Google for Developers | 공식 문서 또는 원 논문을 web open/find로 확인 |
@@ -79,13 +87,16 @@
 | [Optimizing Model Parameters](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html) | PyTorch | Official training and test loops read, including eval and no_grad comments |
 | [Transfer Learning for Computer Vision Tutorial](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html) | PyTorch | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Zeroing out gradients in PyTorch](https://docs.pytorch.org/tutorials/recipes/recipes/zeroing_out_gradients.html) | PyTorch | Official introduction explicitly describing accumulation into .grad read |
+| [Wafer map failure pattern 논문 DOI 탐색](https://doi.org/10.1109/TSM.2014.2364237) | IEEE | access_failed |
 | [Korea Agentic AI Hackathon 후보 모집 주소](https://fastcampus.co.kr/NVIDIA_hackathon) | FastCampus | 검색 캐시 단서와 실제 브라우저 확인 |
 | [LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
 | [LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Git install for Windows](https://git-scm.com/install/windows) | Git / Git for Windows | Official body read by research team |
 | [Git for Windows official project](https://gitforwindows.org/) | Git / Git for Windows | Official body read by research team |
 | [Towards Total Recall in Industrial Anomaly Detection PatchCore implementation](https://github.com/amazon-science/patchcore-inspection) | PatchCore authors / Amazon Science | Opened official README and repository license |
+| [IESA 공개 참가자 Edge AI README](https://github.com/iammdsaadkhan/IESA-Edge-AI-Hackathon-2026/blob/main/README.md) | iammdsaadkhan | author_repository_page |
 | [BoTorch Bayesian optimization in PyTorch](https://github.com/meta-pytorch/botorch) | Meta PyTorch / BoTorch developers | Official README and MIT license returned by web search |
+| [HackZurich 2023 제출과 심사 기준](https://hackzurich23.devpost.com/) | HackZurich organizers / Devpost | organizer_page |
 | [LoRA](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora) | Hugging Face PEFT | Official low-rank update and frozen original weight passages read |
 | [Transformers How caching works](https://huggingface.co/docs/transformers/en/cache_explanation) | Hugging Face | Opened official caching explanation |
 | [Quantization overview](https://huggingface.co/docs/transformers/en/quantization/overview) | Hugging Face Transformers | Official overview description of lower-precision weight storage read |
@@ -95,6 +106,9 @@
 | [Quantization Overview](https://huggingface.co/docs/transformers/main/en/quantization/overview) | Hugging Face | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Tokenization algorithms](https://huggingface.co/docs/transformers/main/en/tokenizer_summary) | Hugging Face | web open 또는 find로 공식 본문·원 논문 확인 |
 | [How do Transformers work?](https://huggingface.co/learn/llm-course/en/chapter1/4) | Hugging Face | web open 또는 find로 공식 본문·원 논문 확인 |
+| [SEMICON India Hackathon 2026 문제와 제출 요구](https://i4c.in/hackathon-2026) | i4C / SEMICON India | official_page |
+| [IESA DeepTech Hackathon 2026 안내](https://i4c.in/iesa-hackathon/) | i4C / IESA | official_page |
+| [IESA DeepTech Hackathon 2026 브로슈어](https://i4c.in/wp-content/uploads/2026/01/DeepTech-Hackathon-Brochure-1-3.pdf) | i4C / IESA | official_pdf_text |
 | [Common pitfalls and recommended practices](https://imbalanced-learn.org/stable/common_pitfalls.html) | imbalanced-learn developers | Official resampling-before-split leakage section read |
 | [그렙 공식 계정 SK하이닉스 1차 예선 AI 역량평가 발표](https://kr.linkedin.com/company/grepp/) | 평가 플랫폼 업체 공식 | web 본문 게시물 확인 |
 | [크래프톤 CJ올리브영 Cofathon 공식 발표](https://kr.linkedin.com/posts/krafton-inc_krafton-%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4-cj%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-activity-7480523102427303936-P-ur) | 크래프톤 공식 | web 본문 |
@@ -106,8 +120,10 @@
 | [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | OpenAI | web open 또는 find로 본문 확인 |
 | [WinGet download and Microsoft Store licensing](https://learn.microsoft.com/en-us/windows/package-manager/winget/download) | Microsoft | Official body read by research team |
 | [GetPhysicallyInstalledSystemMemory](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getphysicallyinstalledsystemmemory) | Microsoft 공식 문서 | web 공식 본문 |
+| [WM 811K 원 배포처 탐색](https://mirlab.org/dataSet/public/) | MIRLab | access_failed |
 | [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) | Model Context Protocol | web open 또는 find로 본문 확인 |
 | [Model Context Protocol tools specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) | Model Context Protocol maintainers | Official input/output schema, isError and security consideration sections read |
+| [Samsung Semiconductor India Research SIC 해커톤](https://news.samsung.com/in/samsung-semiconductor-india-research-celebrates-young-innovators-and-future-tech-leaders-conducts-a-hackathon-as-part-of-samsung-innovation-campus-programme) | Samsung Newsroom | official_page |
 | [SK하이닉스 AI 실전 역량 겨루는 해커톤 개최](https://news.skhynix.co.kr/ai-hackathon-2026/) | SK하이닉스 공식 뉴스룸 | web 403 이후 브라우저 본문 확인 |
 | [Introduce GaiA 1편 AI로 일하는 시대 SK하이닉스 Biz 특화 AI Agent가 만든 변화](https://news.skhynix.co.kr/gaia_ep1_biz_ai_agent/) | SK hynix Newsroom; 황청석 TL DT AI Design Lab | Full article parsed by web search |
 | [일하는 방식의 변화 하이지니어에게 맡겨봐 해커톤 대회 시즌3 현장을 가다](https://news.skhynix.co.kr/hackathon-season-3-site/) | SK hynix Newsroom | Full original article returned by exact-URL web search; direct open returned an error |
@@ -120,6 +136,7 @@
 | [Semiconductor 101 SK hynix’s Guide to Who’s Who in the Semiconductor Industry](https://news.skhynix.com/en/semiconductor-101-sk-hynix-guide-to-key-industry-players/) | SK hynix Newsroom | Parsed article body in web results |
 | [SK hynix Ships Samples of 12-Layer Next-Gen HBM4E](https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/) | SK hynix Newsroom | Parsed full press release in web search |
 | [Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html) | pandas developers | web open 또는 find로 공식 본문·원 논문 확인 |
+| [PHM 2016 CMP Data Challenge](https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2016/phm-data-challenge-4/) | PHM Society | official_page |
 | [Definitions of the SI units: The binary prefixes](https://physics.nist.gov/cuu/Units/binary.html) | NIST | 공식 원문 web 확인 |
 | [Glossary](https://platform.claude.com/docs/en/about-claude/glossary) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
 | [Programmers AI assessment product overview](https://programmers.co.kr/ai-assessment) | Programmers / Grepp | Current official web body and direct guided-demo link |
@@ -148,6 +165,8 @@
 | [Metrics and scoring: quantifying the quality of predictions](https://scikit-learn.org/stable/modules/model_evaluation.html) | scikit-learn developers | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html) | scikit-learn | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Decision Trees](https://scikit-learn.org/stable/modules/tree.html) | scikit-learn | 공식 문서 또는 원 논문을 web open/find로 확인 |
+| [삼성전기 SEMCo Work 사내 해커톤](https://sem.samsung.com/kr/newsroom/news/view.do?id=10585) | Samsung Electro-Mechanics | indexed_official_body |
+| [Samsung 반도체 GTC 2026 Agentic AI 사례](https://semiconductor.samsung.com/news-events/tech-blog/samsung-showcases-agentic-ai-driven-semiconductor-engineering-innovation-at-nvidia-gtc-2026/) | Samsung Semiconductor | official_page |
 | [SK 2026 SK AI 해커톤 성료](https://sk.com/ko/media/news_view.jsp?idx=1775&pageNo=1) | SK그룹 공식 | web full page |
 | [SK하이닉스 AI 해커톤 2026 공식 홈페이지와 FAQ](https://skhynix-hackathon.com/ai-2026) | 대회 공식 | web full page 및 브라우저 FAQ 여섯 분류 확인 |
 | [SK하이닉스 AI 해커톤 2026 서류 전형 합격 및 1차 예선 안내](https://skhynix-hackathon.com/my/notice) | 공식 대회 운영 사이트 | 기존 계정 세션의 동일 대회 공지 화면 브라우저 확인 |
@@ -177,10 +196,13 @@
 | [What are confidence intervals](https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm) | NIST / SEMATECH | Full official confidence interval section read |
 | [Do two processes have the same mean](https://www.itl.nist.gov/div898/handbook/prc/section3/prc31.htm) | NIST / SEMATECH | Official two-sample comparison section opened |
 | [NIST Engineering Statistics Handbook 5.1.1 What is experimental design](https://www.itl.nist.gov/div898/handbook/pri/section1/pri11.htm) | NIST / SEMATECH | Opened section |
+| [Bosch Production Line Performance](https://www.kaggle.com/competitions/bosch-production-line-performance/overview) | Bosch / Kaggle | indexed_official_body |
+| [Micron Smart Manufacturing 사례](https://www.micron.com/about/blog/applications/ai/smart-manufacturing-at-micron-ai-at-enterprise-scale) | Micron | official_page |
 | [MVTec AD Industrial anomaly detection benchmark dataset](https://www.mvtec.com/research-teaching/datasets/mvtec-ad) | MVTec Software GmbH | Opened full official page and explicit license section |
 | [MVTec AD 2 Advanced Industrial Anomaly Detection Dataset](https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2) | MVTec Software GmbH | Official page parsed including evaluation and license sections |
 | [Prognostics Center of Excellence Data Set Repository](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/) | NASA Ames Prognostics Center of Excellence | Official page body parsed in web results |
 | [Metric SI Prefixes](https://www.nist.gov/pml/owm/metric-si-prefixes) | NIST | Official SI prefix page opened after older NIST URL redirect |
+| [NXP eIQ Toolkit](https://www.nxp.com/design/design-center/software/eiq-ai-development-environment/eiq-toolkit-for-end-to-end-model-development-and-deployment:EIQ-TOOLKIT) | NXP | official_product_documentation |
 | [프로그래머스 서비스 가이드](https://www.programmers.co.kr/pages/service-guide) | 그렙 프로그래머스 | web full page 및 공식 응시자 도움말 링크 추적 |
 | [www.python.org official download/reference](https://www.python.org/downloads/) | Python Software Foundation | Official reference link |
 | [www.python.org official download/reference](https://www.python.org/downloads/macos/) | Python Software Foundation | Official reference link |
