@@ -4,6 +4,8 @@
 
 [프로젝트 준비 점검](PREPARATION-CHECK.md)은 실제로 검증한 항목과 남은 응시 조건을 구분한다. 도구 테스트 통과를 본인의 응시 준비 완료로 해석하지 않는다.
 
+새 노트북이나 해외 응시는 **[노트북 준비 안내](LAPTOP-PREPARATION.md)**를 따른다. 설치·로그인·VPN 조건·현지 통신 확인과 Windows/Mac 실행 명령을 정리했다. Python 진입점 `scripts/study.py`는 설치된 Python 3.11 이상으로 별도 환경을 만들며 추가 패키지를 받지 않는다.
+
 초대가 **20문항·30분과 16문항·90분** 구성이라면 [두 세션의 학습 전략](research/09-first-round-time-strategy.md)과 [백엔드 경험을 AI에 연결하는 노트](research/10-backend-ai-bridge.md)를 먼저 읽는다. 세션 명칭과 외부 도구 허용은 문항 수만으로 확정하지 않는다.
 
 전체 조사 결과는 [REPORT.md](REPORT.md)에서 시작한다. 상세 응시 메일은 공지상 10월 13일 발송 예정이었다. [메일 검색·미확정 조건·재발송 문의 초안](research/07-notice-and-open-questions.md)을 확인한다. 풀이 인터페이스는 [프로그래머스 공식 공개 체험](https://programmers.co.kr/ai-assessment/preview)에서 경험한다. 체험 풀이에는 개인회원 로그인이 필요하며 실전의 감독·시간·허용 도구는 개인 안내를 따른다.
@@ -87,6 +89,8 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 | REPORT.md | 조사 결론과 상세 자료 안내 |
 | MINIMUM-KNOWLEDGE.md | 3~5분씩 읽는 여섯 블록과 확인 문답 |
 | PREPARATION-CHECK.md | 학습 세팅 검증 결과와 남은 실전 확인 |
+| LAPTOP-PREPARATION.md | 새 노트북 설치·해외 회선·VPN·이동용 자료 안내 |
+| templates/laptop-checklist.md | 개인 노트북에서 실제 수행한 점검 기록 양식 |
 | output/pdf/SK-hynix-minimum-AI-knowledge.pdf | 별도 최소지식 책의 PDF |
 | SUMMARY.md | 3쪽 복습 요약의 원문 |
 | output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf | 휴대·출력용 한글 복습 요약 |
@@ -118,7 +122,7 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 
 ## 환경 재생성
 
-새 `.venv-study`는 설치된 Codex 번들의 Python 3.12.14를 사용한다. 기존 `.venv`는 Python 3.9.13 환경으로 남아 있다. 연습 도구는 표준 라이브러리만 사용한다. 폴더를 옮기면 가상환경도 새로 만든다. 10월 13일의 환경과 준비 계획은 [기존 준비 계획](research/04-preparation-plan.md)에 남겨두고, 현재 실행 환경은 `reports/environment.json`을 기준으로 한다.
+현재 PC의 `.venv-study`는 설치된 Codex 번들의 Python 3.12.14로 검증했다. 새 노트북에는 Codex가 없어도 설치된 Python 3.11 이상이면 된다. 기존 `.venv`는 Python 3.9.13 환경으로 남아 있다. 연습 도구는 표준 라이브러리만 사용한다. 폴더를 옮기면 가상환경도 새로 만든다. 10월 13일의 환경과 준비 계획은 [기존 준비 계획](research/04-preparation-plan.md)에 남겨두고, 현재 실행 환경은 `reports/environment.json`을 기준으로 한다.
 
 새 위치에서는 지원 중인 Python 실행 파일을 지정해 복원한다. 아래는 Python 3.12 런처가 등록된 PC의 예다. PowerShell 스크립트 실행 정책을 바꿀 필요가 없다.
 

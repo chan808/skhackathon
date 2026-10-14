@@ -16,3 +16,4 @@ reports/environment.json
 reports/windows-preflight.json
 reports/participant-status.json
 tmp/
+output/laptop-kit/

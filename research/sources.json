@@ -1,7 +1,7 @@
 {
   "compiled_on_kst": "2026-10-14",
   "source_checks": "Individual check dates and access status are recorded per source.",
-  "unique_url_count": 161,
+  "unique_url_count": 182,
   "count_note": "URL 개수는 독립 근거 개수와 다르다. 동일 보도자료·미러·서로 다른 언어판·접근 제한은 records의 caveats를 따른다.",
   "local_checks": [
     {
@@ -390,6 +390,21 @@
           "caveats": [
             "읽은 HTML은 v7, 2023-08-02 수정. 원 Transformer 설명이며 모든 현대 구조에 동일한 세부 사항을 적용하지 않는다."
           ]
+        }
+      ]
+    },
+    {
+      "url": "https://chromeenterprise.google/download/",
+      "title": "Chrome full enterprise installer download",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Chrome full enterprise installer download",
+          "publisher": "Google",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
         }
       ]
     },
@@ -2122,6 +2137,36 @@
       ]
     },
     {
+      "url": "https://git-scm.com/install/windows",
+      "title": "Git install for Windows",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Git install for Windows",
+          "publisher": "Git / Git for Windows",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
+        }
+      ]
+    },
+    {
+      "url": "https://gitforwindows.org/",
+      "title": "Git for Windows official project",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Git for Windows official project",
+          "publisher": "Git / Git for Windows",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
+        }
+      ]
+    },
+    {
       "url": "https://github.com/amazon-science/patchcore-inspection",
       "title": "Towards Total Recall in Industrial Anomaly Detection PatchCore implementation",
       "records": [
@@ -2481,6 +2526,57 @@
       ]
     },
     {
+      "url": "https://learn.chatgpt.com/docs/app",
+      "title": "ChatGPT desktop app",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "ChatGPT desktop app",
+          "publisher": "OpenAI",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Installation is not exam-use permission; account and device login not performed."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/app/settings",
+      "title": "ChatGPT desktop app settings",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "ChatGPT desktop app settings",
+          "publisher": "OpenAI",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Installation is not exam-use permission; account and device login not performed."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/app/windows",
+      "title": "ChatGPT desktop app for Windows",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "ChatGPT desktop app for Windows",
+          "publisher": "OpenAI",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Installation is not exam-use permission; account and device login not performed."
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://learn.chatgpt.com/docs/cli",
       "title": "Codex CLI",
       "records": [
@@ -2549,6 +2645,21 @@
             "현재 공식 용어를 기준으로 했으며 모든 계정에 Work가 열려 있다고 주장하지 않는다.",
             "ChatGPT 앱을 도구 없는 단일 채팅으로 일반화하지 않는다."
           ]
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/package-manager/winget/download",
+      "title": "WinGet download and Microsoft Store licensing",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "WinGet download and Microsoft Store licensing",
+          "publisher": "Microsoft",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
         }
       ]
     },
@@ -3130,6 +3241,57 @@
             "기업교육의 일반 프레임워크",
             "100점 감점·가점 설명을 SK하이닉스 점수 공식으로 이전하지 않음",
             "상업 설명의 효과 수치를 준비도 근거로 사용하지 않음"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://protonvpn.com/support/advanced-kill-switch",
+      "title": "Proton VPN advanced Kill Switch",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Proton VPN advanced Kill Switch",
+          "publisher": "Proton",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Explains networking behavior; no purchase or vendor selection made."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://protonvpn.com/support/browser-extensions",
+      "title": "Proton VPN browser extension traffic scope",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Proton VPN browser extension traffic scope",
+          "publisher": "Proton",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Explains networking behavior; no purchase or vendor selection made."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://protonvpn.com/support/change-server-free-plan",
+      "title": "Proton VPN free-plan server selection",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Proton VPN free-plan server selection",
+          "publisher": "Proton",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Explains networking behavior; no purchase or vendor selection made."
           ]
         }
       ]
@@ -3826,6 +3988,38 @@
       ]
     },
     {
+      "url": "https://support.google.com/chrome/answer/95346",
+      "title": "Download and install Chrome",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Download and install Chrome",
+          "publisher": "Google",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
+        }
+      ]
+    },
+    {
+      "url": "https://support.nordvpn.com/hc/en-us/articles/48557553837969-How-to-log-in-to-a-captive-portal-Wi-Fi-network-while-using-NordVPN",
+      "title": "NordVPN captive portal Wi-Fi login",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "NordVPN captive portal Wi-Fi login",
+          "publisher": "NordVPN",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "Explains networking behavior; no purchase or vendor selection made."
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://talent.skhynix.com/hub/ko/company/story/237",
       "title": "Talent Hub SK하이닉스 AI 실전 역량 겨루는 해커톤 개최",
       "records": [
@@ -3933,6 +4127,24 @@
       ]
     },
     {
+      "url": "https://user-guide.grepp.co/en/articles/Lost-Connection-During-Test-4b8ac401",
+      "title": "Programmers Lost Connection During Test",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Lost Connection During Test",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a",
       "title": "Minimum Requirements",
       "records": [
@@ -3950,6 +4162,108 @@
             "이번 대회의 확정 환경표가 아님",
             "영문 도입부의 Windows only 표현과 표의 macOS 지원이 함께 있어 단일 문장만으로 전체 지원 범위를 단정하지 않음",
             "현재 사용자 PC의 카메라·네트워크를 테스트하지 않음"
+          ]
+        },
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Minimum Requirements",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/Monitio-42b3563a",
+      "title": "Programmers Monito+",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Monito+",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/Test-Interrupted-in-Monito-baf22989",
+      "title": "Programmers Monito+ virtual machine conflicts",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Monito+ virtual machine conflicts",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/Test-Regulations-74bb73c8",
+      "title": "Programmers Test Regulations",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Test Regulations",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/What-is-a-Demo-Test-ac3f5c17",
+      "title": "Programmers Demo Test",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers Demo Test",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://user-guide.grepp.co/en/articles/What-to-Prepare-63beea5b",
+      "title": "Programmers What to Prepare",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Programmers What to Prepare",
+          "publisher": "Programmers / Grepp",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": [
+            "General platform guide; participant-specific SK notice takes precedence.",
+            "No public VPN or Korean-IP requirement established."
           ]
         }
       ]
@@ -4360,6 +4674,55 @@
           "caveats": [
             "SK하이닉스 대회 배정·메일 발송 창구와 동일하다고 주장하지 않음"
           ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.python.org/downloads/",
+      "title": "www.python.org official download/reference",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "www.python.org official download/reference",
+          "publisher": "Python Software Foundation",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official reference link",
+          "status": "linked_not_opened",
+          "caveats": [
+            "Official reference link only; this page was not independently fetched this turn."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.python.org/downloads/macos/",
+      "title": "www.python.org official download/reference",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "www.python.org official download/reference",
+          "publisher": "Python Software Foundation",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official reference link",
+          "status": "linked_not_opened",
+          "caveats": [
+            "Official reference link only; this page was not independently fetched this turn."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.python.org/downloads/release/python-31316/",
+      "title": "Python 3.13.16 release and installer hashes",
+      "records": [
+        {
+          "register": "laptop-sources.json",
+          "title": "Python 3.13.16 release and installer hashes",
+          "publisher": "Python Software Foundation",
+          "checked_on_kst": "2026-10-14",
+          "read_method": "Official body read by research team",
+          "status": "read",
+          "caveats": []
         }
       ]
     },

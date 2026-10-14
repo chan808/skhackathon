@@ -1,0 +1,242 @@
+{
+  "scope": "Laptop migration, overseas connection, conditional VPN and installer preparation",
+  "records": [
+    {
+      "title": "Chrome full enterprise installer download",
+      "url": "https://chromeenterprise.google/download/",
+      "publisher": "Google",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    },
+    {
+      "title": "Git install for Windows",
+      "url": "https://git-scm.com/install/windows",
+      "publisher": "Git / Git for Windows",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    },
+    {
+      "title": "Git for Windows official project",
+      "url": "https://gitforwindows.org/",
+      "publisher": "Git / Git for Windows",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    },
+    {
+      "title": "ChatGPT desktop app",
+      "url": "https://learn.chatgpt.com/docs/app",
+      "publisher": "OpenAI",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Installation is not exam-use permission; account and device login not performed."
+      ]
+    },
+    {
+      "title": "ChatGPT desktop app settings",
+      "url": "https://learn.chatgpt.com/docs/app/settings",
+      "publisher": "OpenAI",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Installation is not exam-use permission; account and device login not performed."
+      ]
+    },
+    {
+      "title": "ChatGPT desktop app for Windows",
+      "url": "https://learn.chatgpt.com/docs/app/windows",
+      "publisher": "OpenAI",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Installation is not exam-use permission; account and device login not performed."
+      ]
+    },
+    {
+      "title": "WinGet download and Microsoft Store licensing",
+      "url": "https://learn.microsoft.com/en-us/windows/package-manager/winget/download",
+      "publisher": "Microsoft",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    },
+    {
+      "title": "Proton VPN advanced Kill Switch",
+      "url": "https://protonvpn.com/support/advanced-kill-switch",
+      "publisher": "Proton",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Explains networking behavior; no purchase or vendor selection made."
+      ]
+    },
+    {
+      "title": "Proton VPN browser extension traffic scope",
+      "url": "https://protonvpn.com/support/browser-extensions",
+      "publisher": "Proton",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Explains networking behavior; no purchase or vendor selection made."
+      ]
+    },
+    {
+      "title": "Proton VPN free-plan server selection",
+      "url": "https://protonvpn.com/support/change-server-free-plan",
+      "publisher": "Proton",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Explains networking behavior; no purchase or vendor selection made."
+      ]
+    },
+    {
+      "title": "Download and install Chrome",
+      "url": "https://support.google.com/chrome/answer/95346",
+      "publisher": "Google",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    },
+    {
+      "title": "NordVPN captive portal Wi-Fi login",
+      "url": "https://support.nordvpn.com/hc/en-us/articles/48557553837969-How-to-log-in-to-a-captive-portal-Wi-Fi-network-while-using-NordVPN",
+      "publisher": "NordVPN",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "Explains networking behavior; no purchase or vendor selection made."
+      ]
+    },
+    {
+      "title": "Programmers Lost Connection During Test",
+      "url": "https://user-guide.grepp.co/en/articles/Lost-Connection-During-Test-4b8ac401",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers Minimum Requirements",
+      "url": "https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers Monito+",
+      "url": "https://user-guide.grepp.co/en/articles/Monitio-42b3563a",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers Monito+ virtual machine conflicts",
+      "url": "https://user-guide.grepp.co/en/articles/Test-Interrupted-in-Monito-baf22989",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers Test Regulations",
+      "url": "https://user-guide.grepp.co/en/articles/Test-Regulations-74bb73c8",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers Demo Test",
+      "url": "https://user-guide.grepp.co/en/articles/What-is-a-Demo-Test-ac3f5c17",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "Programmers What to Prepare",
+      "url": "https://user-guide.grepp.co/en/articles/What-to-Prepare-63beea5b",
+      "publisher": "Programmers / Grepp",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": [
+        "General platform guide; participant-specific SK notice takes precedence.",
+        "No public VPN or Korean-IP requirement established."
+      ]
+    },
+    {
+      "title": "www.python.org official download/reference",
+      "url": "https://www.python.org/downloads/",
+      "publisher": "Python Software Foundation",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official reference link",
+      "status": "linked_not_opened",
+      "caveats": [
+        "Official reference link only; this page was not independently fetched this turn."
+      ]
+    },
+    {
+      "title": "www.python.org official download/reference",
+      "url": "https://www.python.org/downloads/macos/",
+      "publisher": "Python Software Foundation",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official reference link",
+      "status": "linked_not_opened",
+      "caveats": [
+        "Official reference link only; this page was not independently fetched this turn."
+      ]
+    },
+    {
+      "title": "Python 3.13.16 release and installer hashes",
+      "url": "https://www.python.org/downloads/release/python-31316/",
+      "publisher": "Python Software Foundation",
+      "checked_on_kst": "2026-10-14",
+      "read_method": "Official body read by research team",
+      "status": "read",
+      "caveats": []
+    }
+  ]
+}

@@ -18,6 +18,7 @@
 | [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) | Liu et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180) | Authors Woosuk Kwon and collaborators via arXiv; SOSP 2023 | Opened original abstract and metadata |
 | [Attention Is All You Need](https://arxiv.org/html/1706.03762v7) | Vaswani et al.; arXiv | web open 또는 find로 공식 본문·원 논문 확인 |
+| [Chrome full enterprise installer download](https://chromeenterprise.google/download/) | Google | Official body read by research team |
 | [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | Anthropic | web open 또는 find로 본문 확인 |
 | [Connect Claude Code to tools via MCP](https://code.claude.com/docs/en/mcp) | Anthropic | web open 또는 find로 본문 확인 |
 | [Configure permissions](https://code.claude.com/docs/en/permissions) | Anthropic | web open 또는 find로 본문 확인 |
@@ -81,6 +82,8 @@
 | [Korea Agentic AI Hackathon 후보 모집 주소](https://fastcampus.co.kr/NVIDIA_hackathon) | FastCampus | 검색 캐시 단서와 실제 브라우저 확인 |
 | [LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
 | [LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) | OWASP Gen AI Security Project | web open 또는 find로 공식 본문·원 논문 확인 |
+| [Git install for Windows](https://git-scm.com/install/windows) | Git / Git for Windows | Official body read by research team |
+| [Git for Windows official project](https://gitforwindows.org/) | Git / Git for Windows | Official body read by research team |
 | [Towards Total Recall in Industrial Anomaly Detection PatchCore implementation](https://github.com/amazon-science/patchcore-inspection) | PatchCore authors / Amazon Science | Opened official README and repository license |
 | [BoTorch Bayesian optimization in PyTorch](https://github.com/meta-pytorch/botorch) | Meta PyTorch / BoTorch developers | Official README and MIT license returned by web search |
 | [LoRA](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora) | Hugging Face PEFT | Official low-rank update and frozen original weight passages read |
@@ -95,9 +98,13 @@
 | [Common pitfalls and recommended practices](https://imbalanced-learn.org/stable/common_pitfalls.html) | imbalanced-learn developers | Official resampling-before-split leakage section read |
 | [그렙 공식 계정 SK하이닉스 1차 예선 AI 역량평가 발표](https://kr.linkedin.com/company/grepp/) | 평가 플랫폼 업체 공식 | web 본문 게시물 확인 |
 | [크래프톤 CJ올리브영 Cofathon 공식 발표](https://kr.linkedin.com/posts/krafton-inc_krafton-%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4-cj%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-activity-7480523102427303936-P-ur) | 크래프톤 공식 | web 본문 |
+| [ChatGPT desktop app](https://learn.chatgpt.com/docs/app) | OpenAI | Official body read by research team |
+| [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/app/settings) | OpenAI | Official body read by research team |
+| [ChatGPT desktop app for Windows](https://learn.chatgpt.com/docs/app/windows) | OpenAI | Official body read by research team |
 | [Codex CLI](https://learn.chatgpt.com/docs/cli) | OpenAI | web open 또는 find로 본문 확인 |
 | [ChatGPT Work Overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview) | OpenAI | web open 또는 find로 본문 확인 |
 | [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | OpenAI | web open 또는 find로 본문 확인 |
+| [WinGet download and Microsoft Store licensing](https://learn.microsoft.com/en-us/windows/package-manager/winget/download) | Microsoft | Official body read by research team |
 | [GetPhysicallyInstalledSystemMemory](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getphysicallyinstalledsystemmemory) | Microsoft 공식 문서 | web 공식 본문 |
 | [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) | Model Context Protocol | web open 또는 find로 본문 확인 |
 | [Model Context Protocol tools specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) | Model Context Protocol maintainers | Official input/output schema, isError and security consideration sections read |
@@ -120,6 +127,9 @@
 | [프로그래머스는 왜 AI 역량평가를 만들었을까](https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment) | 평가 플랫폼 공식 | web full page |
 | [프로그래머스 AI 역량평가 응시 환경 체험하기](https://programmers.co.kr/ai-assessment/preview) | 평가 플랫폼 공식 | 브라우저 공개 목록·FAQ 확인, 지식 체험 진입 시 로그인 화면 확인 |
 | [프로그래머스 AX 기업교육 4P 기준](https://programmers.co.kr/b2b-education) | 그렙 프로그래머스 | web full page |
+| [Proton VPN advanced Kill Switch](https://protonvpn.com/support/advanced-kill-switch) | Proton | Official body read by research team |
+| [Proton VPN browser extension traffic scope](https://protonvpn.com/support/browser-extensions) | Proton | Official body read by research team |
+| [Proton VPN free-plan server selection](https://protonvpn.com/support/change-server-free-plan) | Proton | Official body read by research team |
 | [Semantic Search](https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) | Sentence Transformers maintainers | Official asymmetric semantic-search and query/document encoding passages read |
 | [Wafer map failure pattern recognition and similarity ranking for large-scale data sets](https://scholars.lib.ntu.edu.tw/entities/publication/563e8f2c-74ee-4733-bd62-ba5e409d8424) | National Taiwan University Scholars; original paper by Ming-Ju Wu, Jyh-Shing R. Jang and Jui-Long Chen, IEEE | Opened official NTU record and abstract |
 | [Single estimator versus bagging: bias-variance decomposition](https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html) | scikit-learn | 공식 문서 또는 원 논문을 web open/find로 확인 |
@@ -142,11 +152,19 @@
 | [SK하이닉스 AI 해커톤 2026 서류 전형 합격 및 1차 예선 안내](https://skhynix-hackathon.com/my/notice) | 공식 대회 운영 사이트 | 기존 계정 세션의 동일 대회 공지 화면 브라우저 확인 |
 | [대회 개인정보 처리방침](https://skhynix-hackathon.com/my/privacy-policy) | 대회 공식 | 브라우저 본문 확인 |
 | [대회 이용약관](https://skhynix-hackathon.com/my/term-of-service) | 대회 공식 | 브라우저 본문 확인 |
+| [Download and install Chrome](https://support.google.com/chrome/answer/95346) | Google | Official body read by research team |
+| [NordVPN captive portal Wi-Fi login](https://support.nordvpn.com/hc/en-us/articles/48557553837969-How-to-log-in-to-a-captive-portal-Wi-Fi-network-while-using-NordVPN) | NordVPN | Official body read by research team |
 | [Talent Hub SK하이닉스 AI 실전 역량 겨루는 해커톤 개최](https://talent.skhynix.com/hub/ko/company/story/237) | SK하이닉스 공식 Talent Hub | web full page |
 | [사전 테스트가 무엇인가요](https://user-faq.grepp.co/ko/articles/%EC%82%AC%EC%A0%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-ca2e42b8) | 그렙 공식 개인문의 도움말 | web full page |
 | [온라인 테스트 도움말](https://user-faq.grepp.co/ko/categories/%EC%98%A8%EB%9D%BC%EC%9D%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-4aabea7b) | 그렙 공식 개인문의 도움말 | web full page |
 | [Accessing the Test Page](https://user-guide.grepp.co/en/articles/Accessing-the-Test-Page-5dff571a) | 그렙 공식 응시자 가이드 | 공식 서비스 가이드에서 연결된 문서 web full page |
+| [Programmers Lost Connection During Test](https://user-guide.grepp.co/en/articles/Lost-Connection-During-Test-4b8ac401) | Programmers / Grepp | Official body read by research team |
 | [Minimum Requirements](https://user-guide.grepp.co/en/articles/Minimum-Requirements-b0a9cc7a) | 그렙 공식 응시자 가이드 | web full page |
+| [Programmers Monito+](https://user-guide.grepp.co/en/articles/Monitio-42b3563a) | Programmers / Grepp | Official body read by research team |
+| [Programmers Monito+ virtual machine conflicts](https://user-guide.grepp.co/en/articles/Test-Interrupted-in-Monito-baf22989) | Programmers / Grepp | Official body read by research team |
+| [Programmers Test Regulations](https://user-guide.grepp.co/en/articles/Test-Regulations-74bb73c8) | Programmers / Grepp | Official body read by research team |
+| [Programmers Demo Test](https://user-guide.grepp.co/en/articles/What-is-a-Demo-Test-ac3f5c17) | Programmers / Grepp | Official body read by research team |
+| [Programmers What to Prepare](https://user-guide.grepp.co/en/articles/What-to-Prepare-63beea5b) | Programmers / Grepp | Official body read by research team |
 | [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) | Anthropic | web open 또는 find로 본문 확인 |
 | [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
 | [Hybrid search](https://www.elastic.co/docs/solutions/search/hybrid-search) | Elastic | 공식 문서 또는 원 논문을 web open/find로 확인 |
@@ -163,6 +181,9 @@
 | [Prognostics Center of Excellence Data Set Repository](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/) | NASA Ames Prognostics Center of Excellence | Official page body parsed in web results |
 | [Metric SI Prefixes](https://www.nist.gov/pml/owm/metric-si-prefixes) | NIST | Official SI prefix page opened after older NIST URL redirect |
 | [프로그래머스 서비스 가이드](https://www.programmers.co.kr/pages/service-guide) | 그렙 프로그래머스 | web full page 및 공식 응시자 도움말 링크 추적 |
+| [www.python.org official download/reference](https://www.python.org/downloads/) | Python Software Foundation | Official reference link |
+| [www.python.org official download/reference](https://www.python.org/downloads/macos/) | Python Software Foundation | Official reference link |
+| [Python 3.13.16 release and installer hashes](https://www.python.org/downloads/release/python-31316/) | Python Software Foundation | Official body read by research team |
 | [Retrieve & Re-Rank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) | Sentence Transformers | 공식 문서 또는 원 논문을 web open/find로 확인 |
 | [Built-in Aggregate Functions](https://www.sqlite.org/lang_aggfunc.html) | SQLite developers | web open 또는 find로 공식 본문·원 논문 확인 |
 | [SQL Language Expressions](https://www.sqlite.org/lang_expr.html) | SQLite developers | web open 또는 find로 공식 본문·원 논문 확인 |
