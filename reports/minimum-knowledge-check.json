@@ -1,0 +1,15 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "reading_blocks": 6,
+  "source_characters": 6966,
+  "pdf_pages": 8,
+  "linked_primary_urls": 16,
+  "unregistered_urls": [],
+  "source_sha256": "90071ebae9dc87b4f4184f051f524b4c53c281f2e6a7ba3fac66ce821d08dea7",
+  "pdf_sha256": "112790aa12bafa92937d2d35ff7257c65b754da9ccf82f2041df362dd0b386e5",
+  "classification_example_independently_checked": true,
+  "pdf_text_checked": true,
+  "rendered_pages_visually_checked": true,
+  "visual_check_mode": "operator_confirmed",
+  "limits": "File and rendering checks do not assess the learner or actual exam coverage."
+}

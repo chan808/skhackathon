@@ -113,6 +113,7 @@
 | [Semiconductor 101 SK hynix’s Guide to Who’s Who in the Semiconductor Industry](https://news.skhynix.com/en/semiconductor-101-sk-hynix-guide-to-key-industry-players/) | SK hynix Newsroom | Parsed article body in web results |
 | [SK hynix Ships Samples of 12-Layer Next-Gen HBM4E](https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/) | SK hynix Newsroom | Parsed full press release in web search |
 | [Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html) | pandas developers | web open 또는 find로 공식 본문·원 논문 확인 |
+| [Definitions of the SI units: The binary prefixes](https://physics.nist.gov/cuu/Units/binary.html) | NIST | 공식 원문 web 확인 |
 | [Glossary](https://platform.claude.com/docs/en/about-claude/glossary) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
 | [프로그래머스 AI 역량평가 인사이트 목록](https://programmers.co.kr/ai-assessment/insight) | 그렙 프로그래머스 | web full page |
 | [AI 리터러시 교육 실제 역량 변화로 연결하려면](https://programmers.co.kr/ai-assessment/insight/ai-literacy-training) | 그렙 프로그래머스 | web full page |

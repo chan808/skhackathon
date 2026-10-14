@@ -15,7 +15,7 @@ def main():
     local_checks = []
     inputs = ["event-sources.json", "ai-sources.json", "semiconductor-sources.json", "readiness-sources.json", "agent-sources.json",
               "notice-sources.json", "foundation-sources.json", "advanced-quiz-sources.json", "setup-sources.json",
-              "time-strategy-sources.json", "backend-bridge-sources.json"]
+              "time-strategy-sources.json", "backend-bridge-sources.json", "minimum-knowledge-sources.json"]
     for filename in inputs:
         document = json.loads((ROOT / "research" / filename).read_text(encoding="utf-8-sig"))
         sources = document if isinstance(document, list) else document.get("sources", document.get("records", []))

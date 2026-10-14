@@ -95,18 +95,21 @@ def quiz(args):
         print("\n연습을 종료합니다.")
     moment = datetime.now(KST)
     score = sum(item["correct"] for item in responses)
+    completed = len(responses) == len(questions)
     elapsed = round(time.monotonic() - started, 1)
     wrong_by_category = Counter(item["category"] for item in responses if not item["correct"])
     result = {"kind": "original_practice_not_official", "bank": bank, "priority_filter": priority, "time_kst": moment.isoformat(),
+              "status": "completed" if completed else "partial",
               "elapsed_seconds": elapsed, "planned_questions": len(questions),
               "answered": len(responses), "correct": score, "seed": args.seed,
               "wrong_by_category": dict(wrong_by_category), "responses": responses}
     if minutes is not None:
         result.update({"practice_budget_minutes": minutes, "within_practice_budget": elapsed <= minutes * 60,
+                       "completed_within_practice_budget": completed and elapsed <= minutes * 60,
                        "timer_mode": "advisory_no_forced_input_cutoff"})
     output = ROOT / "reports" / ("quiz-" + moment.strftime("%Y%m%d-%H%M%S-%f") + ".json")
     save_json(output, result)
-    print("\n결과 %d/%d, 기록: %s" % (score, len(responses), output))
+    print("\n%s 응답 %d/%d, 정답 %d/%d, 기록: %s" % ("완료" if completed else "미완료", len(responses), len(questions), score, len(responses), output))
     if minutes is not None:
         print("소요 %.1f분 / 자체 예산 %.1f분. %s" % (elapsed / 60, minutes, "예산 내 종료" if result["within_practice_budget"] else "예산 초과"))
     if args.exam:
@@ -121,6 +124,7 @@ def doctor(args):
     document = load_quiz()
     dataset = ROOT / "data" / "synthetic" / "lots.csv"
     result = {"python": platform.python_version(), "executable": sys.executable,
+              "minimum_python": "3.11", "supported_python": sys.version_info >= (3, 11),
               "virtual_environment": sys.prefix != sys.base_prefix,
               "external_python_packages_required": False,
               "quiz_questions": len(document["questions"]),
@@ -144,6 +148,9 @@ def doctor(args):
         result["backend_selected_questions"] = len(load_bank("backend")["questions"])
     save_json(ROOT / "reports" / "environment.json", result)
     print(json.dumps(result, ensure_ascii=False, indent=2))
+    if not result["supported_python"]:
+        print("학습 환경에는 지원 중인 Python 3.11 이상이 필요합니다. .venv-study 실행 파일을 사용하세요.", file=sys.stderr)
+        return 2
     return 0
 
 

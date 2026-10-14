@@ -1,0 +1,15 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "최소 AI 지식 문서에 추가한 단위 근거; 나머지 인용은 기존 등록부에 존재",
+  "records": [
+    {
+      "title": "Definitions of the SI units: The binary prefixes",
+      "url": "https://physics.nist.gov/cuu/Units/binary.html",
+      "publisher": "NIST",
+      "published": null,
+      "read_method": "공식 원문 web 확인",
+      "supports": ["1MiB=2^20 B=1,048,576 B", "1MB=10^6 B=1,000,000 B"],
+      "caveats": ["모든 서비스가 표시하는 MB 단위를 이 문서만으로 확정하지 않음; 문제의 정의와 가정을 따름"]
+    }
+  ]
+}

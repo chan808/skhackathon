@@ -1,6 +1,8 @@
 # SK하이닉스 AI 해커톤 조사와 준비
 
-2026년 10월 14일 KST 재점검 반영. 서류 합격 후 AI 학습과 체험을 시작하는 웹 개발자를 위한 조사와 로컬 연습 환경이다. 먼저 **[처음 시작하는 학습 순서](LEARNING-PATH.md)**를 읽고 첫 90분을 실행한다. [준비 상태와 에이전트 설명](START-HERE.md)은 판단 근거를 설명한다. 학습 도구의 테스트 통과를 본인의 응시 준비 완료로 해석하지 않는다.
+2026년 10월 14일 KST 재점검 반영. 서류 합격 후 AI 학습과 체험을 시작하는 백엔드 개발자를 위한 조사와 로컬 연습 환경이다. 공부할 첫 문서는 **[최소 AI 지식](MINIMUM-KNOWLEDGE.md)**이다. 한 번에 한 블록을 3~5분 읽고, 확인 질문에 답한다. 전체 조사 파일을 먼저 읽을 필요는 없다. 읽은 뒤 [학습 순서](LEARNING-PATH.md)를 따라 짧은 연습을 시작한다.
+
+[프로젝트 준비 점검](PREPARATION-CHECK.md)은 실제로 검증한 항목과 남은 응시 조건을 구분한다. 도구 테스트 통과를 본인의 응시 준비 완료로 해석하지 않는다.
 
 초대가 **20문항·30분과 16문항·90분** 구성이라면 [두 세션의 학습 전략](research/09-first-round-time-strategy.md)과 [백엔드 경험을 AI에 연결하는 노트](research/10-backend-ai-bridge.md)를 먼저 읽는다. 세션 명칭과 외부 도구 허용은 문항 수만으로 확정하지 않는다.
 
@@ -8,9 +10,20 @@
 
 틈틈이 복습할 때는 [3쪽 요약 PDF](output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf) 또는 [요약 원문](SUMMARY.md)을 읽는다.
 
+처음 배우는 용어의 설명과 확인 질문을 읽으려면 [최소지식 PDF](output/pdf/SK-hynix-minimum-AI-knowledge.pdf)를 사용한다. 3쪽 요약은 개념을 익힌 뒤 빠르게 복습할 때 쓴다.
+
 ## 바로 실행
 
 PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성화하지 않아도 실행된다. 추가 패키지 설치, API 키, 유료 서비스가 필요하지 않다.
+
+진입 명령을 줄인 실행 스크립트도 있다. `learn`은 해설을 보며 풀기, `timed`는 30분 예산 기록, `case`는 RC02 자료 검증이다. 기존 환경을 점검하고 없으면 설치된 지원 버전의 Python으로 새 환경을 만든다. Python을 내려받거나 모델 계정을 연결하지 않는다.
+
+```powershell
+.\scripts\study.ps1 -Mode learn
+.\scripts\study.ps1 -Mode timed
+.\scripts\study.ps1 -Mode case
+.\scripts\study.ps1 -Mode check
+```
 
 ```powershell
 .\.venv-study\Scripts\python.exe -m practice doctor
@@ -72,6 +85,9 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 | 파일 | 용도 |
 | --- | --- |
 | REPORT.md | 조사 결론과 상세 자료 안내 |
+| MINIMUM-KNOWLEDGE.md | 3~5분씩 읽는 여섯 블록과 확인 문답 |
+| PREPARATION-CHECK.md | 학습 세팅 검증 결과와 남은 실전 확인 |
+| output/pdf/SK-hynix-minimum-AI-knowledge.pdf | 별도 최소지식 책의 PDF |
 | SUMMARY.md | 3쪽 복습 요약의 원문 |
 | output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf | 휴대·출력용 한글 복습 요약 |
 | LEARNING-PATH.md | 미학습 상태에서 시작하는 첫 90분과 전체 주제 지도 |
@@ -128,3 +144,7 @@ py -3.12 -m venv .venv-study --without-pip
 ```
 
 PDF 재생성만 선택적으로 `reportlab`과 한글 TrueType 글꼴이 필요하다. 이미 생성된 PDF를 보거나 퀴즈·실습·검증을 실행할 때는 추가 패키지가 필요 없다. `scripts/build_summary.py --font 경로 --bold-font 경로`로 글꼴을 지정할 수 있다.
+
+최소지식 PDF 재생성은 `scripts/build_minimum_knowledge.py`가 같은 글꼴 옵션을 사용한다.
+
+문서 저작 시에는 선택적으로 `pypdf`로 `scripts/check_minimum_knowledge.py`를 실행해 원문과 PDF의 버전·인용·수치를 기록한다. 최신 PDF를 렌더링해 직접 확인한 뒤에만 `--visual-reviewed`를 지정한다. 일반 학습 검증은 추가 패키지 없이 저장된 해시와 현재 파일을 비교하므로, 원문만 바꾸고 PDF를 갱신하지 않은 상태를 발견한다.

@@ -91,6 +91,7 @@ class PracticeTests(unittest.TestCase):
             result = json.loads(logs[0].read_text(encoding="utf-8"))
             self.assertEqual(result["answered"], 40)
             self.assertEqual(result["correct"], 40)
+            self.assertEqual(result["status"], "completed")
             self.assertEqual(result["wrong_by_category"], {})
 
     def test_wrong_answer_review_selects_only_prior_errors(self):
@@ -117,6 +118,7 @@ class PracticeTests(unittest.TestCase):
             result = json.loads(saved.read_text(encoding="utf-8"))
             self.assertEqual(result["answered"], 1)
             self.assertEqual(result["planned_questions"], 10)
+            self.assertEqual(result["status"], "partial")
 
 
 if __name__ == "__main__":

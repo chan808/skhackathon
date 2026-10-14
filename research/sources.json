@@ -1,7 +1,7 @@
 {
   "compiled_on_kst": "2026-10-14",
   "source_checks": "Individual check dates and access status are recorded per source.",
-  "unique_url_count": 160,
+  "unique_url_count": 161,
   "count_note": "URL 개수는 독립 근거 개수와 다르다. 동일 보도자료·미러·서로 다른 언어판·접근 제한은 records의 caveats를 따른다.",
   "local_checks": [
     {
@@ -2877,6 +2877,26 @@
           ],
           "caveats": [
             "SQL·CSV의 집계 단위 함정을 설명하는 근거. pandas 설치를 요구하지 않는다."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://physics.nist.gov/cuu/Units/binary.html",
+      "title": "Definitions of the SI units: The binary prefixes",
+      "records": [
+        {
+          "register": "minimum-knowledge-sources.json",
+          "title": "Definitions of the SI units: The binary prefixes",
+          "publisher": "NIST",
+          "published": null,
+          "read_method": "공식 원문 web 확인",
+          "supports": [
+            "1MiB=2^20 B=1,048,576 B",
+            "1MB=10^6 B=1,000,000 B"
+          ],
+          "caveats": [
+            "모든 서비스가 표시하는 MB 단위를 이 문서만으로 확정하지 않음; 문제의 정의와 가정을 따름"
           ]
         }
       ]

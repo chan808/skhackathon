@@ -11,6 +11,17 @@ from practice.__main__ import load_bank, quiz
 
 
 class TimedQuizTests(unittest.TestCase):
+    def test_partial_timed_session_is_not_presented_as_complete(self):
+        args = Namespace(bank="backend", priority=None, category=None, review=None, seed=17, count=20, exam=True, minutes=30)
+        output = io.StringIO()
+        with workspace_temp() as folder:
+            with patch("practice.__main__.ROOT", Path(folder)), patch("builtins.input", side_effect=["1", "q"]), redirect_stdout(output):
+                quiz(args)
+            result = json.loads(next((Path(folder) / "reports").glob("quiz-*.json")).read_text(encoding="utf-8"))
+            self.assertEqual(result["status"], "partial")
+            self.assertFalse(result["completed_within_practice_budget"])
+            self.assertIn("미완료 응답 1/20", output.getvalue())
+
     def test_backend_bank_composes_twenty_original_questions(self):
         questions = load_bank("backend")["questions"]
         self.assertEqual(len(questions), 20)

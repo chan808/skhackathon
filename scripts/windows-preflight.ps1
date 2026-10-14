@@ -10,14 +10,17 @@ $result = [ordered]@{
     camera_live_test = 'not_performed'
     microphone_live_test = 'not_performed'
     upload_speed_test = 'not_performed'
-    actual_exam_conditions = 'detailed_notice_not_yet_available'
+    actual_exam_conditions = 'participant_rules_require_confirmation'
+    resolution_source = 'video_controller_metadata_not_a_live_screen_test'
 }
 try {
     $memoryModules = Get-CimInstance Win32_PhysicalMemory -ErrorAction Stop
     $result.memory_gib = [Math]::Round(($memoryModules | Measure-Object -Property Capacity -Sum).Sum / 1GB, 2)
 } catch { $result.inventory_errors += 'Memory inventory unavailable in this execution context.' }
 try {
-    $result.displays = @(Get-CimInstance Win32_VideoController -ErrorAction Stop | ForEach-Object {
+    $result.displays = @(Get-CimInstance Win32_VideoController -ErrorAction Stop | Where-Object {
+        $_.CurrentHorizontalResolution -gt 0 -and $_.CurrentVerticalResolution -gt 0
+    } | ForEach-Object {
         [ordered]@{ width = $_.CurrentHorizontalResolution; height = $_.CurrentVerticalResolution }
     })
 } catch { $result.inventory_errors += 'Display inventory unavailable in this execution context.' }
