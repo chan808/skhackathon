@@ -1,0 +1,52 @@
+{
+  "checked_on_kst": "2026-10-14",
+  "scope": "Official candidate preview relationship and public guided-demo interaction analysis",
+  "records": [
+    {
+      "title": "Programmers candidate AI assessment preview",
+      "url": "https://programmers.co.kr/ai-assessment/preview",
+      "publisher": "Programmers / Grepp",
+      "read_method": "Current web body and public HTML; earlier same-day FAQ observation is separately retained in notice-sources.json",
+      "status": "partially_read_current",
+      "supports": ["Official candidate-preview identity and navigation"],
+      "caveats": ["Current extraction returns menu and empty dynamic content container", "No connected browser for fresh live FAQ/list UI verification", "No account login, AI query or sample submission"]
+    },
+    {
+      "title": "Programmers AI assessment product overview",
+      "url": "https://programmers.co.kr/ai-assessment",
+      "publisher": "Programmers / Grepp",
+      "read_method": "Current official web body and direct guided-demo link",
+      "status": "read",
+      "supports": ["Knowledge, proficiency and mastery categories", "Configurable assessment operation", "Prompt and interaction-log evaluation", "Official demo provenance"],
+      "caveats": ["Product features are not a participant-specific SK configuration"]
+    },
+    {
+      "title": "Officially linked Programmers public guided demo",
+      "url": "https://demo.arcade.software/b5dk0zn4GHjoXFKsAmpP?embed=&embed_desktop=inline&embed_mobile=inline&show_copy_link=true",
+      "publisher": "Programmers / Grepp via Arcade",
+      "read_method": "Official product link; public demo explanation data and static images inspected",
+      "status": "read_public_guided_demo",
+      "supports": ["Question selection separate from document selection", "Explicit AI-question document attachment", "Attachment panel 5 files / 19009 of 20000 tokens in example", "AI counter 10 remaining next to question group 1-4", "Answer field and grading/end controls separate"],
+      "caveats": ["Recorded demonstration, not live account interactions", "Counter scope and SK limits not established", "Attachment token budget is not the model total context window", "Report tour does not establish free candidate-preview report availability", "No copyrighted sample file set or answer reproduced in the repository"]
+    },
+    {
+      "title": "Why Programmers built AI assessment",
+      "url": "https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment",
+      "published": "2026-10-07",
+      "publisher": "Programmers / Grepp",
+      "read_method": "Current official article body",
+      "status": "read",
+      "supports": ["General AI Assist question limits and 30-second cooldown", "Problem-copy restriction and material attachment", "Process and outcome assessment", "Organization-specific type/count/time selection"],
+      "caveats": ["No SK-specific scoring weights, question allowance, external-AI permission or cooldown established", "Beta scoring examples are not SK scoring formula"]
+    },
+    {
+      "title": "SK hynix AI hackathon 2026 public overview",
+      "url": "https://skhynix-hackathon.com/ai-2026",
+      "publisher": "SK hynix hackathon official site",
+      "read_method": "Current public web body",
+      "status": "read",
+      "supports": ["First-round AI foundations and application assessment", "Programmers partner relationship"],
+      "caveats": ["No new live dynamic FAQ verification", "Private participant notice remains authoritative for exact exam settings"]
+    }
+  ]
+}

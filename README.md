@@ -10,6 +10,8 @@
 
 전체 조사 결과는 [REPORT.md](REPORT.md)에서 시작한다. 상세 응시 메일은 공지상 10월 13일 발송 예정이었다. [메일 검색·미확정 조건·재발송 문의 초안](research/07-notice-and-open-questions.md)을 확인한다. 풀이 인터페이스는 [프로그래머스 공식 공개 체험](https://programmers.co.kr/ai-assessment/preview)에서 경험한다. 체험 풀이에는 개인회원 로그인이 필요하며 실전의 감독·시간·허용 도구는 개인 안내를 따른다.
 
+[공식 체험 상세 분석](research/11-programmers-preview-analysis.md)은 문제 선택·파일의 AI 전달·첨부 토큰·답안 입력을 구분하고, 제한된 질문으로 자료를 검증하는 연습 순서를 설명한다.
+
 틈틈이 복습할 때는 [3쪽 요약 PDF](output/pdf/SK-hynix-AI-hackathon-quick-reference.pdf) 또는 [요약 원문](SUMMARY.md)을 읽는다.
 
 처음 배우는 용어의 설명과 확인 질문을 읽으려면 [최소지식 PDF](output/pdf/SK-hynix-minimum-AI-knowledge.pdf)를 사용한다. 3쪽 요약은 개념을 익힌 뒤 빠르게 복습할 때 쓴다.
@@ -105,6 +107,7 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 | research/08-ai-foundations-curriculum.md | ML 통계 최적화 DL LLM 기초와 수치 예제 |
 | research/09-first-round-time-strategy.md | 30분 개념 판단과 90분 자료 검증 준비 |
 | research/10-backend-ai-bridge.md | 하네스·workflow·agent·모델과 백엔드 경험 연결 |
+| research/11-programmers-preview-analysis.md | 공식 체험 관계·화면 흐름·자료 선택·질문·검증 연습 |
 | research/sources.json | 통합 출처 등록부 |
 | practice/quiz.json | 해설과 출처가 있는 40문항 |
 | practice/advanced-quiz.json | 심화 36문항과 핵심·확장 표시 |

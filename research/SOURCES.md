@@ -122,6 +122,7 @@
 | [Merge, join, concatenate and compare](https://pandas.pydata.org/docs/user_guide/merging.html) | pandas developers | web open 또는 find로 공식 본문·원 논문 확인 |
 | [Definitions of the SI units: The binary prefixes](https://physics.nist.gov/cuu/Units/binary.html) | NIST | 공식 원문 web 확인 |
 | [Glossary](https://platform.claude.com/docs/en/about-claude/glossary) | Anthropic | 현재 공개 원문을 web open/find로 확인 |
+| [Programmers AI assessment product overview](https://programmers.co.kr/ai-assessment) | Programmers / Grepp | Current official web body and direct guided-demo link |
 | [프로그래머스 AI 역량평가 인사이트 목록](https://programmers.co.kr/ai-assessment/insight) | 그렙 프로그래머스 | web full page |
 | [AI 리터러시 교육 실제 역량 변화로 연결하려면](https://programmers.co.kr/ai-assessment/insight/ai-literacy-training) | 그렙 프로그래머스 | web full page |
 | [프로그래머스는 왜 AI 역량평가를 만들었을까](https://programmers.co.kr/ai-assessment/insight/why-we-built-ai-assessment) | 평가 플랫폼 공식 | web full page |

@@ -1,7 +1,7 @@
 {
   "compiled_on_kst": "2026-10-14",
   "source_checks": "Individual check dates and access status are recorded per source.",
-  "unique_url_count": 182,
+  "unique_url_count": 183,
   "count_note": "URL 개수는 독립 근거 개수와 다르다. 동일 보도자료·미러·서로 다른 언어판·접근 제한은 records의 caveats를 따른다.",
   "local_checks": [
     {
@@ -655,6 +655,27 @@
           ],
           "caveats": [
             "대회 응시 링크가 아님"
+          ]
+        },
+        {
+          "register": "preview-analysis-sources.json",
+          "title": "Officially linked Programmers public guided demo",
+          "publisher": "Programmers / Grepp via Arcade",
+          "read_method": "Official product link; public demo explanation data and static images inspected",
+          "status": "read_public_guided_demo",
+          "supports": [
+            "Question selection separate from document selection",
+            "Explicit AI-question document attachment",
+            "Attachment panel 5 files / 19009 of 20000 tokens in example",
+            "AI counter 10 remaining next to question group 1-4",
+            "Answer field and grading/end controls separate"
+          ],
+          "caveats": [
+            "Recorded demonstration, not live account interactions",
+            "Counter scope and SK limits not established",
+            "Attachment token budget is not the model total context window",
+            "Report tour does not establish free candidate-preview report availability",
+            "No copyrighted sample file set or answer reproduced in the repository"
           ]
         }
       ]
@@ -3037,6 +3058,28 @@
       ]
     },
     {
+      "url": "https://programmers.co.kr/ai-assessment",
+      "title": "Programmers AI assessment product overview",
+      "records": [
+        {
+          "register": "preview-analysis-sources.json",
+          "title": "Programmers AI assessment product overview",
+          "publisher": "Programmers / Grepp",
+          "read_method": "Current official web body and direct guided-demo link",
+          "status": "read",
+          "supports": [
+            "Knowledge, proficiency and mastery categories",
+            "Configurable assessment operation",
+            "Prompt and interaction-log evaluation",
+            "Official demo provenance"
+          ],
+          "caveats": [
+            "Product features are not a participant-specific SK configuration"
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://programmers.co.kr/ai-assessment/insight",
       "title": "프로그래머스 AI 역량평가 인사이트 목록",
       "records": [
@@ -3128,6 +3171,24 @@
           "caveats": [
             "개인 초대의 영역명·허용 도구를 대신하지 않음"
           ]
+        },
+        {
+          "register": "preview-analysis-sources.json",
+          "title": "Why Programmers built AI assessment",
+          "published": "2026-10-07",
+          "publisher": "Programmers / Grepp",
+          "read_method": "Current official article body",
+          "status": "read",
+          "supports": [
+            "General AI Assist question limits and 30-second cooldown",
+            "Problem-copy restriction and material attachment",
+            "Process and outcome assessment",
+            "Organization-specific type/count/time selection"
+          ],
+          "caveats": [
+            "No SK-specific scoring weights, question allowance, external-AI permission or cooldown established",
+            "Beta scoring examples are not SK scoring formula"
+          ]
         }
       ]
     },
@@ -3218,6 +3279,21 @@
             "페이지의 지식 유형 표기에 객관식과 객/주관식 문구가 함께 있어 실제 형식을 단정하지 않음",
             "샘플 수와 실제 시험 수는 다름",
             "체험 풀이와 실제 시험 시작은 수행하지 않음"
+          ]
+        },
+        {
+          "register": "preview-analysis-sources.json",
+          "title": "Programmers candidate AI assessment preview",
+          "publisher": "Programmers / Grepp",
+          "read_method": "Current web body and public HTML; earlier same-day FAQ observation is separately retained in notice-sources.json",
+          "status": "partially_read_current",
+          "supports": [
+            "Official candidate-preview identity and navigation"
+          ],
+          "caveats": [
+            "Current extraction returns menu and empty dynamic content container",
+            "No connected browser for fresh live FAQ/list UI verification",
+            "No account login, AI query or sample submission"
           ]
         }
       ]
@@ -3890,6 +3966,21 @@
           ],
           "caveats": [
             "읽은 페이지의 범위에 관한 확인이며 모든 새 공지의 부존재를 주장하지 않음"
+          ]
+        },
+        {
+          "register": "preview-analysis-sources.json",
+          "title": "SK hynix AI hackathon 2026 public overview",
+          "publisher": "SK hynix hackathon official site",
+          "read_method": "Current public web body",
+          "status": "read",
+          "supports": [
+            "First-round AI foundations and application assessment",
+            "Programmers partner relationship"
+          ],
+          "caveats": [
+            "No new live dynamic FAQ verification",
+            "Private participant notice remains authoritative for exact exam settings"
           ]
         }
       ]
