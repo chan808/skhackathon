@@ -8,7 +8,7 @@ from pathlib import Path, PurePosixPath
 ROOT = Path(__file__).absolute().parents[1]
 OUTPUT = ROOT / "output" / "laptop-kit"
 EXCLUDED = (".venv/", ".venv-study/", ".cache/", ".codex-remote-attachments/", "tmp/", "data/private/", "output/laptop-kit/")
-PRIVATE_REPORTS = {"reports/environment.json", "reports/windows-preflight.json", "reports/participant-status.json", "reports/agent-loop-live.json"}
+PRIVATE_REPORTS = {"reports/environment.json", "reports/windows-preflight.json", "reports/participant-status.json", "reports/agent-loop-live.json", "reports/local-verification.json"}
 
 
 def validate_members(names):
