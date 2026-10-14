@@ -125,6 +125,8 @@ PowerShell에서 이 폴더를 연다. 아래 명령은 가상환경을 활성�
 
 ## 환경 재생성
 
+일반 점검 결과는 Git에서 제외된 `reports/local-verification.json`에 저장한다. 공개 `reports/verification.json`은 문서 작성 시의 검증 기록으로 보존하므로, 노트북에서 `check`를 실행해도 그 파일을 수정하지 않는다. 공개 기록을 갱신하는 작성자는 `scripts/verify.py --publish-report`를 명시한다.
+
 현재 PC의 `.venv-study`는 설치된 Codex 번들의 Python 3.12.14로 검증했다. 새 노트북에는 Codex가 없어도 설치된 Python 3.11 이상이면 된다. 기존 `.venv`는 Python 3.9.13 환경으로 남아 있다. 연습 도구는 표준 라이브러리만 사용한다. 폴더를 옮기면 가상환경도 새로 만든다. 10월 13일의 환경과 준비 계획은 [기존 준비 계획](research/04-preparation-plan.md)에 남겨두고, 현재 실행 환경은 `reports/environment.json`을 기준으로 한다.
 
 새 위치에서는 지원 중인 Python 실행 파일을 지정해 복원한다. 아래는 Python 3.12 런처가 등록된 PC의 예다. PowerShell 스크립트 실행 정책을 바꿀 필요가 없다.

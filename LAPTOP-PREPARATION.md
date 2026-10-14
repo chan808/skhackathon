@@ -57,6 +57,8 @@ py -3 scripts/study.py --mode learn
 
 `py`가 없지만 Python이 PATH에 등록됐다면 `python scripts/study.py --mode check`로 실행한다. 설치한 Python이 여러 버전이면 `py -3.13 scripts/study.py --mode check`처럼 지원 버전을 지정한다. 이 Python 진입점은 PowerShell 실행 정책을 바꾸지 않아도 된다.
 
+현재 저장소를 노트북에도 그대로 clone한다. `check` 결과와 학습 기록은 Git에서 제외된 로컬 파일로 저장하며, 공개 문서·코드·PDF는 함께 버전관리한다. 설치 파일·개인 초대·앱 로그인·VPN 설정은 clone에 포함되지 않으므로 별도로 준비한다. 일반 점검 보고서는 `reports/local-verification.json`이다.
+
 ## Mac: 설치 후 저장소 실행
 
 [공식 Python 다운로드](https://www.python.org/downloads/macos/)에서 지원 버전을 설치한다. Git이 준비됐다면 다음을 실행하고, 그렇지 않으면 GitHub의 Download ZIP이나 이동용 ZIP을 먼저 사용한다. `git` 명령이 별도 개발 도구 설치를 요청하면 ZIP 사용이 더 간단하다.

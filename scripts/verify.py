@@ -1,4 +1,5 @@
 """Record executed tests and local-document checks for this preparation kit."""
+import argparse
 import json
 import hashlib
 import re
@@ -17,6 +18,10 @@ from practice.__main__ import load_bank
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--publish-report", action="store_true",
+                        help="Authoring only: replace the tracked public verification report; default writes a local ignored report")
+    args = parser.parse_args()
     if sys.version_info < (3, 11):
         print("Study verification requires Python 3.11 or newer; use .venv-study.", file=sys.stderr)
         return 2
@@ -36,7 +41,7 @@ def main():
                 continue
             local_links += 1
             destination = (path.parent / target).absolute()
-            # This invocation creates its own verification artifact after checks.
+            # The published reference is tracked; authoring can recreate it after checks.
             is_this_report = destination == (ROOT / "reports" / "verification.json")
             if not destination.exists() and not is_this_report:
                 missing.append({"file": str(path.relative_to(ROOT)), "target": target})
@@ -99,8 +104,11 @@ def main():
                         and minimum_hashes_match and minimum_check.get("rendered_pages_visually_checked") is True
                         and result["advanced_priorities"] == {"first_round_core": 28, "extension": 8}
                         and result["readiness_cases"] == 3 and example_check.returncode == 0 and offline_ok and lab_matches_record)
-    (ROOT / "reports" / "verification.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    report_name = "verification.json" if args.publish_report else "local-verification.json"
+    result["report_file"] = "reports/" + report_name
+    (ROOT / "reports" / report_name).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: result[key] for key in ["passed", "test_count", "markdown_files_checked", "local_links_checked", "missing_local_links", "quiz_questions", "advanced_quiz_questions", "unregistered_quiz_source_urls", "unique_source_urls"]}, ensure_ascii=False, indent=2))
+    print("Report: " + result["report_file"])
     return 0 if result["passed"] else 1
 
 

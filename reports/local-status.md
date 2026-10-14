@@ -10,6 +10,7 @@
 - `.env`와 API 키 파일
 - `data/private/`의 개인 자료와 진도 기록
 - `reports/environment.json`, `reports/windows-preflight.json`, `reports/participant-status.json`
+- 기기별 점검 결과 `reports/local-verification.json` (`--publish-report`를 명시한 저작 점검만 공개 보고서 갱신)
 - 개인 퀴즈·서술형·답안 기록과 `reports/agent-loop-live.json`
 
 공개하는 데이터·퀴즈·서술형·에이전트 예시는 모두 자체 제작 합성 자료다. 공식 기출이나 실제 시험 답안이 아니다. `reports/lab-result.json`과 `reports/agent-example.json`은 기준 풀이이며, `reports/agent-loop-offline.json`은 실제 LLM 추론이 없는 재생 시연 기록이다. `reports/verification.json`은 도구·파일 검증 결과이며 개인 점수나 합격 가능성을 나타내지 않는다.

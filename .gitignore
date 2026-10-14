@@ -15,5 +15,6 @@ reports/agent-loop-live.json
 reports/environment.json
 reports/windows-preflight.json
 reports/participant-status.json
+reports/local-verification.json
 tmp/
 output/laptop-kit/
