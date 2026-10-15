@@ -6,7 +6,7 @@ $checks = @()
 $rootMarkdown = @(Get-ChildItem -LiteralPath $examRoot -File -Filter '*.md')
 if ($rootMarkdown.Count -ne 1 -or $rootMarkdown[0].Name -ne 'README.md') { $failures += 'README.md must be the only Markdown file at project root.' }
 $checks += 'Single root handbook'
-$requiredFiles = @('README.md','etc\README.md','etc\analysis\preview-analysis.md','tools\check.ps1','tools\verify.ps1','tools\package.ps1','tools\installers.json','.gitignore','.gitattributes')
+$requiredFiles = @('README.md','etc\README.md','etc\analysis\preview-analysis.md','etc\analysis\study-guide.md','tools\check.ps1','tools\verify.ps1','tools\package.ps1','tools\installers.json','.gitignore','.gitattributes')
 foreach ($relativeFile in $requiredFiles) {
     if (-not (Test-Path -LiteralPath (Join-Path $examRoot $relativeFile) -PathType Leaf)) { $failures += ('Missing required file: ' + $relativeFile) }
 }
@@ -18,7 +18,7 @@ foreach ($scriptFile in (Get-ChildItem -LiteralPath $PSScriptRoot -Filter '*.ps1
     foreach ($parseError in $parseErrors) { $failures += ($scriptFile.Name + ': ' + $parseError.Message) }
 }
 $checks += 'PowerShell syntax'
-$activeDocuments = @((Join-Path $examRoot 'README.md'),(Join-Path $examRoot 'etc\README.md'),(Join-Path $examRoot 'etc\analysis\preview-analysis.md'))
+$activeDocuments = @((Join-Path $examRoot 'README.md'),(Join-Path $examRoot 'etc\README.md'),(Join-Path $examRoot 'etc\analysis\preview-analysis.md'),(Join-Path $examRoot 'etc\analysis\study-guide.md'))
 foreach ($documentPath in $activeDocuments) {
     if (-not (Test-Path -LiteralPath $documentPath)) { continue }
     $markdown = Get-Content -LiteralPath $documentPath -Raw -Encoding UTF8
