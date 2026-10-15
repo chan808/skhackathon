@@ -4,6 +4,6 @@
 
 `analysis/preview-analysis.md`는 공개 체험의 상세 분석이며 실제 시험 문제나 공식 정답표가 아니다.
 
-`analysis/study-guide.md`는 사진 같은 지식 문항의 개념 설명·조건 판별·AI 활용 연습·학습 일정이다. 준비 중 처음 읽을 자료로 사용한다.
+`analysis/study-guide.md`는 정의·원리·백엔드 예시·계산·비교·문제·정답 해설·용어 사전을 포함한 단일 통합 교재다. 같은 내용의 [PDF](../output/pdf/AI-prelim-complete-textbook.pdf)로도 읽을 수 있다. `analysis/study-guide-check.json`은 원문과 PDF의 버전 및 저작 검증 기록이다.
 
 이전 문서의 루트 경로는 이 보관 폴더 기준이다. 이동한 가상환경은 재사용하지 않고 필요하면 새 환경을 만든다. 개인 자료는 루트 `private/`로, 설치본은 `offline/installers/`로 분리했다. AGENTS.previous.md와 기존 스킬 원본은 보관용이며 현재 루트의 실행 지침이 아니다.

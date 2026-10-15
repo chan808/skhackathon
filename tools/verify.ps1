@@ -6,7 +6,7 @@ $checks = @()
 $rootMarkdown = @(Get-ChildItem -LiteralPath $examRoot -File -Filter '*.md')
 if ($rootMarkdown.Count -ne 1 -or $rootMarkdown[0].Name -ne 'README.md') { $failures += 'README.md must be the only Markdown file at project root.' }
 $checks += 'Single root handbook'
-$requiredFiles = @('README.md','etc\README.md','etc\analysis\preview-analysis.md','etc\analysis\study-guide.md','tools\check.ps1','tools\verify.ps1','tools\package.ps1','tools\installers.json','.gitignore','.gitattributes')
+$requiredFiles = @('README.md','etc\README.md','etc\analysis\preview-analysis.md','etc\analysis\study-guide.md','etc\analysis\study-guide-check.json','output\pdf\AI-prelim-complete-textbook.pdf','tools\check.ps1','tools\verify.ps1','tools\package.ps1','tools\installers.json','.gitignore','.gitattributes')
 foreach ($relativeFile in $requiredFiles) {
     if (-not (Test-Path -LiteralPath (Join-Path $examRoot $relativeFile) -PathType Leaf)) { $failures += ('Missing required file: ' + $relativeFile) }
 }
@@ -31,6 +31,18 @@ foreach ($documentPath in $activeDocuments) {
     }
 }
 $checks += 'Active document links'
+$bookSource = Join-Path $examRoot 'etc\analysis\study-guide.md'
+$bookPdf = Join-Path $examRoot 'output\pdf\AI-prelim-complete-textbook.pdf'
+$bookReview = Join-Path $examRoot 'etc\analysis\study-guide-check.json'
+if ((Test-Path -LiteralPath $bookSource) -and (Test-Path -LiteralPath $bookPdf) -and (Test-Path -LiteralPath $bookReview)) {
+    try {
+        $review = Get-Content -LiteralPath $bookReview -Raw -Encoding UTF8 | ConvertFrom-Json
+        if ((Get-FileHash -LiteralPath $bookSource -Algorithm SHA256).Hash.ToLowerInvariant() -ne $review.source_sha256 -or
+            (Get-FileHash -LiteralPath $bookPdf -Algorithm SHA256).Hash.ToLowerInvariant() -ne $review.pdf_sha256 -or
+            $review.rendered_pages_visually_checked -ne $true) { $failures += 'Textbook source/PDF does not match the reviewed versions.' }
+    } catch { $failures += 'Textbook review record could not be checked.' }
+}
+$checks += 'Reviewed textbook source and PDF hashes'
 $ignoreRules = Get-Content -LiteralPath (Join-Path $examRoot '.gitignore') -Raw -Encoding UTF8
 foreach ($rule in @('/private/','/offline/','/etc/legacy-project/.venv-study/','/etc/legacy-project/tmp/')) {
     if (-not $ignoreRules.Contains($rule)) { $failures += ('Missing Git exclusion: ' + $rule) }

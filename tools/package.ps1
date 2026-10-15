@@ -8,7 +8,7 @@ foreach ($path in @($offlineDirectory,$privateDirectory)) {
 }
 $stageDirectory = Join-Path $privateDirectory ('package-stage-' + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $stageDirectory | Out-Null
-$includedFiles = @('README.md','.gitignore','.gitattributes','etc\README.md','etc\analysis\preview-analysis.md','etc\analysis\study-guide.md')
+$includedFiles = @('README.md','.gitignore','.gitattributes','etc\README.md','etc\analysis\preview-analysis.md','etc\analysis\study-guide.md','etc\analysis\study-guide-check.json','output\pdf\AI-prelim-complete-textbook.pdf')
 $includedFiles += @(Get-ChildItem -LiteralPath $PSScriptRoot -File | ForEach-Object { 'tools\' + $_.Name })
 foreach ($relativeFile in $includedFiles) {
     $sourcePath = [IO.Path]::GetFullPath((Join-Path $examRoot $relativeFile))

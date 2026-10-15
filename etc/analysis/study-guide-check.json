@@ -1,0 +1,38 @@
+{
+  "checked_at_kst": "2026-10-15T15:00:47.930269+09:00",
+  "source_characters": 70309,
+  "source_lines": 1296,
+  "core_chapters": 16,
+  "worked_cases": 3,
+  "self_check_questions": 32,
+  "integrated_questions": 20,
+  "total_questions": 52,
+  "glossary_entries": 102,
+  "pdf_pages": 54,
+  "pdf_bookmarks": 23,
+  "linked_reference_urls": 54,
+  "answer_key_distribution": {
+    "B": 5,
+    "D": 5,
+    "A": 5,
+    "C": 5
+  },
+  "independent_arithmetic_checks": {
+    "case_snack": true,
+    "case_subscription": true,
+    "case_temperature": true,
+    "gradient_step": true,
+    "chapter_confusion": true,
+    "threshold_costs": true,
+    "question_confusion": true,
+    "weighted_ratio": true,
+    "regression_errors": true,
+    "call_budget": true
+  },
+  "missing_glyphs": [],
+  "layout_geometry_issues": [],
+  "rendered_pages_visually_checked": true,
+  "source_sha256": "14d6c54e18ba66636e9591ced8e4b5911e95f943b868e5dc56bab8b336766ceb",
+  "pdf_sha256": "7d5244dd4f29923cc3cf16ffcde1f3c48d7c3def4e97c30ca581f9025e63705c",
+  "limits": "Authoring, arithmetic and rendering checks; does not establish exam coverage, learner readiness or real exam access."
+}
